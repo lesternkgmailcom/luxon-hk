@@ -8,4 +8,4 @@ routes = [
 
 [vars]
 MODEL = "glm-4.5-air"
-MAX_TOKENS = "512"
+MAX_TOKENS = "2048"

@@ -38,7 +38,7 @@ export default {
                 });
             }
 
-            const response = await fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
+            const response = await fetch('https://open.bigmodel.cn/api/coding/paas/v4/chat/completions', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,7 +66,9 @@ export default {
             }
 
             const data = await response.json();
-            const reply = data.choices?.[0]?.message?.content || 'Sorry, I could not generate a response.';
+            const choice = data.choices?.[0]?.message;
+            // GLM-4.7 is a thinking model: actual answer in content, reasoning in reasoning_content
+            const reply = choice?.content || choice?.reasoning_content || 'Sorry, I could not generate a response.';
 
             return new Response(JSON.stringify({ reply }), {
                 status: 200,
