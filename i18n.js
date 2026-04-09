@@ -385,10 +385,10 @@ window.translations = {
         "learn.l8.svg.withoutSearch": "❌ WITHOUT SEARCH",
 
         // Blog
-        "nav.blog": "Blog",
-        "blog.title": "Use Cases",
+        "nav.blog": "AI Living",
+        "blog.title": "AI Living",
         "blog.subtitle": "Real stories of how AI assistants save time every day. No hype — just what actually works.",
-        "blog.backToBlog": "Back to Blog",
+        "blog.backToBlog": "Back to AI Living",
         "blog.readTime": "2 min read",
         "blog.cta.title": "Want an AI that does this for you?",
         "blog.cta.subtitle": "We set up your personal AI assistant in one session. Same day. No technical knowledge needed.",
@@ -863,10 +863,10 @@ window.translations = {
         "learn.l8.svg.withoutSearch": "❌ 冇用搜尋功能",
 
         // Blog
-        "nav.blog": "Blog",
-        "blog.title": "使用案例",
+        "nav.blog": "AI 生活",
+        "blog.title": "AI 生活",
         "blog.subtitle": "真實故事：AI 助手如何每天為你省時間。沒有誇張 — 只有真正有效的東西。",
-        "blog.backToBlog": "返回 Blog",
+        "blog.backToBlog": "返回 AI 生活",
         "blog.readTime": "2 分鐘閱讀",
         "blog.cta.title": "想擁有一個為你做這些事的 AI？",
         "blog.cta.subtitle": "我們在一次設定中為你配置個人 AI 助手。當天完成。無需任何技術知識。",
