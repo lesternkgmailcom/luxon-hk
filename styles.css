@@ -283,6 +283,31 @@ button {
   letter-spacing: -0.02em;
 }
 
+.hero-blog-hint {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.hero-blog-hint a {
+  color: #888;
+  text-decoration: none;
+  border-bottom: 1px dotted #aaa;
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.hero-blog-hint a:hover {
+  color: #bbb;
+  border-bottom-color: #bbb;
+}
+
+.hero-blog-hint a span {
+  font-weight: 500;
+}
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;

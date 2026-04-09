@@ -12,6 +12,7 @@ window.translations = {
         "hero.title": "AI, <span class=\"hero-gradient\">Everything</span>.",
         "hero.subtitle": "AI that simplifies everyday complexity.\nNo setup. No technical worries.\nWe take care of everything, so life stays effortless.",
         "hero.cta": "Book installation",
+        "hero.blogHint": "Not sure what AI can do? <span>See real examples →</span>",
 
         // Features
         "features.heading": "AI is shaping today. So can you.",
@@ -577,6 +578,7 @@ window.translations = {
         "hero.title": "AI，<span class=\"hero-gradient\">所有事</span>。",
         "hero.subtitle": "有 AI 為你分擔日常。\n不必懂技術，我們負責從安裝到維護的每一步，\n讓生活回到輕鬆本來的樣子。",
         "hero.cta": "立即預約安裝",
+        "hero.blogHint": "想知道 AI 能做什麼？<span>看看真實案例 →</span>",
 
         // Features
         "features.heading": "AI 正在改變現在。你也可以。",
@@ -1141,6 +1143,7 @@ window.translations = {
         "hero.title": "AI，<span class=\"hero-gradient\">所有事</span>。",
         "hero.subtitle": "有 AI 为你分担日常。\n不必懂技术，我们负责从安装到维护的每一步，\n让生活回到轻松本来的样子。",
         "hero.cta": "立即预约安装",
+        "hero.blogHint": "想知道 AI 能做什么？<span>看看真实案例 →</span>",
 
         // Features
         "features.heading": "AI 正在改变现在。你也可以。",
