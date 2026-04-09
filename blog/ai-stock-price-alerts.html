@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How I set up AI to report stock prices twice daily at preset times — so I can make trading decisions without constantly checking the market.">
+    <meta property="og:title" content="My AI reports stock prices to me twice a day. I just trade. — Luxon HK">
+    <meta property="og:description" content="I told my AI to track 鴻海 (Hon Hai) and report the price at 10:30 and 11:50 every day. No app to open, no alerts to dismiss — just the numbers I need.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.luxon.hk/blog/ai-stock-price-alerts.html">
+    <meta property="og:image" content="https://luxon.hk/images/blog-stock-price-alerts.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9BMR3XD45"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H9BMR3XD45');
+    </script>
+    <title>My AI reports stock prices to me twice a day. I just trade. — Luxon HK</title>
+    <link rel="stylesheet" href="../styles.css?v=3">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.svg" alt="Luxon HK" class="logo-full">
+                </a>
+            </div>
+            <nav class="nav" id="mainNav">
+                <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+                <a href="index.html" style="color:#1a1a1a;font-weight:600;" data-i18n="nav.blog">AI Living</a>
+                <a href="../learn/index.html" data-i18n="nav.learn">Learn</a>
+                <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+            </nav>
+            <div class="header-actions">
+                <div class="language-selector" id="langSelector">
+                    <button class="lang-icon-btn" aria-label="Change language">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-option active" data-lang="en">English</button>
+                        <button class="lang-option" data-lang="zh-HK">繁體中文</button>
+                        <button class="lang-option" data-lang="zh-CN">简体中文</button>
+                    </div>
+                </div>
+                <button class="hamburger-btn" aria-label="Toggle menu" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="Luxon HK" class="logo-full">
+            </div>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+            <a href="index.html" style="color:#1a1a1a;font-weight:600;" data-i18n="nav.blog">AI Living</a>
+            <a href="../learn/index.html" data-i18n="nav.learn">Learn</a>
+            <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="https://wa.me/85297381028" class="btn btn-primary" data-i18n="nav.bookCall">Book installation</a>
+        </div>
+    </div>
+
+    <!-- Blog Post -->
+    <section class="blog-post">
+        <div class="blog-post__header">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
+                <span data-i18n="blog.backToBlog">Back to AI Living</span>
+            </a>
+            <span class="blog-post__tag blog-post__tag--blue" data-i18n="blog.stock.tag">Finance</span>
+            <h1 class="blog-post__title" data-i18n="blog.stock.title">My AI reports stock prices to me twice a day. I just trade.</h1>
+            <p class="blog-post__subtitle" data-i18n="blog.stock.subtitle">I told my AI to track 鴻海 (Hon Hai) and report the price at 10:30 and 11:50 every day. No app to open, no alerts to dismiss — just the numbers I need, when I need them.</p>
+            <div class="blog-post__meta">
+                <span data-i18n="blog.stock.dateFull">April 2026</span>
+                <span>·</span>
+                <span data-i18n="blog.readTime">2 min read</span>
+            </div>
+        </div>
+
+        <div class="blog-post__hero-image">
+            <img src="../images/blog-stock-price-alerts.png" alt="AI sending scheduled stock price reports via chat">
+        </div>
+
+        <div class="blog-post__content">
+            <p data-i18n="blog.stock.p1">I trade Taiwanese stocks from Hong Kong. The market opens at 9:00 AM Taipei time, and I need to make decisions during the morning session — but I'm also working my day job. I can't sit there watching every tick.</p>
+
+            <p data-i18n="blog.stock.p2">So I told my AI:</p>
+
+            <blockquote>
+                <p data-i18n="blog.stock.quote">&ldquo;Help me report 鴻海's stock price twice daily at preset times, so I can do my trading when needed.&rdquo;</p>
+            </blockquote>
+
+            <p data-i18n="blog.stock.p3">My AI asked a clarifying question — which stock, and what times? I said:</p>
+
+            <blockquote>
+                <p data-i18n="blog.stock.quote2">&ldquo;鴻海 (2317.TW). After market close would be best — so 10:30 and 11:50 AM.&rdquo;</p>
+            </blockquote>
+
+            <p data-i18n="blog.stock.p4">That was it. My AI set up an automated schedule. Now, twice a day, I get a message like this:</p>
+
+            <div class="highlight-box">
+                <p data-i18n="blog.stock.report1"><strong>鴻海 (2317) — 2026/04/02 (三)</strong></p>
+                <p data-i18n="blog.stock.report2"><strong>收盤價:</strong> 193.0</p>
+                <p data-i18n="blog.stock.report3"><strong>跌 4.0 元</strong> (-2.03%)</p>
+                <p data-i18n="blog.stock.report4"><strong>開盤:</strong> 198.0 → <strong>最高:</strong> 199.0 → <strong>最低:</strong> 191.5</p>
+                <p data-i18n="blog.stock.report5"><strong>成交金額:</strong> 70.46 億</p>
+                <p data-i18n="blog.stock.report6"><strong>昨收:</strong> 197.0</p>
+            </div>
+
+            <p data-i18n="blog.stock.p5">Opening price, high, low, close, volume — everything I need to decide whether to buy, sell, or hold. Without opening any app.</p>
+
+            <h2 data-i18n="blog.stock.h2Why">Why this matters</h2>
+
+            <p data-i18n="blog.stock.p6">Trading while holding a full-time job means you're always time-splitting. The old way:</p>
+
+            <ul>
+                <li data-i18n="blog.stock.old1">Open a stock app (Yahoo Finance, 富途, etc.)</li>
+                <li data-i18n="blog.stock.old2">Search for the ticker</li>
+                <li data-i18n="blog.stock.old3">Check the numbers</li>
+                <li data-i18n="blog.stock.old4">Decide if you need to act</li>
+                <li data-i18n="blog.stock.old5">Repeat multiple times a day</li>
+            </ul>
+
+            <p data-i18n="blog.stock.p7">The new way: my AI proactively sends me the data. I read the message, make a decision, and move on. Takes 10 seconds instead of 10 minutes of app-switching.</p>
+
+            <h2 data-i18n="blog.stock.h2Extend">Extending it</h2>
+
+            <p data-i18n="blog.stock.p8">Once the first stock alert was running, it was easy to add more:</p>
+
+            <ul>
+                <li data-i18n="blog.stock.ext1"><strong>Multiple stocks</strong> — track a watchlist of 5-10 tickers, not just one</li>
+                <li data-i18n="blog.stock.ext2"><strong>Conditional alerts</strong> — &ldquo;tell me if 鴻海 drops below 190 or breaks 200&rdquo;</li>
+                <li data-i18n="blog.stock.ext3"><strong>Pre-market briefing</strong> — &ldquo;before market open, give me the ADR price and any overnight news&rdquo;</li>
+                <li data-i18n="blog.stock.ext4"><strong>Weekly summary</strong> — &ldquo;every Friday close, send me a week-over-week comparison&rdquo;</li>
+            </ul>
+
+            <p data-i18n="blog.stock.p9">The AI doesn't just report numbers — it can add context. Like noting that 鴻海 has been dropping for the week and flagging the trend.</p>
+
+            <h2 data-i18n="blog.stock.h2WhoFor">Who is this for?</h2>
+
+            <ul>
+                <li data-i18n="blog.stock.who1"><strong>Part-time traders</strong> — people who trade stocks but can't watch the market all day</li>
+                <li data-i18n="blog.stock.who2"><strong>Cross-border investors</strong> — trading Taiwan/Korea/US markets from Hong Kong</li>
+                <li data-i18n="blog.stock.who3"><strong>Portfolio watchers</strong> — anyone who wants to track specific stocks without living in a finance app</li>
+            </ul>
+
+            <p data-i18n="blog.stock.p10">The setup takes 5 minutes. After that, it runs automatically — every day, on schedule, no manual input needed.</p>
+        </div>
+
+        <!-- CTA -->
+        <div class="blog-cta">
+            <h3 data-i18n="blog.stock.ctaTitle">Want AI stock alerts set up for you?</h3>
+            <p data-i18n="blog.stock.ctaDesc">We configure your AI assistant with scheduled stock reports and market monitoring. One session, same day deployment.</p>
+            <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <span data-i18n="nav.bookCall">Book installation</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../images/logo.svg" alt="Luxon HK" class="logo-full">
+                        </a>
+                    </div>
+                    <p data-i18n="footer.tagline">AI Assistant Installation Service</p>
+                    <p><a href="mailto:info@luxon.hk">info@luxon.hk</a></p>
+                </div>
+                <div class="footer-links">
+                    <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+                    <a href="index.html" data-i18n="nav.blog">AI Living</a>
+                    <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luxon.hk. <span data-i18n="footer.rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../i18n.js?v=6"></script>
+    <script src="../script.js?v=6"></script>
+</body>
+</html>
