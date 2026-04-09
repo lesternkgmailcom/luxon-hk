@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" fill="none">
+  <rect width="640" height="340" rx="16" fill="#f8faf9"/>
+  
+  <!-- Phone on left -->
+  <rect x="40" y="40" width="140" height="260" rx="20" fill="#ffffff" stroke="#1a1a1a" stroke-width="2"/>
+  <rect x="50" y="64" width="120" height="220" rx="4" fill="#f0fdf4"/>
+  <text x="110" y="56" font-size="7" fill="#5f6368" text-anchor="middle" font-family="sans-serif">10:02 PM</text>
+  
+  <!-- Chat on phone -->
+  <rect x="56" y="76" width="60" height="14" rx="7" fill="#ffffff" stroke="#e8eaed" stroke-width="1"/>
+  <rect x="64" y="81" width="40" height="4" rx="2" fill="#1a1a1a" opacity="0.15"/>
+  
+  <rect x="84" y="100" width="76" height="14" rx="7" fill="#10b981" opacity="0.15"/>
+  <rect x="92" y="105" width="56" height="4" rx="2" fill="#10b981" opacity="0.4"/>
+  
+  <rect x="56" y="124" width="68" height="14" rx="7" fill="#ffffff" stroke="#e8eaed" stroke-width="1"/>
+  <rect x="64" y="129" width="48" height="4" rx="2" fill="#1a1a1a" opacity="0.12"/>
+  
+  <!-- Customer avatar -->
+  <circle cx="110" cy="240" r="16" fill="#f1f3f4"/>
+  <circle cx="110" cy="235" r="6" fill="#5f6368" opacity="0.2"/>
+  <path d="M98 250 Q110 244 122 250" fill="#5f6368" opacity="0.12"/>
+  
+  <!-- Arrow 1: phone to AI -->
+  <path d="M190 160 L230 160" stroke="#10b981" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M224 154 L234 160 L224 166" stroke="#10b981" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- AI search panel center -->
+  <rect x="240" y="40" width="200" height="140" rx="12" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.5"/>
+  
+  <!-- Search bar -->
+  <rect x="256" y="56" width="168" height="24" rx="12" fill="#f8f9fa"/>
+  <circle cx="274" cy="68" r="6" fill="none" stroke="#5f6368" stroke-width="1.2"/>
+  <line x1="278" y1="72" x2="282" y2="76" stroke="#5f6368" stroke-width="1.2"/>
+  <rect x="290" y="64" width="80" height="5" rx="2" fill="#1a1a1a" opacity="0.1"/>
+  
+  <!-- Search results -->
+  <rect x="260" y="92" width="100" height="6" rx="3" fill="#10b981" opacity="0.3"/>
+  <rect x="260" y="104" width="140" height="5" rx="2" fill="#1a1a1a" opacity="0.08"/>
+  <rect x="260" y="114" width="120" height="5" rx="2" fill="#1a1a1a" opacity="0.06"/>
+  <rect x="260" y="126" width="80" height="6" rx="3" fill="#10b981" opacity="0.2"/>
+  <rect x="260" y="138" width="130" height="5" rx="2" fill="#1a1a1a" opacity="0.08"/>
+  <rect x="260" y="148" width="96" height="5" rx="2" fill="#1a1a1a" opacity="0.06"/>
+  
+  <!-- "30s" badge -->
+  <rect x="295" y="188" width="50" height="22" rx="11" fill="#1a1a1a"/>
+  <text x="320" y="203" font-size="9" fill="#10b981" text-anchor="middle" font-family="sans-serif" font-weight="600">30 sec</text>
+  
+  <!-- Arrow 2: AI to reply -->
+  <path d="M448 110 L488 110" stroke="#10b981" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M482 104 L492 110 L482 116" stroke="#10b981" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Reply output card -->
+  <rect x="498" y="50" width="120" height="120" rx="12" fill="#ffffff" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="514" y="68" width="70" height="6" rx="3" fill="#10b981" opacity="0.4"/>
+  <rect x="514" y="80" width="88" height="5" rx="2" fill="#1a1a1a" opacity="0.1"/>
+  <rect x="514" y="90" width="76" height="5" rx="2" fill="#1a1a1a" opacity="0.06"/>
+  <rect x="514" y="104" width="60" height="6" rx="3" fill="#10b981" opacity="0.3"/>
+  <rect x="514" y="116" width="80" height="5" rx="2" fill="#1a1a1a" opacity="0.08"/>
+  
+  <!-- Send button -->
+  <circle cx="558" cy="148" r="12" fill="#10b981" opacity="0.15"/>
+  <path d="M552 148 L562 148 M558 142 L564 148 L558 154" stroke="#10b981" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Labels -->
+  <text x="110" y="310" font-size="9" fill="#5f6368" text-anchor="middle" font-family="sans-serif">Customer</text>
+  <text x="340" y="228" font-size="9" fill="#5f6368" text-anchor="middle" font-family="sans-serif">AI Search</text>
+  <text x="558" y="196" font-size="9" fill="#5f6368" text-anchor="middle" font-family="sans-serif">Reply</text>
+</svg>

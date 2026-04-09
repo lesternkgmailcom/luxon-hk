@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn AI basics in 8 short lessons. Practical tips anyone can use — no technical background needed.">
+    <meta property="og:title" content="Learn AI — Luxon HK">
+    <meta property="og:description" content="8 practical AI lessons for beginners. Real techniques you can use today.">
+    <meta property="og:image" content="https://luxon.hk/images/og-image.png">
+    <meta property="og:url" content="https://www.luxon.hk/learn/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9BMR3XD45"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H9BMR3XD45');
+    </script>
+    <title>Learn AI — Luxon.hk</title>
+    <link rel="stylesheet" href="../styles.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.svg" alt="Luxon HK" class="logo-full">
+                </a>
+            </div>
+            <nav class="nav" id="mainNav">
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+                <a href="index.html" class="active" data-i18n="nav.learn">Learn</a>
+            </nav>
+            <div class="header-actions">
+                <div class="language-selector" id="langSelector">
+                    <button class="lang-icon-btn" aria-label="Change language">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-option active" data-lang="en">English</button>
+                        <button class="lang-option" data-lang="zh-HK">繁體中文</button>
+                        <button class="lang-option" data-lang="zh-CN">简体中文</button>
+                    </div>
+                </div>
+                <button class="hamburger-btn" aria-label="Toggle menu" id="hamburgerBtn">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo.svg" alt="Luxon HK" class="logo-full"></a>
+            </div>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../index.html" data-i18n="nav.home">Home</a>
+            <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+            <a href="index.html" class="active" data-i18n="nav.learn">Learn</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="nav.bookCall">Book installation</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="learn-hero">
+        <div class="container">
+            <h1 data-i18n="learn.title">8 Things Most People<br>Get Wrong About AI</h1>
+            <p data-i18n="learn.subtitle">Short, visual lessons based on real beginner mistakes. No jargon, no coding — just practical tips you can use today.</p>
+        </div>
+    </section>
+
+    <!-- Lesson Grid -->
+    <section class="lesson-grid container--wide">
+        <a href="lesson-1.html" class="lesson-card fade-in-up">
+            <div class="lesson-card__number">1</div>
+            <div class="lesson-card__title" data-i18n="learn.l1.title">AI vs Google Search</div>
+            <div class="lesson-card__desc" data-i18n="learn.l1.desc">Why "more words" gives you dramatically better results than a short question.</div>
+            <div class="lesson-card__arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+        </a>
+        <a href="lesson-2.html" class="lesson-card fade-in-up">
+            <div class="lesson-card__number">2</div>
+            <div class="lesson-card__title" data-i18n="learn.l2.title">Set Up a Project First</div>
+            <div class="lesson-card__desc" data-i18n="learn.l2.desc">Stop learning prompts. Projects are the real secret — and most tutorials skip this.</div>
+            <div class="lesson-card__arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+        </a>
+        <a href="lesson-3.html" class="lesson-card fade-in-up">
+            <div class="lesson-card__number">3</div>
+            <div class="lesson-card__title" data-i18n="learn.l3.title">Personalize Your AI</div>
+            <div class="lesson-card__desc" data-i18n="learn.l3.desc">The most powerful AI setting takes 2 minutes — and almost nobody uses it.</div>
+            <div class="lesson-card__arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+        </a>
+        <a href="lesson-4.html" class="lesson-card fade-in-up">
+            <div class="lesson-card__number">4</div>
+            <div class="lesson-card__title" data-i18n="learn.l4.title">The Copy-Paste Trick</div>
+            <div class="lesson-card__desc" data-i18n="learn.l4.desc">Upload an example. Say "do it like this." That's it. No fancy prompting needed.</div>
+            <div class="lesson-card__arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+        </a>
+        <a href="lesson-5.html" class="lesson-card fade-in-up">
+            <div class="lesson-card__number">5</div>
+            <div class="lesson-card__title" data-i18n="learn.l5.title">Say What TO Do</div>
+            <div class="lesson-card__desc" data-i18n="learn.l5.desc">Tell the AI what you want — not what you don't want. This one rule changes everything.</div>
+            <div class="lesson-card__arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+        </a>
+        <a href="lesson-6.html" class="lesson-card fade-in-up">
+            <div class="lesson-card__number">6</div>
+            <div class="lesson-card__title" data-i18n="learn.l6.title">Let AI Write Its Own Instructions</div>
+            <div class="lesson-card__desc" data-i18n="learn.l6.desc">Don't know what to tell your AI? Ask it to figure it out for you.</div>
+            <div class="lesson-card__arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+        </a>
+        <a href="lesson-7.html" class="lesson-card fade-in-up">
+            <div class="lesson-card__number">7</div>
+            <div class="lesson-card__title" data-i18n="learn.l7.title">Smarter ≠ Better</div>
+            <div class="lesson-card__desc" data-i18n="learn.l7.desc">The expensive model isn't always the right choice. Sometimes "fast" beats "pro."</div>
+            <div class="lesson-card__arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+        </a>
+        <a href="lesson-8.html" class="lesson-card fade-in-up">
+            <div class="lesson-card__number">8</div>
+            <div class="lesson-card__title" data-i18n="learn.l8.title">Search Your Past Chats</div>
+            <div class="lesson-card__desc" data-i18n="learn.l8.desc">Everything you've ever asked is still there. Here's how to find it.</div>
+            <div class="lesson-card__arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </div>
+        </a>
+    </section>
+
+    <!-- CTA -->
+    <section class="book-cta-section">
+        <div class="container">
+            <h2 data-i18n="learn.cta.title">Want us to set this up for you?</h2>
+            <p data-i18n="learn.cta.subtitle">We configure your AI assistant with personalization, projects, and workflows — all in one session.</p>
+            <a href="https://wa.me/85297381028" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right:8px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span data-i18n="nav.bookCall">Book installation</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <a href="../index.html"><img src="../images/logo.svg" alt="Luxon HK" class="logo-full"></a>
+                    </div>
+                    <p data-i18n="footer.tagline">AI Assistant Installation Service</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+                    <a href="index.html" data-i18n="nav.learn">Learn</a>
+                    <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luxon.hk. <span data-i18n="footer.rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../i18n.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

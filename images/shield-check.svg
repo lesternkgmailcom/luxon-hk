@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Shield -->
+  <path d="M60 8 L104 28 L104 56 Q104 88 60 112 Q16 88 16 56 L16 28 Z" fill="#f0fdf4" stroke="#10b981" stroke-width="3"/>
+  <!-- Inner shield glow -->
+  <path d="M60 20 L92 36 L92 56 Q92 80 60 100 Q28 80 28 56 L28 36 Z" fill="#10b981" opacity="0.06"/>
+  <!-- Checkmark -->
+  <path d="M42 58 L54 70 L80 44" stroke="#10b981" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Subtle circuit lines -->
+  <line x1="36" y1="30" x2="36" y2="40" stroke="#10b981" stroke-width="0.8" opacity="0.2"/>
+  <line x1="84" y1="30" x2="84" y2="40" stroke="#10b981" stroke-width="0.8" opacity="0.2"/>
+  <line x1="36" y1="80" x2="36" y2="90" stroke="#10b981" stroke-width="0.8" opacity="0.2"/>
+  <line x1="84" y1="80" x2="84" y2="90" stroke="#10b981" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="36" cy="30" r="2" fill="#10b981" opacity="0.3"/>
+  <circle cx="84" cy="30" r="2" fill="#10b981" opacity="0.3"/>
+  <circle cx="36" cy="90" r="2" fill="#10b981" opacity="0.3"/>
+  <circle cx="84" cy="90" r="2" fill="#10b981" opacity="0.3"/>
+</svg>

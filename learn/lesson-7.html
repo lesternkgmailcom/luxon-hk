@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lesson 7: Smarter ≠ Better — Luxon HK AI Learning">
+    <meta property="og:title" content="Smarter ≠ Better — Luxon Learn">
+    <meta property="og:description" content="The expensive model isn't always the right choice. Sometimes fast beats pro.">
+    <meta property="og:image" content="https://luxon.hk/images/og-image.png">
+    <meta property="og:url" content="https://www.luxon.hk/learn/lesson-7.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9BMR3XD45"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H9BMR3XD45');
+    </script>
+    <title>Smarter ≠ Better — Luxon Learn</title>
+    <link rel="stylesheet" href="../styles.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <div class="logo"><a href="../index.html"><img src="../images/logo.svg" alt="Luxon HK" class="logo-full"></a></div>
+            <nav class="nav" id="mainNav">
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+                <a href="index.html" data-i18n="nav.learn">Learn</a>
+            </nav>
+            <div class="header-actions">
+                <div class="language-selector" id="langSelector">
+                    <button class="lang-icon-btn" aria-label="Change language">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-option active" data-lang="en">English</button>
+                        <button class="lang-option" data-lang="zh-HK">繁體中文</button>
+                        <button class="lang-option" data-lang="zh-CN">简体中文</button>
+                    </div>
+                </div>
+                <button class="hamburger-btn" aria-label="Toggle menu" id="hamburgerBtn"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo"><a href="../index.html"><img src="../images/logo.svg" alt="Luxon HK" class="logo-full"></a></div>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../index.html" data-i18n="nav.home">Home</a>
+            <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+            <a href="index.html" data-i18n="nav.learn">Learn</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="nav.bookCall">Book installation</a>
+        </div>
+    </div>
+
+    <!-- Lesson Hero -->
+    <section class="lesson-hero">
+        <div class="lesson-breadcrumb">
+            <a href="index.html" data-i18n="nav.learn">Learn</a>
+            <span>/</span>
+            <span data-i18n="learn.l7.breadcrumb">Lesson 7</span>
+        </div>
+        <div class="lesson-badge" data-i18n="learn.l7.badge">Level 2</div>
+        <h1 data-i18n="learn.l7.title">Smarter ≠ Better</h1>
+        <p class="lesson-subtitle" data-i18n="learn.l7.subtitle">The expensive model isn't always the right choice. Sometimes "fast" beats "pro."</p>
+    </section>
+
+    <div class="lesson-content">
+        
+    <!-- Visual: Pro model vs Fast model -->
+    <div class="lesson-visual">
+        <svg viewBox="0 0 640 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Pro model (expensive, overkill) -->
+            <rect x="20" y="20" width="280" height="260" rx="16" fill="#fef2f2" stroke="#fecaca"/>
+            <text x="160" y="52" font-family="Inter,sans-serif" font-size="12" fill="#dc2626" font-weight="700" text-anchor="middle" data-i18n="learn.l7.svg.proTitle">👑 PRO MODEL ($20/mo)</text>
+            <!-- Speed gauge -->
+            <rect x="50" y="72" width="220" height="20" rx="10" fill="#fee2e2"/>
+            <rect x="50" y="72" width="55" height="20" rx="10" fill="#f87171"/>
+            <text x="160" y="86" font-family="Inter,sans-serif" font-size="9" fill="#fff" text-anchor="middle" data-i18n="learn.l7.svg.slow">SLOW</text>
+            <!-- Quality gauge -->
+            <rect x="50" y="100" width="220" height="20" rx="10" fill="#fee2e2"/>
+            <rect x="50" y="100" width="209" height="20" rx="10" fill="#f87171"/>
+            <text x="160" y="114" font-family="Inter,sans-serif" font-size="9" fill="#fff" text-anchor="middle">95%</text>
+            <!-- Cost -->
+            <text x="50" y="148" font-family="Inter,sans-serif" font-size="11" fill="#dc2626" data-i18n="learn.l7.svg.proCost">💰 $20/month</text>
+            <text x="50" y="168" font-family="Inter,sans-serif" font-size="11" fill="#9ca3af" data-i18n="learn.l7.svg.proSpeed">⏱️ 15 seconds per reply</text>
+            <!-- Task -->
+            <rect x="50" y="186" width="220" height="36" rx="8" fill="#fff" stroke="#fecaca"/>
+            <text x="160" y="200" font-family="Inter,sans-serif" font-size="10" fill="#64748b" text-anchor="middle" data-i18n="learn.l7.svg.task">Task: "Summarize this email"</text>
+            <text x="160" y="214" font-family="Inter,sans-serif" font-size="10" fill="#dc2626" text-anchor="middle" data-i18n="learn.l7.svg.overkill">Overkill. Same result as fast model.</text>
+            <!-- Bottom label -->
+            <text x="50" y="258" font-family="Inter,sans-serif" font-size="11" fill="#dc2626" font-weight="600" data-i18n="learn.l7.svg.proLabel">❌ Paying for brainpower you don't need</text>
+
+            <!-- Fast model (cheap, efficient) -->
+            <rect x="340" y="20" width="280" height="260" rx="16" fill="#f0fdf4" stroke="#bbf7d0"/>
+            <text x="480" y="52" font-family="Inter,sans-serif" font-size="12" fill="#16a34a" font-weight="700" text-anchor="middle" data-i18n="learn.l7.svg.fastTitle">⚡ FAST MODEL ($5/mo)</text>
+            <!-- Speed gauge -->
+            <rect x="370" y="72" width="220" height="20" rx="10" fill="#dcfce7"/>
+            <rect x="370" y="72" width="198" height="20" rx="10" fill="#4ade80"/>
+            <text x="480" y="86" font-family="Inter,sans-serif" font-size="9" fill="#fff" text-anchor="middle" data-i18n="learn.l7.svg.fast">FAST</text>
+            <!-- Quality gauge -->
+            <rect x="370" y="100" width="220" height="20" rx="10" fill="#dcfce7"/>
+            <rect x="370" y="100" width="176" height="20" rx="10" fill="#4ade80"/>
+            <text x="480" y="114" font-family="Inter,sans-serif" font-size="9" fill="#fff" text-anchor="middle">80%</text>
+            <!-- Cost -->
+            <text x="370" y="148" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" data-i18n="learn.l7.svg.fastCost">💰 $5/month</text>
+            <text x="370" y="168" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" data-i18n="learn.l7.svg.fastSpeed">⏱️ 3 seconds per reply</text>
+            <!-- Task -->
+            <rect x="370" y="186" width="220" height="36" rx="8" fill="#fff" stroke="#86efac"/>
+            <text x="480" y="200" font-family="Inter,sans-serif" font-size="10" fill="#64748b" text-anchor="middle" data-i18n="learn.l7.svg.task2">Task: "Summarize this email"</text>
+            <text x="480" y="214" font-family="Inter,sans-serif" font-size="10" fill="#16a34a" text-anchor="middle" data-i18n="learn.l7.svg.sameResult">Same result. 5x faster. 4x cheaper.</text>
+            <!-- Bottom label -->
+            <text x="370" y="258" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="600" data-i18n="learn.l7.svg.fastLabel">✓ Right tool for the right job</text>
+        </svg>
+        <p class="lesson-visual-caption" data-i18n="learn.l7.visualCaption">For simple tasks, the fast model matches the pro model — at ¼ the cost and 5× the speed. Save the big gun for hard problems.</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="lesson-steps">
+        <div class="lesson-step">
+            <div class="lesson-step__number">1</div>
+            <div class="lesson-step__content">
+                <h3 data-i18n="learn.l7.step1.title">The 80/20 rule</h3>
+                <p data-i18n="learn.l7.step1.text">80% of your daily AI tasks are simple: summaries, quick drafts, reformatting, translations. The fast model handles these perfectly. Save the expensive model for the 20% that need deep reasoning — complex analysis, creative writing, or multi-step logic.</p>
+            </div>
+        </div>
+        <div class="lesson-step">
+            <div class="lesson-step__number">2</div>
+            <div class="lesson-step__content">
+                <h3 data-i18n="learn.l7.step2.title">Match model to task</h3>
+                <p data-i18n="learn.l7.step2.text">Quick question? Fast model. Long document analysis? Pro model. Simple rewrite? Fast. Creative brainstorming? Pro. The key question: "Would a smart intern get this right?" If yes — use the fast model.</p>
+            </div>
+        </div>
+        <div class="lesson-step">
+            <div class="lesson-step__number">3</div>
+            <div class="lesson-step__content">
+                <h3 data-i18n="learn.l7.step3.title">Start fast, escalate if needed</h3>
+                <p data-i18n="learn.l7.step3.text">Default to the fast model. If the answer isn't good enough, paste the conversation into the pro model and say "improve this." You'll save time and money — most tasks never need the upgrade.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="lesson-tip">
+        <div class="lesson-tip__icon">💡</div>
+        <div class="lesson-tip__text" data-i18n="learn.l7.tip"><strong>Pro tip:</strong> ChatGPT lets you switch models mid-conversation. Claude has Haiku (fast) and Sonnet/Opus (pro). Use the cheap one by default — upgrade only when you hit the ceiling.</div>
+    </div>
+
+        <!-- CTA -->
+        <div class="lesson-cta">
+            <h3 data-i18n="learn.cta.mini">Want this set up for you?</h3>
+            <p data-i18n="learn.cta.miniDesc">We configure everything — personalization, projects, and workflows — in one session.</p>
+            <a href="https://wa.me/85297381028" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="nav.bookCall">Book installation</a>
+        </div>
+    </div>
+
+    <!-- Lesson Nav -->
+    <div class="lesson-nav">
+        <a href="lesson-6.html" class="prev" data-i18n="learn.l7.prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7-7 7 7 7"/></svg> Let AI Write Its Own Instructions</a>
+        <a href="lesson-8.html" class="next" data-i18n="learn.l7.next">Search Your Past Chats <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="logo"><a href="../index.html"><img src="../images/logo.svg" alt="Luxon HK" class="logo-full"></a></div>
+                    <p data-i18n="footer.tagline">AI Assistant Installation Service</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+                    <a href="index.html" data-i18n="nav.learn">Learn</a>
+                    <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luxon.hk. <span data-i18n="footer.rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../i18n.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

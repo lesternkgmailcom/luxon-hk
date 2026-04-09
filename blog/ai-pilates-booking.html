@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How AI remembers your preferences and books classes for you — a real use case of AI as a personal assistant that knows you better over time.">
+    <meta property="og:title" content="My AI booked a Pilates class for me — because it knows me. — Luxon HK">
+    <meta property="og:description" content="I told my AI I had a gap after work. It booked my favourite Pilates class with my preferred instructor — because it remembers from past bookings.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.luxon.hk/blog/ai-pilates-booking.html">
+    <meta property="og:image" content="https://luxon.hk/images/blog-pilates-booking.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9BMR3XD45"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H9BMR3XD45');
+    </script>
+    <title>My AI booked a Pilates class for me — because it knows me. — Luxon HK</title>
+    <link rel="stylesheet" href="../styles.css?v=3">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.svg" alt="Luxon HK" class="logo-full">
+                </a>
+            </div>
+            <nav class="nav" id="mainNav">
+                <a href="../pricing.html">Plans</a>
+                <a href="../learn/index.html">Learn</a>
+                <a href="index.html" style="color:#1a1a1a;font-weight:600;">Blog</a>
+                <a href="../index.html#faq">FAQ</a>
+            </nav>
+            <div class="header-actions">
+                <div class="language-selector" id="langSelector">
+                    <button class="lang-icon-btn" aria-label="Change language">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-option active" data-lang="en">English</button>
+                        <button class="lang-option" data-lang="zh-HK">繁體中文</button>
+                        <button class="lang-option" data-lang="zh-CN">简体中文</button>
+                    </div>
+                </div>
+                <button class="hamburger-btn" aria-label="Toggle menu" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="Luxon HK" class="logo-full">
+            </div>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../pricing.html">Plans</a>
+            <a href="../learn/index.html">Learn</a>
+            <a href="index.html" style="color:#1a1a1a;font-weight:600;">Blog</a>
+            <a href="../index.html#faq">FAQ</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="https://wa.me/85297381028" class="btn btn-primary">Book installation</a>
+        </div>
+    </div>
+
+    <!-- Blog Post -->
+    <section class="blog-post">
+        <div class="blog-post__header">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
+                Back to Blog
+            </a>
+            <span class="blog-post__tag blog-post__tag--green">Lifestyle</span>
+            <h1 class="blog-post__title">My AI booked a Pilates class for me — because it knows me.</h1>
+            <p class="blog-post__subtitle">I had a gap after work on Tuesday. I told my AI, and it booked my favourite class with my preferred instructor — because it remembers my preferences from past bookings.</p>
+            <div class="blog-post__meta">
+                <span>April 2026</span>
+                <span>·</span>
+                <span>2 min read</span>
+            </div>
+        </div>
+
+        <div class="blog-post__hero-image">
+            <img src="../images/blog-pilates-booking.png" alt="AI booking a Pilates class">
+        </div>
+
+        <div class="blog-post__content">
+            <p>Tuesday afternoon. I finish work and realize I have a gap before dinner. I want to work out, but I don't want to spend 10 minutes scrolling through the Mindbody app checking schedules.</p>
+
+            <p>So I send my AI a message:</p>
+
+            <blockquote>
+                <p>"I have a gap after work tonight. Book a Pilates class for me."</p>
+            </blockquote>
+
+            <p>30 seconds later:</p>
+
+            <blockquote>
+                <p>"Booked ✅ Reformer Pilates with Sabrina at Empower Fitness, 7:15 PM. Added to your calendar. Same studio as last week."</p>
+            </blockquote>
+
+            <h2>Why this is different from Siri or Google Assistant</h2>
+
+            <p>Siri can set a reminder. Google Assistant can search the web. But my AI:</p>
+
+            <ul>
+                <li><strong>Knows my schedule</strong> — it has access to my calendar, so it knows what "after work" means today specifically</li>
+                <li><strong>Remembers my preferences</strong> — Reformer Pilates, not mat. Sabrina as instructor. Empower Fitness in Central</li>
+                <li><strong>Learns from past bookings</strong> — it's booked classes for me before, so it knows the drill</li>
+                <li><strong>Takes action, not just suggests</strong> — it actually books the class and adds it to my calendar, not just tells me where to go</li>
+            </ul>
+
+            <p>The difference is context. My AI has been with me long enough to build up a picture of what I like, when I'm free, and how I prefer things done.</p>
+
+            <h2>The memory advantage</h2>
+
+            <p>Every interaction makes it better. Over time, my AI has learned:</p>
+
+            <div class="highlight-box">
+                <p><strong>Studio preference:</strong> Empower Fitness, 19/F Li Dong Building, Central</p>
+                <p><strong>Class type:</strong> Reformer Pilates</p>
+                <p><strong>Preferred instructor:</strong> Sabrina Lui</p>
+                <p><strong>Preferred time:</strong> Weekday evenings, 7:00-8:00 PM</p>
+                <p><strong>Booking lead time:</strong> Same day is fine, but popular classes fill up by afternoon</p>
+            </div>
+
+            <p>I never had to write any of this down in a settings panel. The AI picked it up from watching my patterns and confirming with me when unsure.</p>
+
+            <h2>What else it handles</h2>
+
+            <p>Class booking is just one example. The same memory and action-taking applies to:</p>
+
+            <ul>
+                <li><strong>Restaurant reservations</strong> — "Book dinner for 2 Friday night, somewhere in Soho, around HK$400/head"</li>
+                <li><strong>Flight bookings</strong> — "Find me a flight to Taipei next weekend, direct if possible"</li>
+                <li><strong>Doctor appointments</strong> — "Book a check-up with Dr. Chan next week, morning preferred"</li>
+                <li><strong>Meeting scheduling</strong> — "Move my Thursday 3pm to Friday morning, the client requested it"</li>
+            </ul>
+
+            <p>The pattern is always the same: I describe what I need in plain language, and my AI handles the rest — because it knows me.</p>
+
+            <h2>The point</h2>
+
+            <p>An AI assistant isn't a chatbot that answers questions. It's something that <em>acts on your behalf</em> — with enough context about your life to make good decisions without asking you 20 follow-up questions.</p>
+
+            <p>That's what we set up for people. Not a tool you have to learn — an assistant that learns you.</p>
+        </div>
+
+        <!-- CTA -->
+        <div class="blog-cta">
+            <h3>Want an AI that knows your preferences?</h3>
+            <p>We set up your personal AI assistant with memory and booking workflows. One session, same day.</p>
+            <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                Book installation
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../images/logo.svg" alt="Luxon HK" class="logo-full">
+                        </a>
+                    </div>
+                    <p>AI Assistant Installation Service</p>
+                    <p><a href="mailto:info@luxon.hk">info@luxon.hk</a></p>
+                </div>
+                <div class="footer-links">
+                    <a href="../pricing.html">Plans</a>
+                    <a href="index.html">Blog</a>
+                    <a href="../index.html#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luxon.hk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../i18n.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxon HK — AI Assistant Installation Service. No technical knowledge required, live same day.">
+    <meta property="og:title" content="Luxon HK — Personal AI Assistant Installation">
+    <meta property="og:description" content="24/7 AI assistant handles your daily tasks. No setup needed. We take care of everything.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://www.luxon.hk">
+    <meta property="og:image" content="https://luxon.hk/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9BMR3XD45"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H9BMR3XD45');
+    </script>
+    <title>Luxon.hk — AI Assistant Installation Service</title>
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Luxon HK" class="logo-full">
+                </a>
+            </div>
+            <nav class="nav" id="mainNav">
+                <a href="pricing.html" data-i18n="nav.pricing">Plans</a>
+                <a href="learn/index.html" data-i18n="nav.learn">Learn</a>
+                <a href="blog/index.html">Blog</a>
+                <a href="#faq" data-i18n="nav.faq">FAQ</a>
+            </nav>
+            <div class="header-actions">
+                <div class="language-selector" id="langSelector">
+                    <button class="lang-icon-btn" aria-label="Change language">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-option active" data-lang="en">English</button>
+                        <button class="lang-option" data-lang="zh-HK">繁體中文</button>
+                        <button class="lang-option" data-lang="zh-CN">简体中文</button>
+                    </div>
+                </div>
+                <button class="hamburger-btn" aria-label="Toggle menu" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Luxon HK" class="logo-full">
+            </div>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="pricing.html" data-i18n="nav.pricing">Plans</a>
+            <a href="learn/index.html" data-i18n="nav.learn">Learn</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="#book" class="btn btn-primary" data-i18n="nav.bookCall">Book installation</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 data-i18n="hero.title">AI, <span class="hero-gradient">Everything</span>.</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">AI that simplifies everyday complexity.
+No setup. No technical worries.
+We take care of everything, so life stays effortless.</p>
+            <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right:8px;vertical-align:middle;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span data-i18n="hero.cta">Book installation</span>
+            </a>
+            <p class="hero-tagline" data-i18n="features.heading">AI is shaping today. So can you.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-features">
+        <div class="container container--wide">
+            <div class="feature-card feature-card--split fade-in-up">
+                <div class="feature-card__text">
+                    <div class="feature-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="44" height="44"><path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+                    </div>
+                    <h3 data-i18n="features.employee.title">Your AI Employee. Always On.</h3>
+                    <p data-i18n="features.employee.desc">An AI staff member that reads your Gmail, answers WhatsApp, manages your calendar, and follows up with clients — all without sleeping, complaining, or calling in sick.</p>
+                </div>
+                <div class="feature-card__visual"><img src="images/feature-employee.svg" alt="" loading="lazy"></div>
+            </div>
+
+            <div class="feature-card feature-card--split fade-in-up">
+                <div class="feature-card__text">
+                    <div class="feature-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="44" height="44"><path d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"/></svg>
+                    </div>
+                    <h3 data-i18n="features.memory.title">Remembers. Analyzes. Understands.</h3>
+                    <p data-i18n="features.memory.desc">Built-in memory. Ongoing analysis.
+It summarizes conversations,
+highlights what matters,
+and keeps important context clearly in focus.
+So every interaction moves your business forward.</p>
+                </div>
+                <div class="feature-card__visual"><img src="images/feature-memory.svg" alt="" loading="lazy"></div>
+            </div>
+
+            <div class="feature-card feature-card--split fade-in-up">
+                <div class="feature-card__text">
+                    <div class="feature-card__icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="44" height="44"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </div>
+                    <h3 data-i18n="features.whatsapp.title">One WhatsApp. Complete control.</h3>
+                    <p data-i18n="features.whatsapp.desc">No extra app required. Commands, reports, and risk insights — available in real time.</p>
+                </div>
+                <div class="feature-card__visual"><img src="images/feature-whatsapp.svg" alt="" loading="lazy"></div>
+            </div>
+
+            <div class="feature-card feature-card--split fade-in-up">
+                <div class="feature-card__text">
+                    <div class="feature-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="44" height="44"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+                    </div>
+                    <h3 data-i18n="features.terms.title">Terms. At a Glance.</h3>
+                    <p data-i18n="features.terms.desc">AI instantly reads contracts and terms,
+highlighting key clauses, important details, and potential risks.
+No fine print. Just what matters.</p>
+                </div>
+                <div class="feature-card__visual"><img src="images/feature-terms.svg" alt="" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section-usecases">
+        <div class="container">
+            <h2 class="section-heading"><span class="section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"/></svg></span> <span data-i18n="usecases.title">How people are using Luxon AI assistance</span></h2>
+
+            <div class="usecase-card fade-in-up">
+                <h3><span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></span> <span data-i18n="usecases.sales.title">Sales lead, captured.</span></h3>
+                <p data-i18n="usecases.sales.desc">A customer messages you on WhatsApp at 10pm. Your AI searches their profile, looks for answers in 30 seconds, and gives you the reply.</p>
+                <div class="feature-visual"><img src="images/usecase-sales.svg" alt="" loading="lazy"></div>
+            </div>
+
+            <div class="usecase-card fade-in-up">
+                <h3><span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg></span> <span data-i18n="usecases.leads.subtitle">Your Business. Summarized. Every Morning.</span></h3>
+                <p data-i18n="usecases.leads.desc">Wake up to a daily briefing: new leads, overdue invoices, today's meetings, pending tasks — all pulled from your mail, calendar and spreadsheets. No more digging through 5 apps to know what's going on.</p>
+                <div class="feature-visual"><img src="images/usecase-briefing.svg" alt="" loading="lazy"></div>
+            </div>
+
+            <div class="usecase-card fade-in-up">
+                <h3><span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg></span> <span data-i18n="usecases.docs.title">Document Processing. On Autopilot.</span></h3>
+                <p data-i18n="usecases.docs.desc">Clients email you documents.
+Your AI reads them,
+understands them,
+extracts what matters,
+and files everything exactly where it belongs.</p>
+                <div class="feature-visual"><img src="images/usecase-docs.svg" alt="" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-heading"><span class="section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/></svg></span> <span data-i18n="testimonials.title">What people are saying</span></h2>
+
+            <div class="testimonial-highlight">
+                <blockquote data-i18n="testimonials.highlight">"Every company today needs to have an OpenClaw strategy."</blockquote>
+                <cite data-i18n="testimonials.highlightAuthor">— Jensen Huang, NVIDIA</cite>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial fade-in-up">
+                    <blockquote data-i18n="testimonials.quote1">"It feels like hiring an employee rather than opening another chat window."</blockquote>
+                    <cite data-i18n="testimonials.quote1Source">— MacStories</cite>
+                </div>
+                <div class="testimonial fade-in-up">
+                    <blockquote data-i18n="testimonials.quote2">"You're solving a problem that people like me probably wouldn't take the time to solve ourselves."</blockquote>
+                    <cite data-i18n="testimonials.quote2Source">— Andrew Blanchard, CEO</cite>
+                </div>
+                <div class="testimonial fade-in-up">
+                    <blockquote data-i18n="testimonials.quote3">"I could have set it up myself, but every self-install I've seen has security gaps. The hardening alone was worth it."</blockquote>
+                    <cite data-i18n="testimonials.quote3Source">— SetupClaw customer, early-stage VC fund</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security-section">
+        <div class="container">
+            <div class="security-box">
+                <div class="security-icon">
+                    <img src="images/shield-check.svg" alt="Security Shield">
+                </div>
+                <h3 data-i18n="security.title">Hacker attack?</h3>
+                <p data-i18n="security.desc">An AI system designed around cybersecurity: using a smart framework, 30 attack threats were simulated across 13 AI databases, with over 60 adversarial tests conducted — all passed. Fully protecting your privacy and network security.</p>
+                <p class="security-note" data-i18n="security.note">Your data is completely isolated. We never sell your data or use it to train AI models.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Hire Us Section -->
+    <section class="why-hire">
+        <div class="container">
+            <h2 class="section-heading"><span class="section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg></span> <span data-i18n="whyHire.title">Why teams hire us</span></h2>
+            <p data-i18n="whyHire.desc">OpenClaw is open-source — you could set it up yourself. But most teams need custom integrations beyond the defaults, and even experienced engineers spend several hours getting everything wired up. Then there's the ongoing maintenance: updates, drift, broken workflows, security patches. We handle all of it — deployed securely from day one, following the official hardening guide, so your team gets leverage instead of another project to maintain.</p>
+        </div>
+    </section>
+
+    <!-- After Purchase Section -->
+    <section class="after-purchase">
+        <div class="container">
+            <h2 class="section-heading"><span class="section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"/></svg></span> <span data-i18n="afterPurchase.title">After you purchase</span></h2>
+            <div class="steps-row">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-label" data-i18n="afterPurchase.step1.time">Within 48 hrs</div>
+                    <p data-i18n="afterPurchase.step1.desc">We reach out to schedule your kickoff call and create a dedicated Telegram group</p>
+                </div>
+                <div class="step-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#dadce0" stroke-width="2" width="24" height="24"><path d="M9 5l7 7-7 7"/></svg>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-label" data-i18n="afterPurchase.step2.time">Kickoff call</div>
+                    <p data-i18n="afterPurchase.step2.desc">20–45 min requirements session: your integrations, workflows, and preferences</p>
+                </div>
+                <div class="step-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#dadce0" stroke-width="2" width="24" height="24"><path d="M9 5l7 7-7 7"/></svg>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-label" data-i18n="afterPurchase.step3.time">Setup session</div>
+                    <p data-i18n="afterPurchase.step3.desc">1–3 hr live build: you go live same day with a working bot on Telegram</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book CTA Section -->
+    <section class="book-cta-section" id="book">
+        <div class="container">
+            <h2 data-i18n="finalCta.title">Ready to get started?</h2>
+            <p data-i18n="finalCta.subtitle">Most customers deploy remotely and are up and running same day.</p>
+            <a href="https://wa.me/85297381028" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right: 8px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span data-i18n="nav.bookCall">Book installation</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-heading"><span class="section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/></svg></span> <span data-i18n="faq.title">Want to learn more?</span></h2>
+            <p class="section-subtitle" data-i18n="faq.subtitle">Here are some answers to common questions.</p>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq.q1.q">What is OpenClaw?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q1.a">An open-source AI assistant that runs 24/7 on dedicated infrastructure. It can triage email, schedule meetings, draft replies, monitor Slack, and automate workflows across your tools — proactively, without you asking. Think of it as a digital employee that never sleeps.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq.q2.q">Do I need to be technical?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q2.a">Not at all. We handle everything — you don't touch a terminal or write any code. Many of our customers are non-technical founders and executives. After setup, you talk to your bot through Telegram (or Slack/WhatsApp) just like texting an assistant.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq.q3.q">Do I need to be in Hong Kong?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q3.a">No. Most customers are remote — we set everything up over a video call regardless of where you are. We have customers across Asia Pacific and beyond. In-person setup is available in Hong Kong.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq.q4.q">Can't I just set it up myself?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q4.a">You can — it's open source. But every self-install we've seen has security gaps: exposed credentials, no audit trail, no sandbox. The installation is straightforward; the hardening is where most teams need help.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq.q5.q">What's included in implementation?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q5.a">VPS or Mac Mini provisioning, security hardening (Docker sandbox, firewall, exec allowlists), OAuth middleware setup, email and calendar integration, up to 3 workflows, documentation, and 14-day hypercare. You go live same day.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq.q6.q">Is it safe to run?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q6.a">It's an AI with access to your email and calendar — so security is critical. We start with read-only permissions, configure Docker sandboxing, and give you an instant kill switch to revoke any integration.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq.q7.q">VPS or Mac Mini?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q7.a">Most customers use a cloud VPS ($5–10/mo) — more secure, easier to maintain. Mac Mini is for teams that need iMessage or prefer owning the hardware (~$600 at cost).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.svg" alt="Luxon HK" class="logo-full">
+                        </a>
+                    </div>
+                    <p data-i18n="footer.tagline">AI Assistant Installation Service</p>
+                    <p><a href="mailto:info@luxon.hk">info@luxon.hk</a></p>
+                </div>
+                <div class="footer-links">
+                    <a href="pricing.html" data-i18n="nav.pricing">Plans</a>
+                    <a href="blog/index.html">Blog</a>
+                    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luxon.hk. <span data-i18n="footer.rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" fill="none">
+  <rect width="640" height="340" rx="16" fill="#f8faf9"/>
+  
+  <!-- Inbox stack left -->
+  <rect x="40" y="80" width="120" height="80" rx="8" fill="#ffffff" stroke="#e8eaed" stroke-width="1"/>
+  <path d="M40 80 L100 120 L160 80" stroke="#e8eaed" stroke-width="1" fill="none"/>
+  <rect x="52" y="96" width="60" height="4" rx="2" fill="#1a1a1a" opacity="0.12"/>
+  <rect x="52" y="106" width="80" height="3" rx="1" fill="#1a1a1a" opacity="0.06"/>
+  
+  <rect x="50" y="70" width="120" height="80" rx="8" fill="#ffffff" stroke="#e8eaed" stroke-width="1.2"/>
+  <path d="M50 70 L110 110 L170 70" stroke="#e8eaed" stroke-width="1" fill="none"/>
+  <rect x="62" y="86" width="60" height="4" rx="2" fill="#1a1a1a" opacity="0.12"/>
+  <rect x="62" y="96" width="80" height="3" rx="1" fill="#1a1a1a" opacity="0.06"/>
+  
+  <rect x="60" y="60" width="120" height="80" rx="8" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.5"/>
+  <path d="M60 60 L120 100 L180 60" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+  <rect x="72" y="76" width="60" height="5" rx="2" fill="#1a1a1a" opacity="0.15"/>
+  <rect x="72" y="86" width="84" height="3" rx="1" fill="#1a1a1a" opacity="0.08"/>
+  
+  <!-- Label -->
+  <text x="120" y="170" font-size="9" fill="#5f6368" text-anchor="middle" font-family="sans-serif">Incoming docs</text>
+  
+  <!-- Arrow to AI -->
+  <path d="M200 100 L260 100" stroke="#10b981" stroke-width="2.5" stroke-dasharray="8 5"/>
+  <path d="M254 94 L264 100 L254 106" stroke="#10b981" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- AI processing center -->
+  <rect x="270" y="40" width="120" height="120" rx="20" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="330" cy="88" r="28" fill="#f0fdf4"/>
+  <circle cx="330" cy="88" r="16" fill="#10b981" opacity="0.15"/>
+  <circle cx="330" cy="88" r="6" fill="#10b981" opacity="0.4"/>
+  <!-- Connection dots -->
+  <circle cx="306" cy="64" r="4" fill="#10b981" opacity="0.2"/>
+  <circle cx="354" cy="64" r="4" fill="#10b981" opacity="0.2"/>
+  <circle cx="306" cy="112" r="4" fill="#10b981" opacity="0.2"/>
+  <circle cx="354" cy="112" r="4" fill="#10b981" opacity="0.2"/>
+  <!-- Lines from center to dots -->
+  <line x1="314" y1="76" x2="308" y2="68" stroke="#10b981" stroke-width="1" opacity="0.2"/>
+  <line x1="346" y1="76" x2="352" y2="68" stroke="#10b981" stroke-width="1" opacity="0.2"/>
+  <line x1="314" y1="100" x2="308" y2="108" stroke="#10b981" stroke-width="1" opacity="0.2"/>
+  <line x1="346" y1="100" x2="352" y2="108" stroke="#10b981" stroke-width="1" opacity="0.2"/>
+  
+  <text x="330" y="140" font-size="8" fill="#5f6368" text-anchor="middle" font-family="sans-serif">AI Processing</text>
+  
+  <!-- Arrow to output -->
+  <path d="M400 100 L460 100" stroke="#10b981" stroke-width="2.5" stroke-dasharray="8 5"/>
+  <path d="M454 94 L464 100 L454 106" stroke="#10b981" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Output: organized folders -->
+  <rect x="470" y="30" width="140" height="80" rx="12" fill="#ffffff" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="470" y="30" width="36" height="14" rx="4" fill="#10b981" opacity="0.12"/>
+  <path d="M488 44 L540 44" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+  <text x="530" y="66" font-size="20" fill="#10b981" text-anchor="middle" font-family="sans-serif">✓</text>
+  <text x="530" y="82" font-size="8" fill="#1a1a1a" text-anchor="middle" font-family="sans-serif" opacity="0.5">Filed &amp; tagged</text>
+  <text x="540" y="100" font-size="8" fill="#5f6368" text-anchor="middle" font-family="sans-serif">Invoices</text>
+  
+  <rect x="470" y="126" width="140" height="80" rx="12" fill="#ffffff" stroke="#5f6368" stroke-width="1" opacity="0.6"/>
+  <rect x="470" y="126" width="36" height="14" rx="4" fill="#5f6368" opacity="0.06"/>
+  <text x="530" y="162" font-size="20" fill="#5f6368" text-anchor="middle" font-family="sans-serif" opacity="0.4">✓</text>
+  <text x="540" y="196" font-size="8" fill="#5f6368" text-anchor="middle" font-family="sans-serif">Contracts</text>
+  
+  <!-- Extracted data at bottom -->
+  <rect x="270" y="200" width="120" height="48" rx="10" fill="#ffffff" stroke="#e8eaed" stroke-width="1.5"/>
+  <text x="330" y="216" font-size="8" fill="#10b981" text-anchor="middle" font-family="sans-serif" font-weight="600">Extracted Data</text>
+  <rect x="286" y="224" width="60" height="4" rx="2" fill="#10b981" opacity="0.3"/>
+  <rect x="286" y="232" width="88" height="3" rx="1" fill="#1a1a1a" opacity="0.06"/>
+  <rect x="286" y="238" width="48" height="3" rx="1" fill="#1a1a1a" opacity="0.04"/>
+  
+  <!-- Arrows from AI to data and folders -->
+  <path d="M330 160 L330 200" stroke="#10b981" stroke-width="1" stroke-dasharray="4 3" opacity="0.4"/>
+  <path d="M390 88 L470 70" stroke="#10b981" stroke-width="1" stroke-dasharray="4 3" opacity="0.4"/>
+  <path d="M390 100 L470 160" stroke="#10b981" stroke-width="1" stroke-dasharray="4 3" opacity="0.3"/>
+</svg>
