@@ -5,7 +5,7 @@
     const SEND = document.getElementById('chatSend');
     const MESSAGES = document.getElementById('chatMessages');
     const WIDGET = document.getElementById('luxon-chat');
-    const API_URL = 'https://luxon-chat.lesterkong.workers.dev/chat';
+    const API_URL = 'https://chat.luxon.hk/chat';
     const MAX_HISTORY = 20;
 
     if (!TOGGLE || !PANEL || !INPUT || !SEND || !MESSAGES || !WIDGET) return;
