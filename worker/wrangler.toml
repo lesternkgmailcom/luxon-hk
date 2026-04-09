@@ -1,0 +1,7 @@
+name = "luxon-chat"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+MODEL = "glm-4.5-air"
+MAX_TOKENS = "512"
