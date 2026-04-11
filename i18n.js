@@ -144,8 +144,8 @@ window.translations = {
         "pricing.cta.button": "Book Free Consultation",
 
         // Learn
-        "learn.title": "8 Things Most People<br>Get Wrong About AI",
-        "learn.subtitle": "Short, visual lessons based on real beginner mistakes. No jargon, no coding — just practical tips you can use today.",
+        "learn.title": "AI Crash Course: 8 Lessons",
+        "learn.subtitle": "An AI developer teaches you 8 techniques for communicating with AI. Tackles beginner mistakes head-on — use them today.",
         "learn.cta.title": "Want us to set this up for you?",
         "learn.cta.subtitle": "We configure your AI assistant with personalization, projects, and workflows — all in one session.",
         "learn.cta.mini": "Want this set up for you?",
@@ -746,8 +746,8 @@ window.translations = {
         "pricing.cta.button": "預約免費諮詢",
 
         // Learn
-        "learn.title": "8 個大多數人<br>對 AI 的誤解",
-        "learn.subtitle": "簡短、視覺化的課程，基於真實的新手錯誤。無術語、無程式碼 — 只有你今天就能用的實用技巧。",
+        "learn.title": "AI 速成 8 堂課",
+        "learn.subtitle": "由 AI 開發工程師，教你 8 個跟 AI 溝通的技巧。直擊新手錯誤，馬上用得着。",
         "learn.cta.title": "需要我們幫你設定嗎？",
         "learn.cta.subtitle": "我們為你的 AI 助手配置個人化設定、專案和工作流程 — 一次搞定。",
         "learn.cta.mini": "需要我們幫你設定嗎？",
@@ -1347,8 +1347,8 @@ window.translations = {
         "pricing.cta.button": "预约免费咨询",
 
         // Learn
-        "learn.title": "8 个大多数人<br>对 AI 的误解",
-        "learn.subtitle": "简短、可视化的课程，基于真实的新手错误。无术语、无代码 — 只有你今天就能用的实用技巧。",
+        "learn.title": "AI 速成 8 堂课",
+        "learn.subtitle": "由 AI 开发工程师，教你 8 个跟 AI 沟通的技巧。直击新手错误，马上用得着。",
         "learn.cta.title": "需要我们帮你设置吗？",
         "learn.cta.subtitle": "我们为你的 AI 助手配置个性化设置、项目和工作流程 — 一次搞定。",
         "learn.cta.mini": "需要我们帮你设置吗？",
