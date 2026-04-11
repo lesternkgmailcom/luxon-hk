@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My AI knows my resting heart rate, HRV, sleep score, and training load history. It acts as my personal trainer — analyzing recovery, recommending workouts, and tracking form. Same AI that handles my emails and contracts.">
+    <meta property="og:title" content="My AI knows my resting heart rate. It told me to go all-out. — Luxon HK">
+    <meta property="og:description" content="The same AI that reads my emails, signs my contracts, and books my Pilates classes also acts as my personal trainer — analyzing training load, HRV, and recovery data.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.luxon.hk/blog/ai-personal-trainer.html">
+    <meta property="og:image" content="https://luxon.hk/images/blog-ai-coach.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9BMR3XD45"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H9BMR3XD45');
+    </script>
+    <title>My AI knows my resting heart rate. It told me to go all-out. — Luxon HK</title>
+    <link rel="stylesheet" href="../styles.css?v=7">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.svg" alt="Luxon HK" class="logo-full">
+                </a>
+            </div>
+            <nav class="nav" id="mainNav">
+                <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+                <a href="index.html" style="color:#1a1a1a;font-weight:600;" data-i18n="nav.blog">AI Living</a>
+                <a href="../learn/index.html" data-i18n="nav.learn">Learn</a>
+                <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+            </nav>
+            <div class="header-actions">
+                <div class="language-selector" id="langSelector">
+                    <button class="lang-icon-btn" aria-label="Change language">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-option active" data-lang="en">English</button>
+                        <button class="lang-option" data-lang="zh-HK">繁體中文</button>
+                        <button class="lang-option" data-lang="zh-CN">简体中文</button>
+                    </div>
+                </div>
+                <button class="hamburger-btn" aria-label="Toggle menu" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="Luxon HK" class="logo-full">
+            </div>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+            <a href="index.html" style="color:#1a1a1a;font-weight:600;" data-i18n="nav.blog">AI Living</a>
+            <a href="../learn/index.html" data-i18n="nav.learn">Learn</a>
+            <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="https://wa.me/85297381028" class="btn btn-primary" data-i18n="nav.bookCall">Book installation</a>
+        </div>
+    </div>
+
+    <!-- Blog Post -->
+    <section class="blog-post">
+        <div class="blog-post__header">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
+                <span data-i18n="blog.backToBlog">Back to AI Living</span>
+            </a>
+            <span class="blog-post__tag blog-post__tag--green" data-i18n="blog.coach.tag">Lifestyle</span>
+            <h1 class="blog-post__title" data-i18n="blog.coach.title">My AI knows my resting heart rate. It told me to go all-out.</h1>
+            <p class="blog-post__subtitle" data-i18n="blog.coach.subtitle">The same AI that reads my emails, signs my contracts, and books my Pilates classes also acts as my personal trainer — analyzing training load, HRV, and recovery data.</p>
+            <div class="blog-post__meta">
+                <span data-i18n="blog.coach.dateFull">April 2026</span>
+                <span>·</span>
+                <span data-i18n="blog.readTime">2 min read</span>
+            </div>
+        </div>
+
+        <div class="blog-post__hero-image">
+            <img src="../images/blog-ai-coach.png" alt="AI analyzing training data with fitness/fatigue/form chart">
+        </div>
+
+        <div class="blog-post__content">
+            <p data-i18n="blog.coach.p1">My AI knows my resting heart rate, my HRV, my sleep score, and my training load history. It told me this morning:</p>
+
+            <blockquote>
+                <p data-i18n="blog.coach.quote1">"You're NOT detrained. CTL of 29 is solid — not your peak of 37, but not a rebuild situation either."</p>
+            </blockquote>
+
+            <p data-i18n="blog.coach.p2">Then it checked my recovery metrics — resting HR of 49, HRV of 53, sleep score of 94 — and said:</p>
+
+            <blockquote>
+                <p data-i18n="blog.coach.quote2">"Your body is in great shape for intervals. Go all-out tomorrow. Just don't stack multiple high-load days without a recovery day."</p>
+            </blockquote>
+
+            <div class="blog-post__inline-image">
+                <img src="../images/blog-ai-coach-1.png" alt="AI analyzing training load, CTL, ATL, form, and recovery metrics" loading="lazy">
+            </div>
+
+            <h2 data-i18n="blog.coach.h2NotFitness">This isn't a fitness app</h2>
+
+            <p data-i18n="blog.coach.p3">This is my AI assistant — the same one that reads my emails, signs my contracts, and books my Pilates classes. It just happens to know my training data too.</p>
+
+            <p data-i18n="blog.coach.p4">How? Because it has access to my health data. It pulls my training metrics, understands the context (what I've been training for, when my next event is), and gives me <em>personalized</em> advice — not generic "get more sleep" tips.</p>
+
+            <div class="blog-post__inline-image">
+                <img src="../images/blog-ai-coach-2.png" alt="AI recommending interval training with load history analysis" loading="lazy">
+            </div>
+
+            <h2 data-i18n="blog.coach.h2OneAssistant">One AI, every part of my life</h2>
+
+            <p data-i18n="blog.coach.p5">The point isn't that AI can be a fitness coach. The point is that <strong>one assistant</strong> handles everything:</p>
+
+            <ul>
+                <li data-i18n="blog.coach.else1"><strong>Work</strong> — reads my emails, drafts replies, signs contracts, manages my calendar</li>
+                <li data-i18n="blog.coach.else2"><strong>Life</strong> — books Pilates, makes reservations, tracks flights</li>
+                <li data-i18n="blog.coach.else3"><strong>Health</strong> — analyzes my training load, recovery metrics, and recommends workouts</li>
+                <li data-i18n="blog.coach.else4"><strong>Finance</strong> — sends me daily market briefings, stock price alerts, commodity tracking</li>
+            </ul>
+
+            <p data-i18n="blog.coach.p6">No app switching. No data silos. No separate logins for 10 different tools.</p>
+
+            <div class="blog-post__inline-image">
+                <img src="../images/blog-ai-coach-3.png" alt="Training load chart showing fitness, fatigue, and form over 5 weeks" loading="lazy">
+            </div>
+
+            <h2 data-i18n="blog.coach.h2Difference">The difference between 10 apps and 1 assistant</h2>
+
+            <p data-i18n="blog.coach.p7">I used to have a training app, an email app, a calendar app, a note-taking app, a finance app, a booking app... Each one isolated. None of them connected.</p>
+
+            <p data-i18n="blog.coach.p8">Now I have one AI that connects them all. When my AI tells me to go all-out tomorrow, it already knows I don't have early meetings. When it books my Pilates class, it already knows my training load that day.</p>
+
+            <p data-i18n="blog.coach.p9">That context is what makes it different. Not smarter algorithms — just <em>more context</em> about your life.</p>
+
+            <h2 data-i18n="blog.coach.h2HowItWorks">How it works</h2>
+
+            <p data-i18n="blog.coach.p10">The setup is simple:</p>
+
+            <div class="highlight-box">
+                <p data-i18n="blog.coach.step1"><strong>1. Connect your data</strong> — give your AI access to the apps and data sources you already use (email, calendar, health, fitness)</p>
+                <p data-i18n="blog.coach.step2"><strong>2. Tell it what you need</strong> — in plain language, describe your goals, preferences, and routines</p>
+                <p data-i18n="blog.coach.step3"><strong>3. It learns and adapts</strong> — every interaction makes it better. It remembers your patterns and builds context over time</p>
+            </div>
+
+            <p data-i18n="blog.coach.p11">No coding. No complex setup. Just a conversation.</p>
+
+            <h2 data-i18n="blog.coach.h2Point">The point</h2>
+
+            <p data-i18n="blog.coach.p12">An AI assistant isn't a fitness tracker, an email client, or a calendar. It's <em>one thing</em> that understands all of them together — and uses that understanding to actually help you, across every part of your life.</p>
+
+            <p data-i18n="blog.coach.p13">That's what we set up for people. Not a tool you have to learn — an assistant that learns you.</p>
+        </div>
+
+        <!-- CTA -->
+        <div class="blog-cta">
+            <h3 data-i18n="blog.coach.ctaTitle">Want an AI that connects everything in your life?</h3>
+            <p data-i18n="blog.coach.ctaDesc">We set up your personal AI assistant with access to your email, calendar, health data, and more. One session, same day.</p>
+            <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <span data-i18n="nav.bookCall">Book installation</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../images/logo.svg" alt="Luxon HK" class="logo-full">
+                        </a>
+                    </div>
+                    <p data-i18n="footer.tagline">AI Assistant Installation Service</p>
+                    <p><a href="mailto:info@luxon.hk">info@luxon.hk</a></p>
+                </div>
+                <div class="footer-links">
+                    <a href="../pricing.html" data-i18n="nav.pricing">Plans</a>
+                    <a href="index.html" data-i18n="nav.blog">AI Living</a>
+                    <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luxon.hk. <span data-i18n="footer.rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../i18n.js?v=7"></script>
+    <script src="../script.js?v=7"></script>
+</body>
+</html>
