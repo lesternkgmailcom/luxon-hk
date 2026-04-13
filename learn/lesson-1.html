@@ -18,7 +18,8 @@
       gtag('config', 'G-H9BMR3XD45');
     </script>
     <title>AI vs Google Search — Luxon Learn</title>
-    <link rel="stylesheet" href="../styles.css?v=4">
+    <link rel="stylesheet" href="../styles.css?v=5">
+    <link rel="stylesheet" href="../chat-story.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -79,71 +80,221 @@
         <p class="lesson-subtitle" data-i18n="learn.l1.subtitle">Why giving AI more context gets you dramatically better results.</p>
     </section>
 
-    <div class="lesson-content">
-        
-    <!-- Visual: Before/After -->
-    <div class="lesson-visual">
-        <svg viewBox="0 0 640 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Google-style short query -->
-            <rect x="20" y="40" width="280" height="200" rx="16" fill="#f8f9fa" stroke="#e8eaed"/>
-            <text x="40" y="72" font-family="Inter,sans-serif" font-size="11" fill="#dc2626" font-weight="700" data-i18n="learn.l1.svg.googleHabit">❌ GOOGLE HABIT</text>
-            <rect x="40" y="90" width="200" height="32" rx="8" fill="#fff" stroke="#dadce0"/>
-            <text x="56" y="112" font-family="monospace" font-size="13" fill="#5f6368" data-i18n="learn.l1.svg.googleQuery">EV comparison</text>
-            <rect x="40" y="140" width="240" height="12" rx="4" fill="#e8eaed"/>
-            <rect x="40" y="160" width="200" height="12" rx="4" fill="#e8eaed"/>
-            <rect x="40" y="180" width="220" height="12" rx="4" fill="#e8eaed"/>
-            <text x="40" y="216" font-family="Inter,sans-serif" font-size="11" fill="#80868b" data-i18n="learn.l1.svg.googleResult">Generic results. Not specific to you.</text>
+    <!-- Chat Story -->
+    <div class="chat-story" role="region" aria-label="Interactive lesson">
 
-            <!-- AI-style detailed query -->
-            <rect x="340" y="40" width="280" height="200" rx="16" fill="#f0fdf4" stroke="#bbf7d0"/>
-            <text x="360" y="72" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="700" data-i18n="learn.l1.svg.aiStyle">✓ AI STYLE</text>
-            <rect x="360" y="90" width="240" height="56" rx="8" fill="#fff" stroke="#86efac"/>
-            <text x="372" y="108" font-family="Inter,sans-serif" font-size="10" fill="#3c4043" data-i18n="learn.l1.svg.aiQuery1">I'm comparing EVs for a family of 4</text>
-            <text x="372" y="122" font-family="Inter,sans-serif" font-size="10" fill="#3c4043" data-i18n="learn.l1.svg.aiQuery2">in HK. Budget HK$300k. Need boot</text>
-            <text x="372" y="136" font-family="Inter,sans-serif" font-size="10" fill="#3c4043" data-i18n="learn.l1.svg.aiQuery3">space for 2 strollers. Prefer white.</text>
-            <rect x="360" y="160" width="240" height="12" rx="4" fill="#86efac"/>
-            <rect x="360" y="180" width="220" height="12" rx="4" fill="#86efac"/>
-            <rect x="360" y="200" width="200" height="12" rx="4" fill="#86efac"/>
-            <text x="360" y="232" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="600" data-i18n="learn.l1.svg.aiResult">Specific, personalized results ✓</text>
-
-            <!-- Arrow -->
-            <path d="M310 140 L330 140" stroke="#4285f4" stroke-width="2" marker-end="url(#arrowhead)"/>
-            <defs><marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4285f4"/></marker></defs>
-        </svg>
-        <p class="lesson-visual-caption" data-i18n="learn.l1.visualCaption">Same question — two different approaches. The longer one gets dramatically better answers.</p>
-    </div>
-
-    <!-- Steps -->
-    <div class="lesson-steps">
-        <div class="lesson-step">
-            <div class="lesson-step__number">1</div>
-            <div class="lesson-step__content">
-                <h3 data-i18n="learn.l1.step1.title">The problem: thinking like Google</h3>
-                <p data-i18n="learn.l1.step1.text">Most people type short keywords into AI, like they're searching Google. "EV comparison" or "write email." AI is not a search engine — it's a conversation partner. The more context you give, the better it understands what you actually need.</p>
+        <!-- Act 1: The Google Habit -->
+        <div class="chat-story__group">
+            <div class="chat-story__bubble chat-story__bubble--user">
+                <div class="chat-story__avatar chat-story__avatar--user">L</div>
+                <div>
+                    <div class="chat-story__meta chat-story__meta--user">
+                        <span class="chat-story__label" data-i18n="learn.l1.youLabel">You</span>
+                        <span class="chat-story__time">10:02 AM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat1.user">EV comparison</div>
+                </div>
+            </div>
+            <div class="chat-story__typing">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+            </div>
+            <div class="chat-story__bubble chat-story__bubble--ai">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div>
+                    <div class="chat-story__meta">
+                        <span class="chat-story__label" data-i18n="learn.l1.aiLabel">AI</span>
+                        <span class="chat-story__time">10:02 AM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat1.ai">Sure! Here are some popular electric vehicles on the market:<br><br>🚗 Tesla Model 3 — from ~HK$280k<br>🚗 BYD Atto 3 — from ~HK$190k<br>🚗 BMW iX3 — from ~HK$380k<br>🚗 Hyundai Ioniq 5 — from ~HK$300k<br><br>Would you like me to compare specific models?</div>
+                </div>
             </div>
         </div>
-        <div class="lesson-step">
-            <div class="lesson-step__number">2</div>
-            <div class="lesson-step__content">
-                <h3 data-i18n="learn.l1.step2.title">The fix: use the Task + Context formula</h3>
-                <p data-i18n="learn.l1.step2.text">Every good AI prompt has two parts: <strong>what you want done</strong> and <strong>what the AI needs to know</strong>. Think of it like briefing a new employee — they can't read your mind, but if you tell them your situation, they'll nail it.</p>
+
+        <!-- Narration -->
+        <div class="chat-story__narration is-visible">
+            <p data-i18n="learn.l1.narr1"><strong>That's how most people talk to AI.</strong> Short keywords. Like a Google search. And the AI gives you… a Google search result. Generic. Not wrong — just not useful.</p>
+        </div>
+
+        <!-- Spacer: the scroll moment -->
+        <div class="chat-story__spacer"></div>
+
+        <!-- Act 2: The Right Way -->
+        <div class="chat-story__group">
+            <div class="chat-story__divider">
+                <span class="chat-story__divider-text" data-i18n="learn.l1.divider1">Try again</span>
+            </div>
+            <div class="chat-story__bubble chat-story__bubble--user">
+                <div class="chat-story__avatar chat-story__avatar--user">L</div>
+                <div>
+                    <div class="chat-story__meta chat-story__meta--user">
+                        <span class="chat-story__label" data-i18n="learn.l1.youLabel">You</span>
+                        <span class="chat-story__time">10:05 AM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat2.user">I'm comparing EVs for a family of 4 in Hong Kong. Budget HK$300k. Need boot space for 2 strollers. Prefer white. We do mostly city driving, occasional trips to Shenzhen. What are my best options?</div>
+                </div>
+            </div>
+            <div class="chat-story__typing">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+            </div>
+            <div class="chat-story__bubble chat-story__bubble--ai">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div>
+                    <div class="chat-story__meta">
+                        <span class="chat-story__label" data-i18n="learn.l1.aiLabel">AI</span>
+                        <span class="chat-story__time">10:05 AM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat2.ai">Based on your situation, here's what I'd narrow it to:<br><br>🥇 <strong>BYD Seal</strong> — HK$259k, 540L boot (fits 2 strollers), available in white, great for city + cross-border charging network<br><br>🥈 <strong>Tesla Model 3 Highland</strong> — HK$265k, 682L boot, Supercharger network across HK + Shenzhen, white available<br><br>🥉 <strong>Hyundai Ioniq 5</strong> — HK$299k, 531L boot, V2L can power appliances during Shenzhen trips<br><br>Want me to compare insurance costs or depreciation for these three?</div>
+                </div>
             </div>
         </div>
-        <div class="lesson-step">
-            <div class="lesson-step__number">3</div>
-            <div class="lesson-step__content">
-                <h3 data-i18n="learn.l1.step3.title">Include your constraints</h3>
-                <p data-i18n="learn.l1.step3.text">Budget, timeline, audience, format — these filters turn a generic answer into a useful one. "Summarize this" vs "Summarize this in 3 bullet points for a non-technical manager" produces completely different (and better) results.</p>
+
+        <!-- Narration: The Formula -->
+        <div class="chat-story__narration is-visible">
+            <p data-i18n="learn.l1.narr2">Same question. One is <strong>3 words</strong>. The other is <strong>3 sentences</strong>. The second answer is 10x more useful. The secret? <strong>Task + Context.</strong></p>
+        </div>
+
+        <!-- Spacer -->
+        <div class="chat-story__spacer"></div>
+
+        <!-- Act 3: Work Email Example -->
+        <div class="chat-story__group">
+            <div class="chat-story__divider">
+                <span class="chat-story__divider-text" data-i18n="learn.l1.divider2">Same mistake at work</span>
+            </div>
+            <div class="chat-story__bubble chat-story__bubble--user">
+                <div class="chat-story__avatar chat-story__avatar--user">L</div>
+                <div>
+                    <div class="chat-story__meta chat-story__meta--user">
+                        <span class="chat-story__label" data-i18n="learn.l1.youLabel">You</span>
+                        <span class="chat-story__time">2:30 PM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat3.user">Write an email about the delayed shipment</div>
+                </div>
+            </div>
+            <div class="chat-story__typing">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+            </div>
+            <div class="chat-story__bubble chat-story__bubble--ai">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div>
+                    <div class="chat-story__meta">
+                        <span class="chat-story__label" data-i18n="learn.l1.aiLabel">AI</span>
+                        <span class="chat-story__time">2:30 PM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat3.ai">I'd be happy to help! Could you tell me:<br><br>• Who is this going to?<br>• What was delayed and why?<br>• What's the new timeline?<br>• What tone do you want — formal, friendly, urgent?</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Tip -->
-    <div class="lesson-tip">
-        <div class="lesson-tip__icon">💡</div>
-        <div class="lesson-tip__text" data-i18n="learn.l1.tip"><strong>Try this now:</strong> Open your AI and ask it the same question you normally would. Then re-ask with 3x more context. Compare the results. The difference is usually shocking.</div>
-    </div>
+        <div class="chat-story__narration is-visible">
+            <p data-i18n="learn.l1.narr3">The AI is asking you the questions it needs. But you already know the answers. <strong>Why not give them all at once?</strong></p>
+        </div>
 
+        <!-- Spacer -->
+        <div class="chat-story__spacer"></div>
+
+        <!-- Act 4: The Complete Version -->
+        <div class="chat-story__group">
+            <div class="chat-story__divider">
+                <span class="chat-story__divider-text" data-i18n="learn.l1.divider3">Here's how it should look</span>
+            </div>
+            <div class="chat-story__bubble chat-story__bubble--user">
+                <div class="chat-story__avatar chat-story__avatar--user">L</div>
+                <div>
+                    <div class="chat-story__meta chat-story__meta--user">
+                        <span class="chat-story__label" data-i18n="learn.l1.youLabel">You</span>
+                        <span class="chat-story__time">2:35 PM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat4.user">Write an email to my supplier in Shenzhen about the delayed shipment. Container was supposed to arrive last Friday, now they say next Wednesday. Our warehouse is in Tuen Mun. Tone: firm but professional. Ask for an explanation and updated ETA. CC our logistics manager David.</div>
+                </div>
+            </div>
+            <div class="chat-story__typing">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+            </div>
+            <div class="chat-story__bubble chat-story__bubble--ai">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div>
+                    <div class="chat-story__meta">
+                        <span class="chat-story__label" data-i18n="learn.l1.aiLabel">AI</span>
+                        <span class="chat-story__time">2:35 PM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat4.ai">Done. Here's the draft:<br><br>---<br><br>Dear [Supplier Name],<br><br>We note that container [number], originally scheduled for arrival on April 11th, has been rescheduled to April 16th without prior notification.<br><br>As this delay impacts our delivery commitments, we would appreciate an explanation for the revised timeline and confirmation that the new ETA of April 16th is firm.<br><br>Our warehouse is located in Tuen Mun — please ensure the delivery booking reflects this.<br><br>We look forward to your prompt response.<br><br>Best regards<br>[Your Name]<br><br>---<br><br>Want me to adjust the tone or add anything?</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Narration: Constraints -->
+        <div class="chat-story__narration is-visible">
+            <p data-i18n="learn.l1.narr4">Every good prompt has two parts: <strong>what you want done</strong> and <strong>what the AI needs to know</strong>. Budget, timeline, audience, tone, format — these filters turn a generic answer into a useful one.</p>
+        </div>
+
+        <!-- Spacer -->
+        <div class="chat-story__spacer"></div>
+
+        <!-- Act 5: Constraint Example -->
+        <div class="chat-story__group">
+            <div class="chat-story__divider">
+                <span class="chat-story__divider-text" data-i18n="learn.l1.divider4">Constraints change everything</span>
+            </div>
+            <div class="chat-story__bubble chat-story__bubble--user">
+                <div class="chat-story__avatar chat-story__avatar--user">L</div>
+                <div>
+                    <div class="chat-story__meta chat-story__meta--user">
+                        <span class="chat-story__label" data-i18n="learn.l1.youLabel">You</span>
+                        <span class="chat-story__time">4:10 PM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat5.user">Summarize this meeting</div>
+                </div>
+            </div>
+            <div class="chat-story__typing">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+            </div>
+            <div class="chat-story__bubble chat-story__bubble--ai">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div>
+                    <div class="chat-story__meta">
+                        <span class="chat-story__label" data-i18n="learn.l1.aiLabel">AI</span>
+                        <span class="chat-story__time">4:10 PM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat5.ai">Here's a summary of the meeting...<br><br>[A 500-word summary covering everything equally, because you didn't tell the AI what mattered]</div>
+                </div>
+            </div>
+            <div class="chat-story__bubble chat-story__bubble--user" style="margin-top: 24px;">
+                <div class="chat-story__avatar chat-story__avatar--user">L</div>
+                <div>
+                    <div class="chat-story__meta chat-story__meta--user">
+                        <span class="chat-story__label" data-i18n="learn.l1.youLabel">You</span>
+                        <span class="chat-story__time">4:12 PM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat5b.user">Summarize this meeting in 3 bullet points. Focus on action items and deadlines. This is for my boss who wasn't there — keep it under 150 words.</div>
+                </div>
+            </div>
+            <div class="chat-story__typing">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+            </div>
+            <div class="chat-story__bubble chat-story__bubble--ai">
+                <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+                <div>
+                    <div class="chat-story__meta">
+                        <span class="chat-story__label" data-i18n="learn.l1.aiLabel">AI</span>
+                        <span class="chat-story__time">4:12 PM</span>
+                    </div>
+                    <div class="chat-story__bubble-inner" data-i18n="learn.l1.chat5b.ai"><strong>Meeting Summary — April 13</strong><br><br>• <strong>Q2 shipment target confirmed:</strong> 200 containers by June 30. David to finalize routing by Friday.<br><br>• <strong>New supplier onboarded:</strong> Shenzhen FastLogistics approved for HK routes. Trial run next week.<br><br>• <strong>Pricing review:</strong> Rate increase request from main carrier — decision needed by April 20.<br><br>95 words. Ready to forward.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tip (kept from original) -->
+        <div class="lesson-tip">
+            <div class="lesson-tip__icon">💡</div>
+            <div class="lesson-tip__text" data-i18n="learn.l1.tip"><strong>Try this now:</strong> Open your AI and ask it the same question you normally would. Then re-ask with 3x more context. Compare the results. The difference is usually shocking.</div>
+        </div>
 
         <!-- CTA -->
         <div class="lesson-cta">
@@ -179,7 +330,8 @@
         </div>
     </footer>
 
-    <script src="../i18n.js"></script>
-    <script src="../script.js"></script>
+    <script src="../i18n.js?v=8"></script>
+    <script src="../script.js?v=8"></script>
+    <script src="../chat-story.js?v=1"></script>
 </body>
 </html>
