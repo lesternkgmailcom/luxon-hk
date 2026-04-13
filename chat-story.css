@@ -22,12 +22,12 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #1d9bf0, #6366f1);
+  background: linear-gradient(90deg, #1a9a5c, #6b21a8);
 }
 
 .lesson-chapter-box__badge {
   display: inline-block;
-  background: #1d9bf0;
+  background: #1a9a5c;
   color: #fff;
   font-size: 0.6875rem;
   font-weight: 700;
@@ -137,12 +137,12 @@
 }
 
 .chat-story__avatar--ai {
-  background: #1d9bf0;
+  background: #1a9a5c;
   color: #fff;
 }
 
 .chat-story__avatar--user {
-  background: #536471;
+  background: #6b21a8;
   color: #fff;
 }
 
@@ -158,17 +158,17 @@
 
 /* AI bubble: left, Economist blue */
 .chat-story__bubble--ai .chat-story__bubble-inner {
-  background: #e7f5ff;
+  background: #eef7f1;
   border-bottom-left-radius: 6px;
   color: #0f1419;
 }
 
-/* User bubble: right, Economist dark */
+/* User bubble: right, purple */
 .chat-story__bubble--user .chat-story__bubble-inner {
-  background: #1d9bf0;
+  background: #6b21a8;
   border-bottom-right-radius: 6px;
   color: #ffffff;
-  box-shadow: 0 1px 3px rgba(29, 155, 240, 0.3);
+  box-shadow: 0 1px 3px rgba(107, 33, 168, 0.3);
 }
 
 /* ---------- Bubble Meta (timestamp, label) ---------- */
@@ -214,7 +214,7 @@
 }
 
 .chat-story__typing-dots {
-  background: #e7f5ff;
+  background: #eef7f1;
   border-radius: 18px;
   border-bottom-left-radius: 6px;
   padding: 14px 20px;
@@ -226,7 +226,7 @@
 .chat-story__typing-dots span {
   width: 6px;
   height: 6px;
-  background: #1d9bf0;
+  background: #1a9a5c;
   border-radius: 50%;
   animation: chatStoryBounce 1.4s ease-in-out infinite;
 }
@@ -271,7 +271,7 @@
 .chat-story__divider-text {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #1d9bf0;
+  color: #1a9a5c;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   white-space: nowrap;
