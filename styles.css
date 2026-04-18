@@ -247,7 +247,7 @@ button {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   line-height: 1.15;
-  color: #1a1a1a;
+  color: #C4956A;
   letter-spacing: -0.03em;
   margin-bottom: 20px;
 }
@@ -501,6 +501,13 @@ button {
 .section-usecases .container--wide,
 .section-usecases .container {
   max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.section-usecases .container > h2.section-heading {
+  grid-column: 1 / -1;
 }
 
 .usecase-grid {
@@ -1053,6 +1060,10 @@ button {
     padding: 24px;
   }
 
+  .section-usecases .container {
+    grid-template-columns: 1fr;
+  }
+
   .testimonial {
     padding: 20px;
   }
@@ -1140,7 +1151,7 @@ button {
   letter-spacing: -0.02em;
   line-height: 1.2;
   margin-bottom: 24px;
-  color: #1a1a1a;
+  color: #C4956A;
   text-align: left;
   display: flex;
   align-items: center;
@@ -1239,7 +1250,7 @@ button {
   font-size: 2.25rem;
   font-weight: 500;
   margin-bottom: 12px;
-  color: #1a1a1a;
+  color: #C4956A;
 }
 .book-cta-section p {
   font-size: 1.0625rem;
