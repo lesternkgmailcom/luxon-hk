@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="zh-HK" title="AI vs Google 搜尋 — Luxon Learn" description="為什麼俾 AI 多啲背景資料，結果會好好多。">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/learn/learn-styles.css" />
+    <link rel="stylesheet" href="/chat-story.css" />
+  </Fragment>
+
+  <!-- Lesson Hero — Chapter Headline -->
+  <section class="lesson-hero">
+    <div class="lesson-breadcrumb">
+      <a href="/zh-HK/learn">Learn</a>
+      <span>/</span>
+      <span>第 1 課</span>
+    </div>
+    <div class="lesson-chapter-box">
+      <div class="lesson-chapter-box__badge">入門</div>
+      <h1>AI vs Google 搜尋</h1>
+      <p class="lesson-chapter-box__sub">為什麼俾 AI 多啲背景資料，結果會好好多。</p>
+    </div>
+  </section>
+
+  <!-- Chat Story -->
+  <div class="chat-story" role="region" aria-label="Interactive lesson">
+
+    <!-- Act 1: The Google Habit -->
+    <div class="chat-story__group">
+      <div class="chat-story__bubble chat-story__bubble--user">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">10:02 AM</span>
+          </div>
+          <div class="chat-story__bubble-inner">電車比較</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">10:02 AM</span>
+          </div>
+          <div class="chat-story__bubble-inner">好！以下係市面上熱門嘅電動車：<br><br>🚗 Tesla Model 3 — 約 HK$280k 起<br>🚗 BYD Atto 3 — 約 HK$190k 起<br>🚗 BMW iX3 — 約 HK$380k 起<br>🚗 Hyundai Ioniq 5 — 約 HK$300k 起<br><br>想我幫你比較特定型號嗎？</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Narration -->
+    <div class="chat-story__narration is-visible">
+      <p><strong>好多人就係咁同 AI 傾偈。</strong>短短幾個關鍵字。好似 Google 搜尋噉。結果 AI 畀你嘅……同 Google 搜尋結果一樣。冇錯 — 但冇用。</p>
+    </div>
+
+    <!-- Act 2: The Right Way -->
+    <div class="chat-story__group">
+      <div class="chat-story__divider">
+        <span class="chat-story__divider-text">再試一次</span>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--user">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">10:05 AM</span>
+          </div>
+          <div class="chat-story__bubble-inner">我喺香港想比較家庭用電動車，一家四口。預算 HK$300k。需要擺得落兩部BB車嘅尾廂。鍾意白色。主要市區行駛，偶然去深圳。有咩好選擇？</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">10:05 AM</span>
+          </div>
+          <div class="chat-story__bubble-inner">根據你嘅情況，我建議以下幾款：<br><br>🥇 <strong>BYD Seal</strong> — HK$259k，540L 尾廂（放得落兩部BB車），有白色，市區加跨境充電網絡完善<br><br>🥈 <strong>Tesla Model 3 Highland</strong> — HK$265k，682L 尾廂，Supercharger 遍佈香港加深圳，有白色<br><br>🥉 <strong>Hyundai Ioniq 5</strong> — HK$299k，531L 尾廂，V2L 可以喺深圳行程中供電俾電器<br><br>想我比較呢三款嘅保險費用或貶值率嗎？</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Narration: The Formula -->
+    <div class="chat-story__narration is-visible">
+      <p>同一個問題。一個係<strong>3 個字</strong>。另一個係<strong>3 句句子</strong>。第二個答案有用 10 倍。秘訣？<strong>任務 + 背景資料。</strong></p>
+    </div>
+
+    <!-- Act 3: Work Email Example -->
+    <div class="chat-story__group">
+      <div class="chat-story__divider">
+        <span class="chat-story__divider-text">工作上犯同樣嘅錯</span>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--user">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">2:30 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">寫封電郵關於延遲嘅貨運</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">2:30 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">好樂意幫你！可否話我知：<br><br>• 收件人係邊個？<br>• 延遲咗乜嘢，點解？<br>• 新嘅時間表係點？<br>• 你想要乜嘢語氣 — 正式、友善、緊急？</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-story__narration is-visible">
+      <p>AI 問緊佢需要嘅問題。但係你已經知道答案。<strong>點解唔一次過講晒？</strong></p>
+    </div>
+
+    <!-- Act 4: The Complete Version -->
+    <div class="chat-story__group">
+      <div class="chat-story__divider">
+        <span class="chat-story__divider-text">正確嘅寫法</span>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--user">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">2:35 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">寫封電郵俾我嘅深圳供應商，關於延遲嘅貨運。貨櫃原本上個星期五到，依家佢哋話下星期三。我哋嘅貨倉喺屯門。語氣：堅定但專業。要求解釋同更新預計到達時間。CC 我哋嘅物流經理 David。</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">2:35 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">搞掂。草稿如下：<br><br>---<br><br>致 [供應商名稱]：<br><br>我哋留意到原訂 4 月 11 日到達嘅貨櫃 [編號]，已經在未有事先通知嘅情況下改為 4 月 16 日。<br><br>由於此延遲影響我哋嘅交付承諾，希望貴公司能解釋修訂後嘅時間表，並確認 4 月 16 日嘅新預計到達時間係確實嘅。<br><br>我哋嘅貨倉位於屯門 — 請確保送貨預約已反映此資訊。<br><br>期待貴公司嘅迅速回覆。<br><br>此致<br>[你的名稱]<br><br>---<br><br>想我調整語氣或者補充啲咩嗎？</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Narration: Constraints -->
+    <div class="chat-story__narration is-visible">
+      <p>每個好嘅提示都有兩部分：<strong>你想做乜</strong>同<strong>AI 需要知道乜</strong>。預算、時間表、對象、語氣、格式 — 呢啲篩選條件將一個泛泛嘅答案變成一個有用嘅答案。</p>
+    </div>
+
+    <!-- Act 5: Constraint Example -->
+    <div class="chat-story__group">
+      <div class="chat-story__divider">
+        <span class="chat-story__divider-text">限制條件改變一切</span>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--user">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">4:10 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">總結呢個會議</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">4:10 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">以下係會議總結……<br><br>[一個 500 字嘅總結，所有內容平均講述，因為你冇話畀 AI 知乜嘢重要]</div>
+        </div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--user" style="margin-top: 24px;">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">4:12 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">用 3 個要點總結呢個會議。集中講行動項目同截止日期。呢個係俾冇出席嘅老闆睇 — 控制喺 150 字以內。</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">4:12 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner"><strong>會議總結 — 4 月 13 日</strong><br><br>• <strong>Q2 出貨目標確認：</strong>6 月 30 日前 200 個貨櫃。David 星期五前敲定路線。<br><br>• <strong>新供應商加入：</strong>深圳 FastLogistics 獲批香港路線。下星期試行。<br><br>• <strong>價格檢討：</strong>主要承運商提出加價要求 — 需於 4 月 20 日前決定。<br><br>95 字。可以直接轉發。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="lesson-tip">
+      <div class="lesson-tip__icon">💡</div>
+      <div class="lesson-tip__text"><strong>唔妨試吓：</strong>打開你嘅 AI，先問你平時會問嘅問題。然後加多 3 倍背景再問一次。對比兩個答案，分別會好大。</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="lesson-cta">
+      <h3>需要我們幫你設定嗎？</h3>
+      <p>我們為你配置一切 — 個人化設定、專案和工作流程 — 一次搞定。</p>
+      <a href="https://wa.me/85297381028" class="btn btn-primary" target="_blank" rel="noopener noreferrer">預約安裝</a>
+    </div>
+  </div>
+
+  <!-- Lesson Nav -->
+  <div class="lesson-nav">
+    <span></span>
+    <a href="/zh-HK/learn/lesson-2" class="next">先建立個專案 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+  </div>
+
+  <script is:inline src="/chat-story.js"></script>
+</BaseLayout>

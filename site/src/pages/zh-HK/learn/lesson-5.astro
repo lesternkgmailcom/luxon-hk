@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="zh-HK" title="話要做啲咩 — Luxon Learn" description="話畀 AI 知你想點 — 而唔係你唔想點。一條規則改變一切。">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/learn/learn-styles.css" />
+  </Fragment>
+
+  <!-- Lesson Hero -->
+  <section class="lesson-hero">
+    <div class="lesson-breadcrumb">
+      <a href="/zh-HK/learn">Learn</a>
+      <span>/</span>
+      <span>第 5 課</span>
+    </div>
+    <div class="lesson-badge">Level 2</div>
+    <h1>話要做啲咩</h1>
+    <p class="lesson-subtitle">話畀 AI 知你想點 — 而唔係你唔想點。一條規則改變一切。</p>
+  </section>
+
+  <div class="lesson-content">
+
+    <!-- Visual: Don't vs Do -->
+    <div class="lesson-visual">
+      <svg viewBox="0 0 640 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Don't bubble (red) -->
+        <rect x="20" y="20" width="280" height="220" rx="16" fill="#fef2f2" stroke="#fecaca"/>
+        <text x="40" y="52" font-family="Inter,sans-serif" font-size="11" fill="#dc2626" font-weight="700">❌ 唔好咁講</text>
+        <!-- Speech bubble -->
+        <rect x="50" y="70" width="220" height="56" rx="20" fill="#fff" stroke="#fca5a5"/>
+        <polygon points="100,126 120,126 110,146" fill="#fff" stroke="#fca5a5"/>
+        <text x="72" y="92" font-family="Inter,sans-serif" font-size="11" fill="#dc2626">「唔好用術語」</text>
+        <text x="72" y="108" font-family="Inter,sans-serif" font-size="11" fill="#dc2626">「唔好寫太長」</text>
+        <text x="72" y="124" font-family="Inter,sans-serif" font-size="11" fill="#dc2626">「唔好加廢話」</text>
+        <!-- Confused AI -->
+        <text x="40" y="176" font-family="Inter,sans-serif" font-size="11" fill="#9ca3af">🤔 AI 搞唔清楚。</text>
+        <text x="40" y="194" font-family="Inter,sans-serif" font-size="11" fill="#9ca3af">咩先係得？你到底想要啲咩？</text>
+        <text x="40" y="212" font-family="Inter,sans-serif" font-size="11" fill="#9ca3af">否定式指令 = 模糊嘅限制。</text>
+
+        <!-- Do bubble (green) -->
+        <rect x="340" y="20" width="280" height="220" rx="16" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="360" y="52" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="700">✓ 改成咁講</text>
+        <!-- Speech bubble -->
+        <rect x="370" y="70" width="220" height="56" rx="20" fill="#fff" stroke="#86efac"/>
+        <polygon points="420,126 440,126 430,146" fill="#fff" stroke="#86efac"/>
+        <text x="392" y="92" font-family="Inter,sans-serif" font-size="11" fill="#16a34a">「用簡單語言解釋」</text>
+        <text x="392" y="108" font-family="Inter,sans-serif" font-size="11" fill="#16a34a">「控制喺 300 字以內」</text>
+        <text x="392" y="124" font-family="Inter,sans-serif" font-size="11" fill="#16a34a">「集中講重點」</text>
+        <!-- Happy AI -->
+        <text x="360" y="176" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="600">🎯 AI 清楚知道要做啲咩。</text>
+        <text x="360" y="194" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="600">清晰嘅指示 = 更好嘅結果。</text>
+        <text x="360" y="212" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="600">正面指令 = 精準嘅輸出。</text>
+      </svg>
+      <p class="lesson-visual-caption">「唔好」話畀 AI 知咩係錯。「要」話畀佢知咩係對。同樣嘅意思 — 完全唔同嘅結果。</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="lesson-steps">
+      <div class="lesson-step">
+        <div class="lesson-step__number">1</div>
+        <div class="lesson-step__content">
+          <h3>常見嘅問題</h3>
+          <p>否定式指令（「唔好做 X」）會令 AI 猜測。佢知道要避開咩，但唔知道要朝邊個方向行。呢種模糊感會導致不穩定、有時甚至好怪嘅結果。</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">2</div>
+        <div class="lesson-step__content">
+          <h3>解決方法</h3>
+          <p>將每個「唔好」轉成正面指令。「唔好用術語」→「用簡單語言」。「唔好寫太長」→「控制喺 300 字以內」。簡單改寫，效果大幅提升。</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">3</div>
+        <div class="lesson-step__content">
+          <h3>講清楚格式</h3>
+          <p>唔好只講你想要咩 — 還要講你想要點呈現。要條列式？一頁？一個表格？一個 3 欄嘅表格？格式愈具體，你需要修改嘅次數就愈少。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compare -->
+    <div class="lesson-compare">
+      <div class="lesson-compare__box lesson-compare__box--bad">
+        <div class="lesson-compare__label">之前</div>
+        <p class="lesson-compare__text">「唔好寫太長、唔好用艱深字眼、唔好加廢話」</p>
+      </div>
+      <div class="lesson-compare__box lesson-compare__box--good">
+        <div class="lesson-compare__label">之後</div>
+        <p class="lesson-compare__text">「控制喺 300 字以內、用簡單語言、集中講重點」</p>
+      </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="lesson-tip">
+      <div class="lesson-tip__icon">💡</div>
+      <div class="lesson-tip__text"><strong>通用法則：</strong>OpenAI 同 Anthropic 都同意呢點 — 正面指令嘅效果遠遠超越否定式指令。呢個係你可以做嘅影響最大嘅提示詞改變。</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="lesson-cta">
+      <h3>需要我們幫你設定嗎？</h3>
+      <p>我們為你配置一切 — 個人化設定、專案和工作流程 — 一次搞定。</p>
+      <a href="https://wa.me/85297381028" class="btn btn-primary" target="_blank" rel="noopener noreferrer">預約安裝</a>
+    </div>
+  </div>
+
+  <!-- Lesson Nav -->
+  <div class="lesson-nav">
+    <a href="/zh-HK/learn/lesson-4" class="prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7-7 7 7 7"/></svg> 複製貼上技巧</a>
+    <a href="/zh-HK/learn/lesson-6" class="next">讓 AI 自己寫指令 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+  </div>
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+/**
+ * MetricCard — large number + label for case study results.
+ * Used in the results/metrics grid sections.
+ */
+interface Props {
+  value: string;
+  label: string;
+  accent?: 'green' | 'purple' | 'white' | 'dark';
+}
+
+const { value, label, accent = 'green' } = Astro.props;
+
+const colorClasses = {
+  green: 'text-luxon-green-accent',
+  purple: 'text-luxon-purple',
+  white: 'text-white',
+  dark: 'text-luxon-dark',
+};
+---
+
+<div>
+  <p class={`font-heading text-3xl md:text-4xl font-bold ${colorClasses[accent]} mb-1`}>
+    {value}
+  </p>
+  <p class="text-sm text-luxon-muted leading-relaxed">{label}</p>
+</div>

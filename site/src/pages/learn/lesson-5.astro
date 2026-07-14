@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Say What TO Do — Luxon Learn" description="Tell the AI what you want — not what you don't want. One rule that changes everything.">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/learn/learn-styles.css" />
+  </Fragment>
+
+  <!-- Lesson Hero -->
+  <section class="lesson-hero">
+    <div class="lesson-breadcrumb">
+      <a href="/learn">Learn</a>
+      <span>/</span>
+      <span>Lesson 5</span>
+    </div>
+    <div class="lesson-badge">Level 2</div>
+    <h1>Say What TO Do</h1>
+    <p class="lesson-subtitle">Tell the AI what you want — not what you don't want. One rule that changes everything.</p>
+  </section>
+
+  <div class="lesson-content">
+
+    <!-- Visual: Don't vs Do -->
+    <div class="lesson-visual">
+      <svg viewBox="0 0 640 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Don't bubble (red) -->
+        <rect x="20" y="20" width="280" height="220" rx="16" fill="#fef2f2" stroke="#fecaca"/>
+        <text x="40" y="52" font-family="Inter,sans-serif" font-size="11" fill="#dc2626" font-weight="700">❌ DON'T SAY THIS</text>
+        <!-- Speech bubble -->
+        <rect x="50" y="70" width="220" height="56" rx="20" fill="#fff" stroke="#fca5a5"/>
+        <polygon points="100,126 120,126 110,146" fill="#fff" stroke="#fca5a5"/>
+        <text x="72" y="92" font-family="Inter,sans-serif" font-size="11" fill="#dc2626">"Don't use jargon"</text>
+        <text x="72" y="108" font-family="Inter,sans-serif" font-size="11" fill="#dc2626">"Don't make it long"</text>
+        <text x="72" y="124" font-family="Inter,sans-serif" font-size="11" fill="#dc2626">"Don't add fluff"</text>
+        <!-- Confused AI -->
+        <text x="40" y="176" font-family="Inter,sans-serif" font-size="11" fill="#9ca3af">🤔 AI is confused.</text>
+        <text x="40" y="194" font-family="Inter,sans-serif" font-size="11" fill="#9ca3af">What IS okay? What DO you want?</text>
+        <text x="40" y="212" font-family="Inter,sans-serif" font-size="11" fill="#9ca3af">Negative instructions = vague constraints.</text>
+
+        <!-- Do bubble (green) -->
+        <rect x="340" y="20" width="280" height="220" rx="16" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="360" y="52" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="700">✓ SAY THIS INSTEAD</text>
+        <!-- Speech bubble -->
+        <rect x="370" y="70" width="220" height="56" rx="20" fill="#fff" stroke="#86efac"/>
+        <polygon points="420,126 440,126 430,146" fill="#fff" stroke="#86efac"/>
+        <text x="392" y="92" font-family="Inter,sans-serif" font-size="11" fill="#16a34a">"Explain in plain language"</text>
+        <text x="392" y="108" font-family="Inter,sans-serif" font-size="11" fill="#16a34a">"Keep it under 300 words"</text>
+        <text x="392" y="124" font-family="Inter,sans-serif" font-size="11" fill="#16a34a">"Focus on key takeaways"</text>
+        <!-- Happy AI -->
+        <text x="360" y="176" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="600">🎯 AI knows exactly what to do.</text>
+        <text x="360" y="194" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="600">Clear direction = better results.</text>
+        <text x="360" y="212" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="600">Positive instructions = precise output.</text>
+      </svg>
+      <p class="lesson-visual-caption">"Don't" tells AI what's wrong. "Do" tells it what's right. Same idea — completely different results.</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="lesson-steps">
+      <div class="lesson-step">
+        <div class="lesson-step__number">1</div>
+        <div class="lesson-step__content">
+          <h3>The pattern</h3>
+          <p>Negative instructions ("don't do X") leave the AI guessing. It knows what to avoid, but not what to aim for. That ambiguity leads to inconsistent, sometimes bizarre results.</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">2</div>
+        <div class="lesson-step__content">
+          <h3>The fix</h3>
+          <p>Flip every "don't" into a positive instruction. "Don't use jargon" → "Use plain language." "Don't make it long" → "Keep it under 300 words." Simple rewrite, massive improvement.</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">3</div>
+        <div class="lesson-step__content">
+          <h3>Be specific about format</h3>
+          <p>Don't just say what you want — say how you want it. Bullet points? One page? A table? A table with 3 columns? The more specific the format, the less revision you'll need.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compare -->
+    <div class="lesson-compare">
+      <div class="lesson-compare__box lesson-compare__box--bad">
+        <div class="lesson-compare__label">Before</div>
+        <p class="lesson-compare__text">"Don't make it too long, don't use big words, don't add fluff"</p>
+      </div>
+      <div class="lesson-compare__box lesson-compare__box--good">
+        <div class="lesson-compare__label">After</div>
+        <p class="lesson-compare__text">"Keep it under 300 words, use simple language, focus on key takeaways"</p>
+      </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="lesson-tip">
+      <div class="lesson-tip__icon">💡</div>
+      <div class="lesson-tip__text"><strong>Universal rule:</strong> Both OpenAI and Anthropic agree on this — positive instructions dramatically outperform negative ones. It's the single most impactful prompting change you can make.</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="lesson-cta">
+      <h3>Want this set up for you?</h3>
+      <p>We configure everything — personalization, projects, and workflows — in one session.</p>
+      <a href="https://wa.me/85297381028" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book installation</a>
+    </div>
+  </div>
+
+  <!-- Lesson Nav -->
+  <div class="lesson-nav">
+    <a href="/learn/lesson-4" class="prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7-7 7 7 7"/></svg> The Copy-Paste Trick</a>
+    <a href="/learn/lesson-6" class="next">Let AI Write Its Own Instructions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+  </div>
+</BaseLayout>

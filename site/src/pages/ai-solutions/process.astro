@@ -1,0 +1,170 @@
+---
+/**
+ * AI Solutions Process Page — /ai-solutions/process
+ * 4 sections: Hero, Timeline, What You Get, CTA.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProcessTimeline from '../../components/ai-solutions/ProcessTimeline.astro';
+
+const deliverables = [
+  {
+    title: 'Interactive dashboard',
+    description: 'Web-based, works on any device. Real-time data visualization designed for your workflow.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+  },
+  {
+    title: 'Automation pipeline',
+    description: 'Runs on schedule or trigger. Pulls data, processes it, delivers results — without manual intervention.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>`,
+  },
+  {
+    title: 'Documentation',
+    description: 'Complete docs so your team can use and maintain the system independently.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+  },
+  {
+    title: 'Source code ownership',
+    description: 'You own what we build. Full source code, no vendor lock-in.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+  },
+];
+---
+
+<BaseLayout title="Our Process — How We Build AI Solutions | Luxon" description="A clear, iterative process from discovery to deployment. We build custom AI solutions in 4 weeks with weekly demos.">
+
+  <!-- Section 1: Hero -->
+  <section class="relative overflow-hidden py-28 md:py-36 lg:py-44 px-6">
+    <div
+      class="absolute inset-0 -z-10 opacity-[0.07]"
+      style="background: radial-gradient(ellipse 70% 50% at 60% 40%, #6B5CE7 0%, #4A7C59 100%);"
+      aria-hidden="true"
+    ></div>
+
+    <div class="max-w-[720px] mx-auto text-center">
+      <nav class="text-sm text-luxon-muted mb-6" aria-label="Breadcrumb">
+        <a href="/ai-solutions" class="hover:text-luxon-dark transition-colors">AI Solutions</a>
+        <span class="mx-2">/</span>
+        <span>Process</span>
+      </nav>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-luxon-dark tracking-tight leading-tight mb-6">
+        How We Build Your Solution
+      </h1>
+      <p class="text-lg md:text-xl text-luxon-muted max-w-[580px] mx-auto leading-relaxed">
+        A clear, iterative process from discovery to deployment. No surprises, no scope creep — just steady progress you can track.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 2: Timeline -->
+  <div class="fade-in-up">
+    <ProcessTimeline />
+  </div>
+
+  <!-- Section 3: What You Get -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28">
+      <div class="max-w-[1100px] mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-luxon-dark text-center mb-4">
+          What You Get
+        </h2>
+        <p class="text-luxon-muted text-center mb-12 max-w-[600px] mx-auto">
+          Every engagement delivers a complete, production-ready system.
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {deliverables.map((item) => (
+            <div class="bg-luxon-card rounded-xl border border-luxon-border p-6 shadow-sm">
+              <div class="w-10 h-10 rounded-full bg-luxon-green/10 flex items-center justify-center mb-4">
+                <Fragment set:html={item.icon} />
+              </div>
+              <h3 class="font-heading text-lg font-bold text-luxon-dark mb-2">{item.title}</h3>
+              <p class="text-luxon-muted leading-relaxed text-sm">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Section 4: CTA -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28">
+      <div class="max-w-[700px] mx-auto text-center">
+        <div
+          class="relative overflow-hidden rounded-2xl px-8 py-14 md:px-14 md:py-20"
+          style="background: linear-gradient(135deg, #6B5CE7 0%, #4A7C59 100%);"
+        >
+          <div
+            class="absolute inset-0 opacity-[0.06]"
+            style="background: radial-gradient(circle at 20% 80%, white 0%, transparent 50%), radial-gradient(circle at 80% 20%, white 0%, transparent 50%);"
+            aria-hidden="true"
+          ></div>
+
+          <div class="relative z-10">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+              Tell us about your project
+            </h2>
+            <p class="text-white/80 mb-10 text-lg leading-relaxed">
+              We will assess your workflow and suggest the right approach — no commitment, no pressure.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center px-8 py-3.5 bg-white text-luxon-dark font-semibold rounded-full text-lg hover:bg-gray-100 transition-colors"
+            >
+              Get in touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Scroll animation -->
+  <style>
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        document.querySelectorAll('.fade-in-up').forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      document.querySelectorAll('.fade-in-up').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+</BaseLayout>

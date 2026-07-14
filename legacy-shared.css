@@ -1,0 +1,118 @@
+/* ============================================================
+   Legacy Shared Utilities — extracted from old styles.css
+   Used by blog and learn sections migrated from static HTML.
+   ============================================================ */
+
+/* ---------- Container ---------- */
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container--wide {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: 16px;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.btn-primary {
+  background: #000000;
+  color: #ffffff;
+  padding: 12px 32px;
+  font-size: 1.125rem;
+  border-radius: 16px;
+}
+
+.btn-primary:hover {
+  background: #333333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-large {
+  padding: 14px 36px;
+  font-size: 1.125rem;
+}
+
+/* ---------- Section Utilities ---------- */
+.section-heading {
+  font-size: 2.25rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #5f6368;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* ---------- Book CTA Section ---------- */
+.book-cta-section {
+  padding: 100px 0;
+  text-align: center;
+  background: #ffffff;
+}
+
+.book-cta-section h2 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.book-cta-section p {
+  font-size: 1.0625rem;
+  color: #5f6368;
+  margin-bottom: 32px;
+}
+
+/* ---------- Fade-in animation ---------- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767px) {
+  .section-heading {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 1.5rem;
+  }
+}

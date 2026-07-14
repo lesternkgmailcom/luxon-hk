@@ -1,0 +1,71 @@
+---
+/**
+ * BaseLayout.astro
+ * Base HTML layout with fonts, GA4, global CSS, Header/Footer/ChatWidget.
+ */
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileMenu from '../components/MobileMenu.astro';
+import ChatWidget from '../components/ChatWidget.tsx';
+import { type Locale, defaultLocale } from '../i18n/translations';
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+  locale?: Locale;
+}
+
+const {
+  title = 'Luxon \u2014 AI that fits your business',
+  description = 'Luxon builds AI Workers and custom AI solutions for SMEs in Hong Kong and Asia Pacific. Deploy autonomous AI agents or build custom dashboards.',
+  lang,
+  locale = defaultLocale,
+} = Astro.props;
+
+const t = getTranslations(locale);
+---
+
+<!doctype html>
+<html lang={lang || locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="canonical" href={Astro.url.href} />
+
+    <!-- Google Fonts: Google Sans Text, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+
+    <!-- Named slot for page-specific head content (e.g. legacy CSS) -->
+    <slot name="head" />
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9BMR3XD45" is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-H9BMR3XD45');
+    </script>
+  </head>
+  <body class="bg-luxon-bg text-luxon-text font-body antialiased">
+    <Header locale={locale} t={t} />
+    <MobileMenu locale={locale} t={t} />
+    <main class="pt-16">
+      <slot />
+    </main>
+    <Footer locale={locale} t={t} />
+    <ChatWidget client:load />
+  </body>
+</html>

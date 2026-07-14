@@ -1,0 +1,365 @@
+---
+/**
+ * Flagship Case Study — Ocean Freight Rate Intelligence
+ * /ai-solutions/cases/ocean-freight-dashboard
+ *
+ * Challenge → Solution → Key Features → Results → Tech Stack → CTA
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const metrics = [
+  { value: '13', label: 'carriers automated across 5 trade lanes' },
+  { value: '44', label: 'specialized extractors (Excel, PDF, Word, email, PNG)' },
+  { value: 'Seconds', label: 'daily snapshot generation (was 4+ hours manual)' },
+  { value: '5 min', label: 'rate comparison time (was 4+ hours)' },
+  { value: '6+', label: 'input formats handled' },
+  { value: '24/7', label: 'self-healing pipeline with automatic retries' },
+];
+
+const features = [
+  {
+    title: 'Rate comparison table',
+    description: 'Side-by-side rates across all carriers with a week-over-week delta column. Color-coded increases (red) and decreases (green) make changes immediately visible.',
+    screenshot: '/images/case-studies/ocean-freight-dashboard-hero.png',
+    alt: 'Rate comparison dashboard showing carrier rates across trade lanes with color-coded week-over-week deltas',
+  },
+  {
+    title: 'Trade lane tabs',
+    description: 'TPEB US, TPEB Canada, WCSA, ECSA, EUR — each with per-destination columns. Switch between trade lanes instantly to focus on what matters.',
+    screenshot: '/images/case-studies/ocean-freight-dashboard-full.png',
+    alt: 'Full dashboard view with trade lane tabs for TPEB, WCSA, ECSA showing carrier rate comparisons',
+  },
+  {
+    title: 'Carrier coverage tracking',
+    description: '13-carrier heatmap showing which carriers have fresh data, which are manual config, and which have gaps. Stale data alerts prevent decisions on outdated rates.',
+    screenshot: '/images/case-studies/dashboard-terminal-theme-hero.png',
+    alt: 'Terminal-themed dashboard view showing carrier coverage and rate data across trade lanes',
+  },
+  {
+    title: 'Natural language queries',
+    description: 'Ask "Shanghai to Manzanillo 20DC" and get instant rates with surcharges and validity. No more complex multi-step spreadsheet lookups.',
+    placeholder: 'Dashboard screenshot — natural language query interface',
+  },
+];
+
+const techStack = [
+  { label: 'Python extraction engine', detail: '44 per-carrier parsers with format detection' },
+  { label: 'SQLite databases', detail: '5 normalized relational schemas' },
+  { label: 'Streamlit dashboard', detail: 'Plotly visualizations, multi-panel layout' },
+  { label: 'n8n workflow automation', detail: 'Scheduled triggers, email polling, snapshot generation' },
+  { label: 'Vision AI (OCR)', detail: 'glm-4.6v for PNG screenshot rate table extraction' },
+];
+---
+
+<BaseLayout title="Case Study: Ocean Freight Rate Intelligence | Luxon" description="How we built an AI-powered dashboard that automated rate tracking across 13 carriers, 5 trade lanes, and 6+ document formats — replacing 4+ hours of daily manual work.">
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-28 md:py-36 lg:py-44 px-6">
+    <div
+      class="absolute inset-0 -z-10 opacity-[0.07]"
+      style="background: radial-gradient(ellipse 70% 50% at 60% 40%, #4A7C59 0%, #6B5CE7 100%);"
+      aria-hidden="true"
+    ></div>
+
+    <div class="max-w-[720px] mx-auto text-center">
+      <nav class="text-sm text-luxon-muted mb-6" aria-label="Breadcrumb">
+        <a href="/ai-solutions" class="hover:text-luxon-dark transition-colors">AI Solutions</a>
+        <span class="mx-2">/</span>
+        <a href="/ai-solutions/cases" class="hover:text-luxon-dark transition-colors">Case Studies</a>
+        <span class="mx-2">/</span>
+        <span>Ocean Freight Rate Intelligence</span>
+      </nav>
+      <p class="text-xs uppercase tracking-widest text-luxon-green-accent font-semibold mb-4">
+        Case Study
+      </p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-luxon-dark tracking-tight leading-tight mb-6">
+        Ocean Freight Rate Intelligence
+      </h1>
+      <p class="text-lg md:text-xl text-luxon-muted max-w-[580px] mx-auto leading-relaxed">
+        How we built an AI-powered dashboard that automated rate tracking across 13 carriers on 5 major trade lanes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Results Metrics -->
+  <div class="fade-in-up">
+    <section class="px-6 pb-20 md:pb-28">
+      <div class="max-w-[900px] mx-auto">
+        <div class="relative overflow-hidden rounded-xl bg-luxon-dark p-8 md:p-12">
+          <div
+            class="absolute -top-20 -right-20 w-60 h-60 rounded-full opacity-10"
+            style="background: radial-gradient(circle, #6B5CE7 0%, transparent 70%);"
+            aria-hidden="true"
+          ></div>
+          <div class="relative z-10">
+            <p class="text-xs uppercase tracking-widest text-luxon-green-accent font-semibold mb-8">Results at a glance</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8">
+              {metrics.map((m) => (
+                <div>
+                  <p class="font-heading text-3xl md:text-4xl font-bold text-luxon-green-accent mb-1">{m.value}</p>
+                  <p class="text-sm text-gray-400 leading-relaxed">{m.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Challenge -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28">
+      <div class="max-w-[800px] mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-luxon-dark mb-8">
+          The Challenge
+        </h2>
+        <div class="space-y-5 text-luxon-text leading-relaxed">
+          <p>
+            Ocean freight rates change weekly across <strong>13 carriers</strong> on <strong>5 major trade lanes</strong> (Asia to US/Canada, Asia to Latin America, Asia to Europe). Keeping track of these movements is critical — a missed rate increase or expired contract can cost thousands of dollars per shipment.
+          </p>
+          <p>
+            But rate sheets arrive in wildly different formats: Excel (.xls and .xlsx), PDF, Word documents, Outlook .msg emails, inline email text, and even <strong>PNG screenshots</strong> of rate tables. Each carrier has a unique spreadsheet layout, and some change their format between filings.
+          </p>
+          <p>
+            The result: manual comparison took <strong>4+ hours per day</strong> — copy-pasting into spreadsheets, prone to errors, with decisions delayed by days. Rate validity windows expired constantly, and GRI increases were caught too late.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Solution -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28 bg-white">
+      <div class="max-w-[800px] mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-luxon-dark mb-8">
+          The Solution
+        </h2>
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="w-8 h-8 rounded-lg bg-luxon-green/10 flex items-center justify-center shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading text-lg font-bold text-luxon-dark mb-1">AI-powered extraction engine</h3>
+              <p class="text-luxon-muted leading-relaxed">
+                44 carrier-specific extractor modules that read rate sheets in any format — Excel, PDF, Word, email, and PNG via vision AI — and extract structured data into normalized databases.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-8 h-8 rounded-lg bg-luxon-green/10 flex items-center justify-center shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading text-lg font-bold text-luxon-dark mb-1">Comparison dashboard</h3>
+              <p class="text-luxon-muted leading-relaxed">
+                Side-by-side rate comparison across all carriers, trade lanes, and destinations. Color-coded deltas show week-over-week changes at a glance.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-8 h-8 rounded-lg bg-luxon-green/10 flex items-center justify-center shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading text-lg font-bold text-luxon-dark mb-1">Natural language queries</h3>
+              <p class="text-luxon-muted leading-relaxed">
+                Ask "Shanghai to Manzanillo 20DC" and get instant rates with surcharges and validity information. Replaces complex multi-step spreadsheet lookups.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-8 h-8 rounded-lg bg-luxon-green/10 flex items-center justify-center shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading text-lg font-bold text-luxon-dark mb-1">Daily market snapshot</h3>
+              <p class="text-luxon-muted leading-relaxed">
+                Automated report generated and emailed every morning with current rates and week-over-week changes across all trade lanes.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-8 h-8 rounded-lg bg-luxon-green/10 flex items-center justify-center shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-heading text-lg font-bold text-luxon-dark mb-1">Rate change detection</h3>
+              <p class="text-luxon-muted leading-relaxed">
+                Color-coded increases and decreases, validity tracking, and GRI awareness. Catch rate movements before they impact negotiations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Key Features with Screenshots -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28">
+      <div class="max-w-[900px] mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-luxon-dark text-center mb-12">
+          Key Features
+        </h2>
+        <div class="space-y-12">
+          {features.map((feature, i) => (
+            <div class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? 'md:direction-rtl' : ''}`}>
+              <div class={i % 2 === 1 ? 'md:order-2' : ''}>
+                {feature.screenshot ? (
+                  <img
+                    src={feature.screenshot}
+                    alt={feature.alt}
+                    class="w-full rounded-xl border border-luxon-border shadow-sm"
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                  />
+                ) : (
+                  <Fragment>
+                    {/* TODO: Replace with actual dashboard screenshot */}
+                    <div class="aspect-[16/10] bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl border border-gray-200 flex flex-col items-center justify-center gap-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                      </svg>
+                      <span class="text-sm font-medium text-gray-400 text-center px-4">{feature.placeholder}</span>
+                    </div>
+                  </Fragment>
+                )}
+              </div>
+              <div class={i % 2 === 1 ? 'md:order-1' : ''}>
+                <h3 class="font-heading text-xl font-bold text-luxon-dark mb-3">{feature.title}</h3>
+                <p class="text-luxon-muted leading-relaxed">{feature.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Technology Stack -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28 bg-luxon-dark">
+      <div class="max-w-[800px] mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          Technology Stack
+        </h2>
+        <div class="space-y-4">
+          {techStack.map((item) => (
+            <div class="flex items-start gap-4 py-3 border-b border-gray-700/50">
+              <code class="font-mono text-sm text-luxon-green-accent shrink-0 min-w-[180px]">{item.label}</code>
+              <p class="text-sm text-gray-400 leading-relaxed">{item.detail}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-xs text-gray-500 mt-8 text-center">
+          Kept brief for credibility. Full architecture details available on request.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- CTA -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28">
+      <div class="max-w-[700px] mx-auto text-center">
+        <div
+          class="relative overflow-hidden rounded-2xl px-8 py-14 md:px-14 md:py-20"
+          style="background: linear-gradient(135deg, #4A7C59 0%, #3a6347 40%, #6B5CE7 100%);"
+        >
+          <div
+            class="absolute inset-0 opacity-[0.06]"
+            style="background: radial-gradient(circle at 20% 80%, white 0%, transparent 50%), radial-gradient(circle at 80% 20%, white 0%, transparent 50%);"
+            aria-hidden="true"
+          ></div>
+
+          <div class="relative z-10">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+              Want something like this for your business?
+            </h2>
+            <p class="text-white/80 mb-10 text-lg leading-relaxed">
+              Book a discovery call. We will assess your workflow and propose the right approach.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center px-8 py-3.5 bg-white text-luxon-dark font-semibold rounded-full text-lg hover:bg-gray-100 transition-colors"
+            >
+              Book a Discovery Call
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Scroll animation -->
+  <style>
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        document.querySelectorAll('.fade-in-up').forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      document.querySelectorAll('.fade-in-up').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+</BaseLayout>

@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="My AI reports stock prices to me twice a day. I just trade. — Luxon HK" description="How I set up AI to report stock prices twice daily at preset times — so I can make trading decisions without constantly checking the market.">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/blog/styles.css" />
+  </Fragment>
+
+  <!-- Blog Post -->
+  <section class="blog-post">
+    <div class="blog-post__header">
+      <a href="/blog" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
+        <span>Back to AI Living</span>
+      </a>
+      <span class="blog-post__tag blog-post__tag--blue">Finance</span>
+      <h1 class="blog-post__title">My AI reports stock prices to me twice a day. I just trade.</h1>
+      <p class="blog-post__subtitle">I told my AI to track 鴻海 (Hon Hai) and report the price at 10:30 and 11:50 every day. No app to open, no alerts to dismiss — just the numbers I need, when I need them.</p>
+      <div class="blog-post__meta">
+        <span>April 2026</span>
+        <span>·</span>
+        <span>2 min read</span>
+      </div>
+    </div>
+
+    <div class="blog-post__hero-image">
+      <img src="/images/blog-stock-price-alerts.png" alt="AI sending scheduled stock price reports via chat">
+    </div>
+
+    <div class="blog-post__content">
+      <p>I trade Taiwanese stocks from Hong Kong. The market opens at 9:00 AM Taipei time, and I need to make decisions during the morning session — but I'm also working my day job. I can't sit there watching every tick.</p>
+
+      <p>So I told my AI:</p>
+
+      <blockquote>
+        <p>&ldquo;Help me report 鴻海's stock price twice daily at preset times, so I can do my trading when needed.&rdquo;</p>
+      </blockquote>
+
+      <p>My AI asked a clarifying question — which stock, and what times? I said:</p>
+
+      <blockquote>
+        <p>&ldquo;鴻海 (2317.TW). After market close would be best — so 10:30 and 11:50 AM.&rdquo;</p>
+      </blockquote>
+
+      <p>That was it. My AI set up an automated schedule. Now, twice a day, I get a message like this:</p>
+
+      <div class="highlight-box">
+        <p><strong>鴻海 (2317) — 2026/04/02 (三)</strong></p>
+        <p><strong>收盤價:</strong> 193.0</p>
+        <p><strong>跌 4.0 元</strong> (-2.03%)</p>
+        <p><strong>開盤:</strong> 198.0 → <strong>最高:</strong> 199.0 → <strong>最低:</strong> 191.5</p>
+        <p><strong>成交金額:</strong> 70.46 億</p>
+        <p><strong>昨收:</strong> 197.0</p>
+      </div>
+
+      <p>Opening price, high, low, close, volume — everything I need to decide whether to buy, sell, or hold. Without opening any app.</p>
+
+      <h2>Why this matters</h2>
+
+      <p>Trading while holding a full-time job means you're always time-splitting. The old way:</p>
+
+      <ul>
+        <li>Open a stock app (Yahoo Finance, 富途, etc.)</li>
+        <li>Search for the ticker</li>
+        <li>Check the numbers</li>
+        <li>Decide if you need to act</li>
+        <li>Repeat multiple times a day</li>
+      </ul>
+
+      <p>The new way: my AI proactively sends me the data. I read the message, make a decision, and move on. Takes 10 seconds instead of 10 minutes of app-switching.</p>
+
+      <h2>Extending it</h2>
+
+      <p>Once the first stock alert was running, it was easy to add more:</p>
+
+      <ul>
+        <li><strong>Multiple stocks</strong> — track a watchlist of 5-10 tickers, not just one</li>
+        <li><strong>Conditional alerts</strong> — &ldquo;tell me if 鴻海 drops below 190 or breaks 200&rdquo;</li>
+        <li><strong>Pre-market briefing</strong> — &ldquo;before market open, give me the ADR price and any overnight news&rdquo;</li>
+        <li><strong>Weekly summary</strong> — &ldquo;every Friday close, send me a week-over-week comparison&rdquo;</li>
+      </ul>
+
+      <p>The AI doesn't just report numbers — it can add context. Like noting that 鴻海 has been dropping for the week and flagging the trend.</p>
+
+      <h2>Who is this for?</h2>
+
+      <ul>
+        <li><strong>Part-time traders</strong> — people who trade stocks but can't watch the market all day</li>
+        <li><strong>Cross-border investors</strong> — trading Taiwan/Korea/US markets from Hong Kong</li>
+        <li><strong>Portfolio watchers</strong> — anyone who wants to track specific stocks without living in a finance app</li>
+      </ul>
+
+      <p>The setup takes 5 minutes. After that, it runs automatically — every day, on schedule, no manual input needed.</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="blog-cta">
+      <h3>Want AI stock alerts set up for you?</h3>
+      <p>We configure your AI assistant with scheduled stock reports and market monitoring. One session, same day deployment.</p>
+      <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <span>Book installation</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

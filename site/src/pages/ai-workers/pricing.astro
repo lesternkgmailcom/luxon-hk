@@ -1,0 +1,290 @@
+---
+/**
+ * AI Workers Pricing Page — /ai-workers/pricing
+ * Migrated from pricing.html with rebranding:
+ *   - "Basic" -> "Starter", "Professional" -> "Business", "Enterprise" stays
+ *   - "VPS setup & configuration" -> "AI Worker deployment"
+ *   - All feature lists preserved exactly
+ *   - FAQ, What's Included, and CTA sections retained
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PricingCard from '../../components/ai-workers/PricingCard.astro';
+
+const tiers = [
+  {
+    name: 'Starter',
+    price: 'HK$3,500',
+    priceNote: 'Single agent setup',
+    features: [
+      'AI Worker deployment & configuration',
+      'Email & calendar integration',
+      '1 workflow automation',
+      '14-day hypercare',
+    ],
+    ctaText: 'Get Started',
+    ctaHref: 'https://wa.me/85297381028',
+    featured: false,
+  },
+  {
+    name: 'Business',
+    price: 'HK$6,500',
+    priceNote: 'Multi-agent deployment',
+    features: [
+      'Everything in Starter',
+      'Up to 3 agents',
+      '5 workflow automations',
+      'CRM & tools integration',
+      'Priority support',
+    ],
+    ctaText: 'Get Started',
+    ctaHref: 'https://wa.me/85297381028',
+    featured: true,
+  },
+  {
+    name: 'Enterprise',
+    price: 'HK$12,000+',
+    priceNote: 'Full team deployment',
+    features: [
+      'Everything in Business',
+      'Unlimited agents',
+      'Custom integrations',
+      'On-site service available',
+      'Dedicated account manager',
+    ],
+    ctaText: 'Contact Us',
+    ctaHref: 'https://wa.me/85297381028',
+    featured: false,
+  },
+];
+
+const included = [
+  {
+    title: 'AI Worker Deployment',
+    description: 'Cloud infrastructure provisioning with security hardening, Docker sandboxing, and firewall configuration.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
+  },
+  {
+    title: 'Integrations',
+    description: 'Email, calendar, and messaging app integrations with secure OAuth authentication.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>`,
+  },
+  {
+    title: '14-Day Hypercare',
+    description: 'Dedicated support channel for workflow tuning, edge case fixes, and training.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+  },
+  {
+    title: 'Security Hardening',
+    description: 'Following official security guidelines with audit trails and instant kill switches.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>`,
+  },
+];
+
+const faqs = [
+  {
+    question: "What's the difference between plans?",
+    answer: 'Starter is for single users who need one AI Worker. Business supports up to 3 agents with more workflows. Enterprise is for teams needing unlimited agents and custom integrations.',
+  },
+  {
+    question: 'What ongoing costs are there?',
+    answer: 'Your AI Worker runs on managed infrastructure — there are no separate hosting costs for you to worry about. Everything is included in your plan. We handle the deployment, maintenance, and updates.',
+  },
+  {
+    question: 'How long does setup take?',
+    answer: 'You go live same day with a working bot. The 14-day hypercare period ensures everything runs smoothly.',
+  },
+  {
+    question: 'Do you offer ongoing support?',
+    answer: 'Implementation includes 14-day hypercare. Ongoing support requires Managed Care \u2014 contact us for details.',
+  },
+];
+---
+
+<BaseLayout title="AI Workers Pricing — Simple, Transparent Plans | Luxon" description="Simple, transparent pricing for AI Worker deployment. From HK$3,500. Same-day deployment.">
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 md:py-28 px-6">
+    <div
+      class="absolute inset-0 -z-10 opacity-[0.05]"
+      style="background: radial-gradient(ellipse 70% 50% at 60% 40%, #4A7C59 0%, #6B5CE7 100%);"
+      aria-hidden="true"
+    ></div>
+
+    <div class="max-w-[720px] mx-auto text-center">
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-luxon-dark tracking-tight leading-tight mb-4">
+        Simple, Transparent Pricing
+      </h1>
+      <p class="text-lg text-luxon-muted max-w-[580px] mx-auto leading-relaxed">
+        Choose the plan that fits your team's needs. All plans include 14-day hypercare support.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <div class="fade-in-up">
+    <section class="px-6 pb-20 md:pb-28">
+      <div class="max-w-[1100px] mx-auto grid md:grid-cols-3 gap-6 items-start">
+        {tiers.map((tier) => (
+          <PricingCard
+            name={tier.name}
+            price={tier.price}
+            priceNote={tier.priceNote}
+            features={tier.features}
+            ctaText={tier.ctaText}
+            ctaHref={tier.ctaHref}
+            featured={tier.featured}
+          />
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <!-- What's Included -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28">
+      <div class="max-w-[1100px] mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-luxon-dark text-center mb-4">
+          What's Included
+        </h2>
+        <p class="text-luxon-muted text-center mb-12 max-w-[600px] mx-auto">
+          Every plan comes with professional deployment and security standards.
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {included.map((item) => (
+            <div class="bg-luxon-card rounded-xl border border-luxon-border p-6 shadow-sm">
+              <div class="w-12 h-12 rounded-lg bg-luxon-green/10 flex items-center justify-center mb-4">
+                <Fragment set:html={item.icon} />
+              </div>
+              <h3 class="font-heading font-bold text-luxon-dark mb-2">{item.title}</h3>
+              <p class="text-luxon-muted text-sm leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FAQ -->
+  <div class="fade-in-up">
+    <section id="faq" class="px-6 py-20 md:py-28">
+      <div class="max-w-[760px] mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-luxon-dark text-center mb-4">
+          Common Questions
+        </h2>
+        <p class="text-luxon-muted text-center mb-12">
+          Answers about our AI Worker pricing plans.
+        </p>
+
+        <div class="space-y-3">
+          {faqs.map((faq) => (
+            <details class="group bg-luxon-card border border-luxon-border rounded-xl">
+              <summary class="flex items-center justify-between cursor-pointer px-6 py-5 font-heading font-semibold text-luxon-dark select-none [&::-webkit-details-marker]:hidden list-none">
+                <span>{faq.question}</span>
+                <svg
+                  class="w-5 h-5 text-luxon-muted shrink-0 ml-4 transition-transform group-open:rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                </svg>
+              </summary>
+              <div class="px-6 pb-5 text-luxon-muted leading-relaxed">
+                {faq.answer}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CTA -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28">
+      <div class="max-w-[700px] mx-auto text-center">
+        <div
+          class="relative overflow-hidden rounded-2xl px-8 py-14 md:px-14 md:py-20"
+          style="background: linear-gradient(135deg, #4A7C59 0%, #3a6347 40%, #6B5CE7 100%);"
+        >
+          <div
+            class="absolute inset-0 opacity-[0.06]"
+            style="background: radial-gradient(circle at 20% 80%, white 0%, transparent 50%), radial-gradient(circle at 80% 20%, white 0%, transparent 50%);"
+            aria-hidden="true"
+          ></div>
+
+          <div class="relative z-10">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to get started?
+            </h2>
+            <p class="text-white/80 mb-10 text-lg leading-relaxed">
+              Book a free consultation to discuss which plan is right for you.
+            </p>
+
+            <a
+              href="https://wa.me/85297381028"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2.5 px-8 py-3.5 bg-white text-luxon-dark font-semibold rounded-full text-lg hover:bg-gray-100 transition-colors"
+            >
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Book Free Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Scroll animation -->
+  <style>
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        document.querySelectorAll('.fade-in-up').forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      document.querySelectorAll('.fade-in-up').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+</BaseLayout>

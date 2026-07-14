@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="zh-HK" title="我把 PDF 發給 AI，它簽名後傳回來。 — Luxon HK" description="如何使用 AI 自動簽署合約 — 發送 PDF，幾秒後收到已簽署副本。來自香港合約季節的真實用例。">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/blog/styles.css" />
+  </Fragment>
+
+  <!-- Blog Post -->
+  <section class="blog-post">
+    <div class="blog-post__header">
+      <a href="/zh-HK/blog" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
+        <span>返回 AI 生活</span>
+      </a>
+      <span class="blog-post__tag">文件</span>
+      <h1 class="blog-post__title">我把 PDF 發給 AI，它簽名後傳回來。</h1>
+      <p class="blog-post__subtitle">在亞洲/美國合約季節，我每天需要簽署多份合約。我的 AI 幫我處理 — 使用我儲存的簽名，在幾秒內簽署 PDF 並傳回。</p>
+      <div class="blog-post__meta">
+        <span>2026 年 4 月</span>
+        <span>·</span>
+        <span>2 分鐘閱讀</span>
+      </div>
+    </div>
+
+    <div class="blog-post__hero-image">
+      <img src="/images/blog-contract-signing.png" alt="AI 合約簽署工作流程">
+    </div>
+
+    <div class="blog-post__content">
+      <p>合約季節到了。在亞洲和美國的時區之間，合約隨時會來 — 供應商協議、保密協議、服務合約。忙碌的時候，我一天可能要簽 10-15 份文件。</p>
+
+      <p>以前的做法：下載 PDF，打開 Preview，加上簽名，儲存，重新命名，附加到回覆電郵，發送。每份合約大約 3-4 分鐘。忙起來的時候，光簽名就要花近一個小時。</p>
+
+      <h2>現在我怎麼做</h2>
+
+      <p>我把合約 PDF 轉發給我的 AI 助手，附上簡單的訊息：</p>
+
+      <blockquote>
+        <p>「幫我簽這份合約並傳回來。」</p>
+      </blockquote>
+
+      <p>就這樣。我的 AI：</p>
+
+      <ol>
+        <li><strong>接收 PDF</strong> — 我透過電郵或 WhatsApp 轉發</li>
+        <li><strong>打開並閱讀</strong> — 確認是合約，不是垃圾郵件</li>
+        <li><strong>套用我儲存的簽名</strong> — 安全儲存，放在正確位置</li>
+        <li><strong>傳回已簽署的 PDF</strong> — 準備好發送，回覆草稿通常已經擬好</li>
+      </ol>
+
+      <p>從頭到尾：大約 15 秒。不用下載、不用列印、不用掃描。</p>
+
+      <h2>設定方法</h2>
+
+      <p>這不是魔法 — 而是配置好的工作流程。在設定時，我：</p>
+
+      <ul>
+        <li>儲存了一次數位簽名（透明背景的 PNG）</li>
+        <li>告訴 AI 我收到的合約上簽名通常放在哪裡</li>
+        <li>設定在簽署前標記任何有異常條款的合約</li>
+      </ul>
+
+      <p>之後，它就一直運作。每次都行。</p>
+
+      <div class="highlight-box">
+        <p><strong>每月省下時間：</strong> 約 5 小時</p>
+        <p><strong>本季已簽署合約：</strong> 40+ 份</p>
+        <p><strong>錯誤：</strong> 0</p>
+      </div>
+
+      <h2>適合誰？</h2>
+
+      <p>任何需要定期簽署文件的人：</p>
+
+      <ul>
+        <li><strong>採購經理</strong> — 供應商合約、採購單</li>
+        <li><strong>企業主</strong> — 保密協議、服務協議、租約續期</li>
+        <li><strong>地產代理</strong> — 租賃協議、買賣合約</li>
+        <li><strong>顧問</strong> — 委聘書、工作範圍文件</li>
+      </ul>
+
+      <p>如果你每週需要簽署超過 5 份合約，光是這個工作流程就已經回本了。</p>
+
+      <h2>不只是簽名</h2>
+
+      <p>同一個 AI 還可以：</p>
+
+      <ul>
+        <li>在簽署前總結合約條款</li>
+        <li>標記異常條款或到期日</li>
+        <li>自動將已簽署的副本歸檔</li>
+        <li>在合約到期前發出提醒</li>
+      </ul>
+
+      <p>它不只是更快 — 比手動處理更聰明。</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="blog-cta">
+      <h3>想擁有一個為你處理合約的 AI？</h3>
+      <p>我們在一次設定中為你配置帶文件工作流程的個人 AI 助手。當天部署。</p>
+      <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <span>立即預約安裝</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

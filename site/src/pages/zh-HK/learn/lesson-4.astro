@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="zh-HK" title="複製貼上技巧 — Luxon Learn" description="上傳一個範例。話「照這樣做」。就這樣。不需要花俏的提示詞。">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/learn/learn-styles.css" />
+  </Fragment>
+
+  <!-- Lesson Hero -->
+  <section class="lesson-hero">
+    <div class="lesson-breadcrumb">
+      <a href="/zh-HK/learn">Learn</a>
+      <span>/</span>
+      <span>第 4 課</span>
+    </div>
+    <div class="lesson-badge">Level 2</div>
+    <h1>複製貼上技巧</h1>
+    <p class="lesson-subtitle">上傳一個範例。話「照呢個做」。就咁簡單。</p>
+  </section>
+
+  <div class="lesson-content">
+
+    <!-- Visual: Example → Matching Output -->
+    <div class="lesson-visual">
+      <svg viewBox="0 0 640 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Person uploading example -->
+        <rect x="20" y="20" width="260" height="240" rx="16" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="40" y="50" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="700">✓ 你嘅範例</text>
+        <!-- Document being uploaded -->
+        <rect x="40" y="68" width="220" height="100" rx="8" fill="#fff" stroke="#86efac"/>
+        <rect x="56" y="84" width="120" height="8" rx="3" fill="#16a34a" opacity="0.3"/>
+        <rect x="56" y="98" width="180" height="6" rx="3" fill="#d1d5db"/>
+        <rect x="56" y="110" width="160" height="6" rx="3" fill="#d1d5db"/>
+        <rect x="56" y="122" width="140" height="6" rx="3" fill="#d1d5db"/>
+        <rect x="56" y="138" width="80" height="18" rx="4" fill="#16a34a" opacity="0.15"/>
+        <text x="64" y="151" font-family="monospace" font-size="9" fill="#16a34a">📄 example.pdf</text>
+        <!-- Prompt -->
+        <rect x="40" y="184" width="220" height="32" rx="8" fill="#fff" stroke="#86efac"/>
+        <text x="56" y="204" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="600">「照呢個做。」</text>
+
+        <!-- Arrow -->
+        <path d="M290 140 L340 140" stroke="#4285f4" stroke-width="3" marker-end="url(#arrowhead4)"/>
+        <defs><marker id="arrowhead4" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#4285f4"/></marker></defs>
+
+        <!-- AI producing matching output -->
+        <rect x="350" y="20" width="270" height="240" rx="16" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="370" y="50" font-family="Inter,sans-serif" font-size="11" fill="#2563eb" font-weight="700">🤖 AI 輸出</text>
+        <!-- Matching document -->
+        <rect x="370" y="68" width="230" height="100" rx="8" fill="#fff" stroke="#93c5fd"/>
+        <rect x="386" y="84" width="120" height="8" rx="3" fill="#2563eb" opacity="0.3"/>
+        <rect x="386" y="98" width="190" height="6" rx="3" fill="#d1d5db"/>
+        <rect x="386" y="110" width="170" height="6" rx="3" fill="#d1d5db"/>
+        <rect x="386" y="122" width="150" height="6" rx="3" fill="#d1d5db"/>
+        <rect x="386" y="138" width="80" height="18" rx="4" fill="#2563eb" opacity="0.15"/>
+        <text x="394" y="151" font-family="monospace" font-size="9" fill="#2563eb">📄 new-output.pdf</text>
+        <!-- Match indicator -->
+        <text x="370" y="196" font-family="Inter,sans-serif" font-size="12" fill="#2563eb" font-weight="600">✓ 同樣格式、結構同風格</text>
+        <text x="370" y="214" font-family="Inter,sans-serif" font-size="10" fill="#6b7280">新內容。你嘅範本。零努力。</text>
+      </svg>
+      <p class="lesson-visual-caption">貼一個好範例。AI 就可以完美複製個格式 — 每次都得。</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="lesson-steps">
+      <div class="lesson-step">
+        <div class="lesson-step__number">1</div>
+        <div class="lesson-step__content">
+          <h3>搵一個好範例</h3>
+          <p>攞一份以前做得好嘅作品出嚟 — 電郵、報告、發票、社交貼文都得。唔需要完美，只需要顯示你想要嘅風格同結構。</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">2</div>
+        <div class="lesson-step__content">
+          <h3>上傳去對話框</h3>
+          <p>直接將檔案拖入對話框，或者貼上文字。Claude 同 ChatGPT 都處理得到 PDF、文件同貼上嘅文字。</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">3</div>
+        <div class="lesson-step__content">
+          <h3>話「照呢個做」</h3>
+          <p>三個字就夠：「用呢個做範本填好呢份表格。」AI 會自動配合語氣、排版同結構。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compare -->
+    <div class="lesson-compare">
+      <div class="lesson-compare__box lesson-compare__box--bad">
+        <div class="lesson-compare__label">之前</div>
+        <p class="lesson-compare__text">"Write me a report with a title at the top, then an executive summary in bold, then 3 sections with bullet points, using formal language and keeping it under 2 pages..."</p>
+      </div>
+      <div class="lesson-compare__box lesson-compare__box--good">
+        <div class="lesson-compare__label">之後</div>
+        <p class="lesson-compare__text">「照呢個做。」 <span style="opacity:0.6;font-size:0.85em;">(3 個字 + 你嘅範例)</span></p>
+      </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="lesson-tip">
+      <div class="lesson-tip__icon">💡</div>
+      <div class="lesson-tip__text"><strong>乜都啱用：</strong>發票、電郵、報告、社交貼文、會議記錄、合約。只要你有一個好範例，AI 就可以複製個格式。</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="lesson-cta">
+      <h3>需要我們幫你設定嗎？</h3>
+      <p>我們為你配置一切 — 個人化設定、專案和工作流程 — 一次搞定。</p>
+      <a href="https://wa.me/85297381028" class="btn btn-primary" target="_blank" rel="noopener noreferrer">預約安裝</a>
+    </div>
+  </div>
+
+  <!-- Lesson Nav -->
+  <div class="lesson-nav">
+    <a href="/zh-HK/learn/lesson-3" class="prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7-7 7 7 7"/></svg> 個人化你嘅 AI</a>
+    <a href="/zh-HK/learn/lesson-5" class="next">話要做啲咩 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+  </div>
+</BaseLayout>

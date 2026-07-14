@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="zh-CN" title="让 AI 自己写指令 — Luxon Learn" description="不知道要告诉 AI 什么？让它自己想出来。">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/learn/learn-styles.css" />
+  </Fragment>
+
+  <!-- Lesson Hero -->
+  <section class="lesson-hero">
+    <div class="lesson-breadcrumb">
+      <a href="/zh-CN/learn">Learn</a>
+      <span>/</span>
+      <span>第 6 课</span>
+    </div>
+    <div class="lesson-badge">Level 2</div>
+    <h1>让 AI 自己写指令</h1>
+    <p class="lesson-subtitle">不知道要告诉 AI 什么？让它自己想出来。</p>
+  </section>
+
+  <div class="lesson-content">
+
+    <!-- Visual: You → AI → Better Instructions -->
+    <div class="lesson-visual">
+      <svg viewBox="0 0 640 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Step 1: You thinking -->
+        <rect x="20" y="40" width="170" height="200" rx="16" fill="#f0f9ff" stroke="#bae6fd"/>
+        <text x="105" y="75" font-family="Inter,sans-serif" font-size="12" fill="#0369a1" font-weight="700" text-anchor="middle">🤔 你</text>
+        <text x="105" y="100" font-family="Inter,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">「我需要帮忙做</text>
+        <text x="105" y="116" font-family="Inter,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">每周报告，但是</text>
+        <text x="105" y="132" font-family="Inter,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">我不知道应该</text>
+        <text x="105" y="148" font-family="Inter,sans-serif" font-size="10" fill="#dc2626" font-weight="600" text-anchor="middle">跟 AI 说什么…」</text>
+
+        <!-- Arrow 1 -->
+        <path d="M200 140 L220 140" stroke="#4285f4" stroke-width="2" marker-end="url(#arrow6)"/>
+        <defs><marker id="arrow6" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4285f4"/></marker></defs>
+
+        <!-- Step 2: AI thinking -->
+        <rect x="230" y="40" width="170" height="200" rx="16" fill="#faf5ff" stroke="#e9d5ff"/>
+        <text x="315" y="75" font-family="Inter,sans-serif" font-size="12" fill="#7c3aed" font-weight="700" text-anchor="middle">🤖 AI</text>
+        <text x="315" y="100" font-family="Inter,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">「帮我写最好的</text>
+        <text x="315" y="116" font-family="Inter,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">自定义指令来处理</text>
+        <text x="315" y="132" font-family="Inter,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">这个任务」</text>
+        <text x="315" y="148" font-family="Inter,sans-serif" font-size="10" fill="#16a34a" font-weight="600" text-anchor="middle"></text>
+        <text x="315" y="175" font-family="Inter,sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle">✨ 自动生成</text>
+        <text x="315" y="191" font-family="Inter,sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle">自定义规则</text>
+
+        <!-- Arrow 2 -->
+        <path d="M410 140 L430 140" stroke="#4285f4" stroke-width="2" marker-end="url(#arrow6)"/>
+
+        <!-- Step 3: Better results -->
+        <rect x="440" y="40" width="180" height="200" rx="16" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="530" y="75" font-family="Inter,sans-serif" font-size="12" fill="#16a34a" font-weight="700" text-anchor="middle">✓ 结果</text>
+        <rect x="460" y="90" width="140" height="28" rx="6" fill="#fff" stroke="#86efac"/>
+        <text x="470" y="108" font-family="Inter,sans-serif" font-size="9" fill="#16a34a">📄 使用表格格式</text>
+        <rect x="460" y="124" width="140" height="28" rx="6" fill="#fff" stroke="#86efac"/>
+        <text x="470" y="142" font-family="Inter,sans-serif" font-size="9" fill="#16a34a">📄 标出差异</text>
+        <rect x="460" y="158" width="140" height="28" rx="6" fill="#fff" stroke="#86efac"/>
+        <text x="470" y="176" font-family="Inter,sans-serif" font-size="9" fill="#16a34a">📄 控制在一页内</text>
+        <text x="530" y="218" font-family="Inter,sans-serif" font-size="10" fill="#16a34a" font-weight="600" text-anchor="middle">完美输出 ✓</text>
+      </svg>
+      <p class="lesson-visual-caption">AI 比你更清楚它需要什么。让它自己写指令 — 然后一起完善。</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="lesson-steps">
+      <div class="lesson-step">
+        <div class="lesson-step__number">1</div>
+        <div class="lesson-step__content">
+          <h3>元提示</h3>
+          <p>不要挣扎着写完美的指令，告诉 AI 你想达成什么，让它自己建立指引。例如：「我每个礼拜要写销售报告。帮我写最好的自定义指令，这样你之后可以帮我更快。」</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">2</div>
+        <div class="lesson-step__content">
+          <h3>一起完善</h3>
+          <p>AI 会生成一组指令。读一下 — 它们会出奇地好。然后微调：拿走不合适的、加回它漏掉的细节、调整语气。两个脑袋好过一个。</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">3</div>
+        <div class="lesson-step__content">
+          <h3>保存并重复使用</h3>
+          <p>当你满意这组指令，把它保存到你的项目（第 2 课）或自定义指令。之后每次对话都会从这个背景开始 — 不用再重复讲。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compare -->
+    <div class="lesson-compare">
+      <div class="lesson-compare__box lesson-compare__box--bad">
+        <div class="lesson-compare__label">之前</div>
+        <p class="lesson-compare__text">「做份报告吧。做得好一点。我不知道，总之看起来专业就行。」</p>
+      </div>
+      <div class="lesson-compare__box lesson-compare__box--good">
+        <div class="lesson-compare__label">之后</div>
+        <p class="lesson-compare__text">「帮我写一些指令，让你每次都能完美生成我的每周销售报告。」</p>
+      </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="lesson-tip">
+      <div class="lesson-tip__icon">💡</div>
+      <div class="lesson-tip__text"><strong>专业提示：</strong>这个方法适用于任何重复性工作 — 邮件、社交媒体贴文、会议记录。AI 处理过数以百万计的例子。让它告诉你它需要什么。</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="lesson-cta">
+      <h3>需要我们帮你设置吗？</h3>
+      <p>我们为你配置一切 — 个性化设置、项目和工作流程 — 一次搞定。</p>
+      <a href="https://wa.me/85297381028" class="btn btn-primary" target="_blank" rel="noopener noreferrer">预约安装</a>
+    </div>
+  </div>
+
+  <!-- Lesson Nav -->
+  <div class="lesson-nav">
+    <a href="/zh-CN/learn/lesson-5" class="prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7-7 7 7 7"/></svg> 说做什么</a>
+    <a href="/zh-CN/learn/lesson-7" class="next">更聪明 ≠ 更好 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+  </div>
+</BaseLayout>

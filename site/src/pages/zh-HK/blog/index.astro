@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="zh-HK" title="AI 生活 — Luxon HK" description="AI 助手在香港的真實用例 — 合約簽署、課程預約等。看看人們如何每天使用 AI 省時間。">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/blog/styles.css" />
+  </Fragment>
+
+  <!-- Blog Hero -->
+  <section class="blog-hero">
+    <div class="container">
+      <h1>AI 生活</h1>
+      <p>真實故事：AI 助手如何每天為你省時間。沒有誇張 — 只有真正有效的東西。</p>
+    </div>
+  </section>
+
+  <!-- Blog Listing -->
+  <section class="blog-listing">
+    <div class="container">
+      <div class="blog-grid">
+
+        <!-- Post 1: Contract Signing -->
+        <a href="/zh-HK/blog/ai-contract-signing" class="blog-card fade-in-up">
+          <img src="/images/blog-contract-signing.png" alt="AI 簽署合約" class="blog-card__image" loading="lazy">
+          <div class="blog-card__body">
+            <span class="blog-card__tag">文件</span>
+            <h2 class="blog-card__title">我把 PDF 發給 AI，它簽名後傳回來。</h2>
+            <p class="blog-card__excerpt">在合約季節，我每天需要簽署數十份合約。我的 AI 幫我處理 — 使用我儲存的簽名，在幾秒內簽署 PDF 並傳回。</p>
+            <div class="blog-card__meta">
+              <span>2026 年 4 月</span>
+              <span>·</span>
+              <span>2 分鐘閱讀</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 2: Pilates Booking -->
+        <a href="/zh-HK/blog/ai-pilates-booking" class="blog-card fade-in-up">
+          <img src="/images/blog-pilates-booking.png" alt="AI 預約普拉提課程" class="blog-card__image" loading="lazy">
+          <div class="blog-card__body">
+            <span class="blog-card__tag blog-card__tag--green">生活</span>
+            <h2 class="blog-card__title">我的 AI 幫我預約了普拉提課程 — 因為它了解我。</h2>
+            <p class="blog-card__excerpt">星期二下班後我有空檔。我告訴了 AI，它就幫我預約了最喜歡的課程和最愛的導師 — 因為它記得我過去預約的偏好。</p>
+            <div class="blog-card__meta">
+              <span>2026 年 4 月</span>
+              <span>·</span>
+              <span>2 分鐘閱讀</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 3: Stock Price Alerts -->
+        <a href="/zh-HK/blog/ai-stock-price-alerts" class="blog-card fade-in-up">
+          <img src="/images/blog-stock-price-alerts.png" alt="AI 發送股價提醒" class="blog-card__image" loading="lazy">
+          <div class="blog-card__body">
+            <span class="blog-card__tag blog-card__tag--blue">理財</span>
+            <h2 class="blog-card__title">我的 AI 每天兩次為我報告股價。我只負責交易。</h2>
+            <p class="blog-card__excerpt">我讓 AI 追蹤鴻海，每天 10:30 和 11:50 自動報告股價。不用開 app — 只有我需要的數字。</p>
+            <div class="blog-card__meta">
+              <span>2026 年 4 月</span>
+              <span>·</span>
+              <span>2 分鐘閱讀</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 4: Daily Market Brief -->
+        <a href="/zh-HK/blog/ai-daily-market-brief" class="blog-card fade-in-up">
+          <img src="/images/blog-daily-market-brief.png" alt="AI 每日市場簡報" class="blog-card__image" loading="lazy">
+          <div class="blog-card__body">
+            <span class="blog-card__tag blog-card__tag--blue">理財</span>
+            <h2 class="blog-card__title">我的 AI 每天早上為我簡報金價、油價和市場動態。</h2>
+            <p class="blog-card__excerpt">每天早上，我的 AI 發送金價、油價、標普 500、恆生指數、日經 — 附帶市場變動背景。不需要金融 app。</p>
+            <div class="blog-card__meta">
+              <span>2026 年 4 月</span>
+              <span>·</span>
+              <span>2 分鐘閱讀</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 5: AI Personal Trainer -->
+        <a href="/zh-HK/blog/ai-personal-trainer" class="blog-card fade-in-up">
+          <img src="/images/blog-ai-coach.png" alt="AI 擔任私人教練" class="blog-card__image" loading="lazy">
+          <div class="blog-card__body">
+            <span class="blog-card__tag blog-card__tag--green">生活</span>
+            <h2 class="blog-card__title">我嘅 AI 知道我靜息心率。佢叫我盡力跑。</h2>
+            <p class="blog-card__excerpt">同一個幫我睇 email、簽 contract、book Pilates 嘅 AI，仲會做我嘅私人教練 — 分析訓練負荷、HRV 同埋恢復數據。</p>
+            <div class="blog-card__meta">
+              <span>2026年4月</span>
+              <span>·</span>
+              <span>2 分鐘閱讀</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding: 80px 0;">
+    <div class="container" style="text-align:center;">
+      <h2 class="section-heading" style="justify-content:center;">想擁有一個為你做這些事的 AI？</h2>
+      <p class="section-subtitle">我們在一次設定中為你配置個人 AI 助手。當天完成。無需任何技術知識。</p>
+      <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right:8px;vertical-align:middle;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>立即預約安裝</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

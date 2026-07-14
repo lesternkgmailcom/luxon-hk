@@ -1,0 +1,102 @@
+---
+/**
+ * Header.astro
+ * Sticky header with nav structure from PLAN.md.
+ * Logo, AI Workers, AI Solutions, AI Living, Learn, CTA button, language selector.
+ */
+import LanguageSelector from './LanguageSelector.astro';
+import { type Locale, type TranslationKeys, defaultLocale } from '../i18n/translations';
+
+interface Props {
+  locale?: Locale;
+  t?: TranslationKeys;
+}
+
+const { locale = defaultLocale, t } = Astro.props;
+const nav = t.nav;
+const navItems = [
+  {
+    label: nav.aiWorkers,
+    href: locale === 'en' ? '/ai-workers' : `/${locale}/ai-workers`,
+    children: [
+      { label: nav.pricing, href: locale === 'en' ? '/ai-workers/pricing' : `/${locale}/ai-workers/pricing` },
+    ],
+  },
+  {
+    label: nav.aiSolutions,
+    href: locale === 'en' ? '/ai-solutions' : `/${locale}/ai-solutions`,
+    children: [
+      { label: nav.caseStudies, href: locale === 'en' ? '/ai-solutions/cases' : `/${locale}/ai-solutions/cases` },
+      { label: nav.ourProcess, href: locale === 'en' ? '/ai-solutions/process' : `/${locale}/ai-solutions/process` },
+    ],
+  },
+  { label: nav.aiLiving, href: locale === 'en' ? '/blog' : `/${locale}/blog` },
+  { label: nav.learn, href: locale === 'en' ? '/learn' : `/${locale}/learn` },
+];
+const homeHref = locale === 'en' ? '/' : `/${locale}/`;
+const contactHref = locale === 'en' ? '/contact' : `/${locale}/contact`;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-luxon-card border-b border-luxon-border h-16 flex items-center">
+  <div class="max-w-[1100px] mx-auto w-full px-6 flex items-center justify-between">
+    <!-- Logo -->
+    <a href={homeHref} class="flex items-center gap-2 text-luxon-dark font-bold text-xl tracking-tight">
+      <img src="/images/logo-icon.svg" alt="Luxon" class="h-8 w-auto" />
+      Luxon
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      {navItems.map((item) => (
+        <div class="relative group">
+          <a
+            href={item.href}
+            class="flex items-center gap-1 text-sm font-medium text-luxon-muted hover:text-luxon-dark transition-colors"
+          >
+            {item.label}
+            {item.children && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path d="M19 9l-7 7-7-7"/>
+              </svg>
+            )}
+          </a>
+          {item.children && (
+            <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="bg-luxon-card rounded-xl shadow-lg border border-luxon-border py-2 min-w-[180px]">
+                {item.children.map((child) => (
+                  <a
+                    href={child.href}
+                    class="block px-4 py-2.5 text-sm text-luxon-text hover:bg-luxon-bg transition-colors"
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+    </nav>
+
+    <!-- Right actions -->
+    <div class="flex items-center gap-3">
+      <LanguageSelector locale={locale} />
+      <a
+        href={contactHref}
+        class="hidden md:inline-flex items-center px-5 py-2.5 bg-luxon-dark text-white text-sm font-semibold rounded-full hover:bg-gray-800 transition-colors"
+      >
+        {nav.getStarted}
+      </a>
+      <!-- Mobile hamburger -->
+      <button
+        id="mobile-menu-toggle"
+        class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 z-[1100]"
+        aria-label="Open menu"
+      >
+        <span class="block w-[22px] h-[2px] bg-luxon-dark rounded transition-transform"></span>
+        <span class="block w-[22px] h-[2px] bg-luxon-dark rounded transition-opacity"></span>
+        <span class="block w-[22px] h-[2px] bg-luxon-dark rounded transition-transform"></span>
+      </button>
+    </div>
+  </div>
+</header>

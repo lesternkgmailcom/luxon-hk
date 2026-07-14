@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 32" fill="none">
+  <!-- Abstract L mark -->
+  <path d="M4 2h9c5.5 0 10 4.5 10 10s-4.5 10-10 10H9v8H4V2zm5 15h4c2.8 0 5-2.2 5-5s-2.2-5-5-5H9v10z" fill="#1a1a1a"/>
+  <!-- "LuxonHK" text -->
+  <text x="30" y="23" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#1a1a1a" letter-spacing="-0.3">Luxon</text>
+  <text x="90" y="23" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#1a1a1a" letter-spacing="-0.3">HK</text>
+</svg>

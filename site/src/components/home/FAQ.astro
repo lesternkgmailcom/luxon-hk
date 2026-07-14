@@ -1,0 +1,54 @@
+---
+/**
+ * FAQ accordion — native details/summary, no JS needed.
+ */
+import { type TranslationKeys, translations } from '../../i18n/translations';
+
+interface Props {
+  t?: TranslationKeys;
+}
+
+const { t = translations.en } = Astro.props;
+const faq = t.home.faq;
+
+const faqs = [
+  { question: faq.q1, answer: faq.a1 },
+  { question: faq.q2, answer: faq.a2 },
+  { question: faq.q3, answer: faq.a3 },
+  { question: faq.q4, answer: faq.a4 },
+  { question: faq.q5, answer: faq.a5 },
+  { question: faq.q6, answer: faq.a6 },
+];
+---
+
+<section id="faq" class="px-6 py-20 md:py-28">
+  <div class="max-w-[760px] mx-auto">
+    <h2 class="font-heading text-3xl md:text-4xl font-bold text-luxon-dark text-center mb-4">
+      {faq.title}
+    </h2>
+    <p class="text-luxon-muted text-center mb-12">
+      {faq.subtitle}
+    </p>
+
+    <div class="space-y-3">
+      {faqs.map((item) => (
+        <details class="group bg-luxon-card border border-luxon-border rounded-xl">
+          <summary class="flex items-center justify-between cursor-pointer px-6 py-5 font-heading font-semibold text-luxon-dark select-none [&::-webkit-details-marker]:hidden list-none">
+            <span>{item.question}</span>
+            <svg
+              class="w-5 h-5 text-luxon-muted shrink-0 ml-4 transition-transform group-open:rotate-180"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-luxon-muted leading-relaxed">
+            {item.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

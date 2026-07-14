@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-luxon-green:   #4A7C59;
+  --color-luxon-green-accent: #1a9a5c;
+  --color-luxon-purple:  #6B5CE7;
+  --color-luxon-dark:    #1A1A1A;
+  --color-luxon-text:    #374151;
+  --color-luxon-muted:   #6B7280;
+  --color-luxon-bg:      #FAF9F6;
+  --color-luxon-card:    #FFFFFF;
+  --color-luxon-border:  #E8E5E0;
+
+  --font-heading: 'Google Sans Text', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-card: 12px;
+  --radius-section: 16px;
+}

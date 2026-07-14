@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="zh-CN" title="我的 AI 每天早上为我简报金价、油价和市场动态。 — Luxon HK" description="AI 如何每天早上自动发送市场简报，涵盖金价、油价和主要股指 — 在你开始新一天之前。">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/blog/styles.css" />
+  </Fragment>
+
+  <!-- Blog Post -->
+  <section class="blog-post">
+    <div class="blog-post__header">
+      <a href="/zh-CN/blog" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
+        <span>返回 AI 生活</span>
+      </a>
+      <span class="blog-post__tag blog-post__tag--blue">理财</span>
+      <h1 class="blog-post__title">我的 AI 每天早上为我简报金价、油价和市场动态。</h1>
+      <p class="blog-post__subtitle">每天早上，我的 AI 发送市场简报：金价、油价、标普 500、恒生指数、日经 — 附带每日涨跌幅、市场变动背景，以及对我的影响。不需要打开金融 app。</p>
+      <div class="blog-post__meta">
+        <span>2026 年 4 月</span>
+        <span>·</span>
+        <span>2 分钟阅读</span>
+      </div>
+    </div>
+
+    <div class="blog-post__hero-image">
+      <img src="/images/blog-daily-market-brief.png" alt="AI 每日市场简报显示金价、油价和指数">
+    </div>
+
+    <div class="blog-post__content">
+      <p>做跨太平洋贸易，我需要掌握全球市场动态 — 不只是为了交易，而是因为大宗商品价格直接影响运费、供应商报价和合约谈判。</p>
+
+      <p>以前的方式：打开 Bloomberg、看金价、看油价、看美股指数、看亚洲指数。翻阅新闻。自己拼凑故事。每天早上大概 15-20 分钟。</p>
+
+      <p>现在我只收到一则讯息。以下是 2026 年 4 月 9 日的简报：</p>
+
+      <div class="highlight-box">
+        <p><strong>每日市场简报 — 2026 年 4 月 9 日，下午 12:31 HKT</strong></p>
+        <p><strong>黄金 (XAU/USD):</strong> ~$4,835/oz | 当日: +2.7% | 本月: +3.5% | 本季: -4.4% | 今年: ~+1%</p>
+        <p>黄金在 2 月 11 日创下 $5,061 的历史新高；目前因地缘政治缓和而回调。</p>
+        <br>
+        <p><strong>布伦特原油:</strong> ~$93.90/桶 | 当日: -14% | 本月: -12% | 本季: +18% | 今年: +25%</p>
+        <p>在美伊两周停火协议和霍尔木兹海峡重开后暴跌。近 6 年最大原油跌幅。</p>
+        <br>
+        <p><strong>主要指数:</strong></p>
+        <p><strong>标普 500:</strong> 6,616.85 (+0.08%, 期货 +2.7%)</p>
+        <p><strong>道琼斯:</strong> 46,584.46 (-0.18%, 期货 +2.5%)</p>
+        <p><strong>纳斯达克:</strong> 22,017.85 (+0.10%, 期货 +3.3%)</p>
+        <p><strong>恒生指数:</strong> ~22,900 (+2.95%)</p>
+        <p><strong>日经 225:</strong> 56,308.42 (+5.39%)</p>
+      </div>
+
+      <p>一则讯息。金价、油价、五个指数。还有背景 — <em>为什么</em>油价暴跌（美伊停火）、金价相对高位的<em>位置</em>、期货在<em>暗示</em>什么。</p>
+
+      <h2>不只是数字 — 还有背景</h2>
+
+      <p>没有背景的原始报价毫无用处。我的 AI 不只是倒数据 — 它还会加上背后的故事：</p>
+
+      <ul>
+        <li><strong>地缘政治驱动因素</strong> — 「油价在美伊停火协议后暴跌」 — 告诉我这不是正常的市场波动</li>
+        <li><strong>历史背景</strong> — 「近 6 年最大原油跌幅」 — 告诉我跌幅有多大</li>
+        <li><strong>期货 vs 现货</strong> — 标普收盘持平但期货涨了 2.7% — 告诉我下次开盘可以预期什么</li>
+        <li><strong>多时间框架</strong> — 当日、本月、本季、今年 — 告诉我这是短暂波动还是趋势</li>
+      </ul>
+
+      <h2>完全可自订</h2>
+
+      <p>简报按我的需求配置。我可以：</p>
+
+      <ul>
+        <li><strong>增减追踪资产</strong> — 加入 VIX、美元/日圆、铜，或任何我在追踪的商品</li>
+        <li><strong>更改发送时间</strong> — 早上 7 点我起床前，或 9 点开盘前</li>
+        <li><strong>加入条件提醒</strong> — 「如果金价突破 $5,000 或油价跌破 $90 就通知我」</li>
+        <li><strong>更改格式</strong> — 简短摘要或详细分析</li>
+      </ul>
+
+      <h2>适合谁？</h2>
+
+      <ul>
+        <li><strong>采购和贸易从业员</strong> — 大宗商品价格直接影响你的成本</li>
+        <li><strong>有全职工作的投资者</strong> — 不活在金融 app 里也能掌握市场</li>
+        <li><strong>企业主</strong> — 了解宏观变动如何影响你的业务规划</li>
+      </ul>
+
+      <p>你不需要 Bloomberg 终端机。你需要的是一个会读 Bloomberg 然后告诉你重点的 AI — 每天早上，一则讯息。</p>
+
+      <h2>重点摘要和建议行动</h2>
+
+      <p>除了原始数据，AI 还可以从《经济学人》等出版物中提取重点，并根据你的投资组合建议行动：</p>
+
+      <div class="blog-post__inline-image">
+        <img src="/images/blog-economist-highlight.png" alt="AI 从经济学人文章中提取重点并建议行动" loading="lazy">
+      </div>
+
+      <p>AI 不只是总结 — 它会将全球新闻与你的具体持仓联系起来。你在一则讯息中同时获得洞察和行动建议。</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="blog-cta">
+      <h3>想让 AI 每天为你发送市场简报？</h3>
+      <p>我们为你配置带定时市场简报的 AI 助手，根据你的投资组合量身定制。一次设定，当天部署。</p>
+      <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <span>立即预约安装</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="zh-CN" title="我把 PDF 发给 AI，它签名后传回来。 — Luxon HK" description="如何使用 AI 自动签署合约 — 发送 PDF，几秒后收到已签署副本。来自香港合约季节的真实用例。">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/blog/styles.css" />
+  </Fragment>
+
+  <!-- Blog Post -->
+  <section class="blog-post">
+    <div class="blog-post__header">
+      <a href="/zh-CN/blog" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
+        <span>返回 AI 生活</span>
+      </a>
+      <span class="blog-post__tag">文件</span>
+      <h1 class="blog-post__title">我把 PDF 发给 AI，它签名后传回来。</h1>
+      <p class="blog-post__subtitle">在亚洲/美国合约季节，我每天需要签署多份合约。我的 AI 帮我处理 — 使用我储存的签名，在几秒内签署 PDF 并传回。</p>
+      <div class="blog-post__meta">
+        <span>2026 年 4 月</span>
+        <span>·</span>
+        <span>2 分钟阅读</span>
+      </div>
+    </div>
+
+    <div class="blog-post__hero-image">
+      <img src="/images/blog-contract-signing.png" alt="AI 合约签署工作流程">
+    </div>
+
+    <div class="blog-post__content">
+      <p>合约季节到了。在亚洲和美国的时区之间，合约随时会来 — 供应商协议、保密协议、服务合约。忙碌的时候，我一天可能要签 10-15 份文件。</p>
+
+      <p>以前的做法：下载 PDF，打开 Preview，加上签名，储存，重新命名，附加到回复电邮，发送。每份合约大约 3-4 分钟。忙起来的时候，光签名就要花近一个小时。</p>
+
+      <h2>现在我怎么做</h2>
+
+      <p>我把合约 PDF 转发给我的 AI 助手，附上简单的讯息：</p>
+
+      <blockquote>
+        <p>「帮我签这份合约并传回来。」</p>
+      </blockquote>
+
+      <p>就这样。我的 AI：</p>
+
+      <ol>
+        <li><strong>接收 PDF</strong> — 我透过电邮或 WhatsApp 转发</li>
+        <li><strong>打开并阅读</strong> — 确认是合约，不是垃圾邮件</li>
+        <li><strong>套用我储存的签名</strong> — 安全储存，放在正确位置</li>
+        <li><strong>传回已签署的 PDF</strong> — 准备好发送，回复草稿通常已经拟好</li>
+      </ol>
+
+      <p>从头到尾：大约 15 秒。不用下载、不用列印、不用扫描。</p>
+
+      <h2>设定方法</h2>
+
+      <p>这不是魔法 — 而是配置好的工作流程。在设定时，我：</p>
+
+      <ul>
+        <li>储存了一次数字签名（透明背景的 PNG）</li>
+        <li>告诉 AI 我收到的合约上签名通常放在哪里</li>
+        <li>设定在签署前标记任何有异常条款的合约</li>
+      </ul>
+
+      <p>之后，它就一直运作。每次都行。</p>
+
+      <div class="highlight-box">
+        <p><strong>每月省下时间：</strong> 约 5 小时</p>
+        <p><strong>本季已签署合约：</strong> 40+ 份</p>
+        <p><strong>错误：</strong> 0</p>
+      </div>
+
+      <h2>适合谁？</h2>
+
+      <p>任何需要定期签署文件的人：</p>
+
+      <ul>
+        <li><strong>采购经理</strong> — 供应商合约、采购单</li>
+        <li><strong>企业主</strong> — 保密协议、服务协议、租约续期</li>
+        <li><strong>地产代理</strong> — 租赁协议、买卖合约</li>
+        <li><strong>顾问</strong> — 委聘书、工作范围文件</li>
+      </ul>
+
+      <p>如果你每周需要签署超过 5 份合约，光是这个工作流程就已经回本了。</p>
+
+      <h2>不只是签名</h2>
+
+      <p>同一个 AI 还可以：</p>
+
+      <ul>
+        <li>在签署前总结合约条款</li>
+        <li>标记异常条款或到期日</li>
+        <li>自动将已签署的副本归档</li>
+        <li>在合约到期前发出提醒</li>
+      </ul>
+
+      <p>它不只是更快 — 比手动处理更聪明。</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="blog-cta">
+      <h3>想拥有一个为你处理合约的 AI？</h3>
+      <p>我们在一次设定中为你配置带文件工作流程的个人 AI 助手。当天部署。</p>
+      <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <span>立即预约安装</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

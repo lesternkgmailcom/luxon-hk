@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="zh-HK" title="更聰明 ≠ 更好 — Luxon Learn" description="最貴嘅模型唔一定係最好嘅選擇。有時候「快速」贏過「專業」。">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/learn/learn-styles.css" />
+  </Fragment>
+
+  <!-- Lesson Hero -->
+  <section class="lesson-hero">
+    <div class="lesson-breadcrumb">
+      <a href="/zh-HK/learn">Learn</a>
+      <span>/</span>
+      <span>第 7 課</span>
+    </div>
+    <div class="lesson-badge">Level 2</div>
+    <h1>更聰明 ≠ 更好</h1>
+    <p class="lesson-subtitle">最貴嘅模型唔一定係最好嘅選擇。有時候「快速」贏過「專業」。</p>
+  </section>
+
+  <div class="lesson-content">
+
+    <!-- Visual: Pro model vs Fast model -->
+    <div class="lesson-visual">
+      <svg viewBox="0 0 640 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Pro model (expensive, overkill) -->
+        <rect x="20" y="20" width="280" height="260" rx="16" fill="#fef2f2" stroke="#fecaca"/>
+        <text x="160" y="52" font-family="Inter,sans-serif" font-size="12" fill="#dc2626" font-weight="700" text-anchor="middle">👑 專業模型（每月 $20）</text>
+        <!-- Speed gauge -->
+        <rect x="50" y="72" width="220" height="20" rx="10" fill="#fee2e2"/>
+        <rect x="50" y="72" width="55" height="20" rx="10" fill="#f87171"/>
+        <text x="160" y="86" font-family="Inter,sans-serif" font-size="9" fill="#fff" text-anchor="middle">慢</text>
+        <!-- Quality gauge -->
+        <rect x="50" y="100" width="220" height="20" rx="10" fill="#fee2e2"/>
+        <rect x="50" y="100" width="209" height="20" rx="10" fill="#f87171"/>
+        <text x="160" y="114" font-family="Inter,sans-serif" font-size="9" fill="#fff" text-anchor="middle">95%</text>
+        <!-- Cost -->
+        <text x="50" y="148" font-family="Inter,sans-serif" font-size="11" fill="#dc2626">💰 每月 $20</text>
+        <text x="50" y="168" font-family="Inter,sans-serif" font-size="11" fill="#9ca3af">⏱️ 每次回覆 15 秒</text>
+        <!-- Task -->
+        <rect x="50" y="186" width="220" height="36" rx="8" fill="#fff" stroke="#fecaca"/>
+        <text x="160" y="200" font-family="Inter,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">任務：「幫我總結呢封電郵」</text>
+        <text x="160" y="214" font-family="Inter,sans-serif" font-size="10" fill="#dc2626" text-anchor="middle">大材小用。同快速模型結果一樣。</text>
+        <!-- Bottom label -->
+        <text x="50" y="258" font-family="Inter,sans-serif" font-size="11" fill="#dc2626" font-weight="600">❌ 俾錢買你唔需要嘅腦力</text>
+
+        <!-- Fast model (cheap, efficient) -->
+        <rect x="340" y="20" width="280" height="260" rx="16" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="480" y="52" font-family="Inter,sans-serif" font-size="12" fill="#16a34a" font-weight="700" text-anchor="middle">⚡ 快速模型（每月 $5）</text>
+        <!-- Speed gauge -->
+        <rect x="370" y="72" width="220" height="20" rx="10" fill="#dcfce7"/>
+        <rect x="370" y="72" width="198" height="20" rx="10" fill="#4ade80"/>
+        <text x="480" y="86" font-family="Inter,sans-serif" font-size="9" fill="#fff" text-anchor="middle">快速</text>
+        <!-- Quality gauge -->
+        <rect x="370" y="100" width="220" height="20" rx="10" fill="#dcfce7"/>
+        <rect x="370" y="100" width="176" height="20" rx="10" fill="#4ade80"/>
+        <text x="480" y="114" font-family="Inter,sans-serif" font-size="9" fill="#fff" text-anchor="middle">80%</text>
+        <!-- Cost -->
+        <text x="370" y="148" font-family="Inter,sans-serif" font-size="11" fill="#16a34a">💰 每月 $5</text>
+        <text x="370" y="168" font-family="Inter,sans-serif" font-size="11" fill="#16a34a">⏱️ 每次回覆 3 秒</text>
+        <!-- Task -->
+        <rect x="370" y="186" width="220" height="36" rx="8" fill="#fff" stroke="#86efac"/>
+        <text x="480" y="200" font-family="Inter,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">任務：「幫我總結呢封電郵」</text>
+        <text x="480" y="214" font-family="Inter,sans-serif" font-size="10" fill="#16a34a" text-anchor="middle">結果一樣。快 5 倍。平 4 倍。</text>
+        <!-- Bottom label -->
+        <text x="370" y="258" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="600">✓ 啱嘅工具做啱嘅事</text>
+      </svg>
+      <p class="lesson-visual-caption">對於簡單任務，快速模型同專業模型一樣好 — 但成本只係 ¼，速度快 5 倍。將重炮留畀真正難嘅問題。</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="lesson-steps">
+      <div class="lesson-step">
+        <div class="lesson-step__number">1</div>
+        <div class="lesson-step__content">
+          <h3>80/20 法則</h3>
+          <p>你每日 80% 嘅 AI 任務都係簡單嘅：摘要、快速草稿、格式轉換、翻譯。快速模型完美處理呢啲工作。將昂貴模型留畀嗰 20% 需要深度推理嘅任務 — 複雜分析、創意寫作、或多步驟邏輯。</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">2</div>
+        <div class="lesson-step__content">
+          <h3>按任務選模型</h3>
+          <p>簡單問題？快速模型。長文件分析？專業模型。簡單改寫？快速。創意腦力激盪？專業。核心問題：「一個聰明嘅實習生做得好嗎？」如果係 — 用快速模型。</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">3</div>
+        <div class="lesson-step__content">
+          <h3>先快速，唔夠先升級</h3>
+          <p>預設用快速模型。如果答案唔夠好，將對話貼到專業模型話「改善呢個」。你會慳時間慳錢 — 大部份任務都唔需要升級。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="lesson-tip">
+      <div class="lesson-tip__icon">💡</div>
+      <div class="lesson-tip__text"><strong>專業提示：</strong>ChatGPT 容許你喺對話中途轉模型。Claude 有 Haiku（快速）同 Sonnet/Opus（專業）。預設用平嗰個 — 只係遇到樽頸先升級。</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="lesson-cta">
+      <h3>需要我們幫你設定嗎？</h3>
+      <p>我們為你配置一切 — 個人化設定、專案和工作流程 — 一次搞定。</p>
+      <a href="https://wa.me/85297381028" class="btn btn-primary" target="_blank" rel="noopener noreferrer">預約安裝</a>
+    </div>
+  </div>
+
+  <!-- Lesson Nav -->
+  <div class="lesson-nav">
+    <a href="/zh-HK/learn/lesson-6" class="prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7-7 7 7 7"/></svg> 讓 AI 自己寫指令</a>
+    <a href="/zh-HK/learn/lesson-8" class="next">搜尋過去嘅對話 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+  </div>
+</BaseLayout>

@@ -1,0 +1,66 @@
+---
+/**
+ * Featured Case Study teaser — dark bg, visually distinct card.
+ */
+import { type TranslationKeys, translations, type Locale, defaultLocale } from '../../i18n/translations';
+
+interface Props {
+  t?: TranslationKeys;
+  locale?: Locale;
+}
+
+const { t = translations.en, locale = defaultLocale } = Astro.props;
+const cs = t.home.featuredCaseStudy;
+const lp = (path: string) => locale === 'en' ? path : `/${locale}${path}`;
+---
+
+<section class="px-6 py-20 md:py-28">
+  <div class="max-w-[900px] mx-auto">
+    <div class="relative overflow-hidden rounded-xl bg-luxon-dark p-8 md:p-12 lg:p-14">
+      <!-- Subtle purple accent glow -->
+      <div
+        class="absolute -top-20 -right-20 w-60 h-60 rounded-full opacity-10"
+        style="background: radial-gradient(circle, #6B5CE7 0%, transparent 70%);"
+        aria-hidden="true"
+      ></div>
+
+      <div class="relative z-10">
+        <p class="text-xs uppercase tracking-widest text-luxon-green-accent font-semibold mb-4">
+          {cs.badge}
+        </p>
+        <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-10">
+          {cs.title}
+        </h2>
+
+        <div class="grid sm:grid-cols-3 gap-6 mb-10">
+          <div>
+            <p class="font-heading text-3xl md:text-4xl font-bold text-luxon-green-accent mb-1">
+              {cs.metric1Value}
+            </p>
+            <p class="text-sm text-gray-400">{cs.metric1Label}</p>
+          </div>
+          <div>
+            <p class="font-heading text-3xl md:text-4xl font-bold text-white mb-1">
+              {cs.metric2Value}
+            </p>
+            <p class="text-sm text-gray-400">{cs.metric2Label}</p>
+          </div>
+          <div>
+            <p class="font-heading text-3xl md:text-4xl font-bold text-white mb-1">
+              {cs.metric3Value}
+            </p>
+            <p class="text-sm text-gray-400">{cs.metric3Label}</p>
+          </div>
+        </div>
+
+        <a
+          href={lp('/ai-solutions/cases/ocean-freight-dashboard')}
+          class="inline-flex items-center text-luxon-green-accent font-semibold hover:underline"
+        >
+          {cs.readFull}
+          <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

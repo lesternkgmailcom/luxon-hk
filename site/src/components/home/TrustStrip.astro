@@ -1,0 +1,18 @@
+---
+/**
+ * Trust strip — text-only, no placeholder logos.
+ */
+import { type TranslationKeys, translations } from '../../i18n/translations';
+
+interface Props {
+  t?: TranslationKeys;
+}
+
+const { t = translations.en } = Astro.props;
+---
+
+<section class="border-y border-luxon-border py-5 px-6">
+  <p class="text-center text-sm text-luxon-muted tracking-wide uppercase font-medium">
+    {t.home.trustStrip}
+  </p>
+</section>

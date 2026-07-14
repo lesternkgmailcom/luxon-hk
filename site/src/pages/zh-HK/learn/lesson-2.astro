@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="zh-HK" title="先建立專案 — Luxon Learn" description="唔好再學提示詞啦。專案先係真正嘅秘密 — 但大部份教程都跳過咗呢點。">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/learn/learn-styles.css" />
+  </Fragment>
+
+  <!-- Lesson Hero -->
+  <section class="lesson-hero">
+    <div class="lesson-breadcrumb">
+      <a href="/zh-HK/learn">Learn</a>
+      <span>/</span>
+      <span>第 2 課</span>
+    </div>
+    <div class="lesson-badge">Level 1</div>
+    <h1>先建立專案</h1>
+    <p class="lesson-subtitle">唔好再學提示詞啦。專案先係真正嘅秘密 — 但大部份教程都跳過咗呢點。</p>
+  </section>
+
+  <div class="lesson-content">
+
+    <!-- Visual: Scattered vs Organized -->
+    <div class="lesson-visual">
+      <svg viewBox="0 0 640 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Scattered papers (no project) -->
+        <rect x="20" y="30" width="280" height="240" rx="16" fill="#fef2f2" stroke="#fecaca"/>
+        <text x="40" y="58" font-family="Inter,sans-serif" font-size="11" fill="#dc2626" font-weight="700">❌ 冇專案</text>
+        <rect x="40" y="76" width="80" height="60" rx="4" fill="#fff" stroke="#e5e7eb" transform="rotate(-8 80 106)"/>
+        <rect x="100" y="90" width="80" height="60" rx="4" fill="#fff" stroke="#e5e7eb" transform="rotate(5 140 120)"/>
+        <rect x="60" y="150" width="80" height="60" rx="4" fill="#fff" stroke="#e5e7eb" transform="rotate(-3 100 180)"/>
+        <rect x="150" y="140" width="80" height="60" rx="4" fill="#fff" stroke="#e5e7eb" transform="rotate(7 190 170)"/>
+        <text x="40" y="240" font-family="Inter,sans-serif" font-size="11" fill="#80868b">冇記憶。每次都由零開始。</text>
+
+        <!-- Organized folder (with project) -->
+        <rect x="340" y="30" width="280" height="240" rx="16" fill="#f0fdf4" stroke="#bbf7d0"/>
+        <text x="360" y="58" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="700">✓ 有專案</text>
+        <rect x="390" y="76" width="180" height="24" rx="4" fill="#16a34a"/>
+        <rect x="390" y="72" width="60" height="12" rx="4" fill="#16a34a"/>
+        <text x="402" y="92" font-family="Inter,sans-serif" font-size="10" fill="#fff" font-weight="600">📋 我嘅專案</text>
+        <rect x="400" y="112" width="160" height="28" rx="6" fill="#fff" stroke="#86efac"/>
+        <text x="412" y="130" font-family="Inter,sans-serif" font-size="10" fill="#3c4043">📄 自訂指令</text>
+        <rect x="400" y="148" width="160" height="28" rx="6" fill="#fff" stroke="#86efac"/>
+        <text x="412" y="166" font-family="Inter,sans-serif" font-size="10" fill="#3c4043">📄 過往對話紀錄</text>
+        <rect x="400" y="184" width="160" height="28" rx="6" fill="#fff" stroke="#86efac"/>
+        <text x="412" y="202" font-family="Inter,sans-serif" font-size="10" fill="#3c4043">📄 已上傳檔案</text>
+        <text x="360" y="240" font-family="Inter,sans-serif" font-size="11" fill="#16a34a" font-weight="600">AI 記住一切。愈用愈聰明 ✓</text>
+
+        <!-- Arrow -->
+        <path d="M310 150 L330 150" stroke="#4285f4" stroke-width="2" marker-end="url(#arrowhead2)"/>
+        <defs><marker id="arrowhead2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4285f4"/></marker></defs>
+      </svg>
+      <p class="lesson-visual-caption">散亂嘅對話乜都記唔住。一個專案會記住 — 而且愈用愈聰明。</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="lesson-steps">
+      <div class="lesson-step">
+        <div class="lesson-step__number">1</div>
+        <div class="lesson-step__content">
+          <h3>咩係專案？</h3>
+          <p>專案就好似一個有記憶嘅資料夾。唔使每次傾偈都由零開始，AI 會記住你嘅偏好、檔案同埋過往嘅對話。呢個係大部份人都未做過嘅最大升級。</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">2</div>
+        <div class="lesson-step__content">
+          <h3>兩次法則</h3>
+          <p>如果你做同一件事超過兩次 — 每週報告、客戶電郵、教案 — 就將佢變成一個專案。咁簡單。如果有重複性，就值得開一個專案。</p>
+        </div>
+      </div>
+      <div class="lesson-step">
+        <div class="lesson-step__number">3</div>
+        <div class="lesson-step__content">
+          <h3>點樣建立</h3>
+          <p><strong>Claude：</strong>喺側邊欄撳「Create Project」。<br><strong>ChatGPT：</strong>喺側邊欄撳專案圖示。用你正在做嘅嘢嚟命名 — 「每週報告」、「客戶電郵」、「課程內容」。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="lesson-tip">
+      <div class="lesson-tip__icon">💡</div>
+      <div class="lesson-tip__text"><strong>專業提示：</strong>建立專案之後，叫 AI 自己寫指令：「幫我寫最好嘅自訂指令畀呢個專案。」佢比自己更清楚佢需要啲咩。</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="lesson-cta">
+      <h3>需要我們幫你設定嗎？</h3>
+      <p>我們為你配置一切 — 個人化設定、專案和工作流程 — 一次搞定。</p>
+      <a href="https://wa.me/85297381028" class="btn btn-primary" target="_blank" rel="noopener noreferrer">預約安裝</a>
+    </div>
+  </div>
+
+  <!-- Lesson Nav -->
+  <div class="lesson-nav">
+    <a href="/zh-HK/learn/lesson-1" class="prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7-7 7 7 7"/></svg> AI vs Google 搜尋</a>
+    <a href="/zh-HK/learn/lesson-3" class="next">個人化你嘅 AI <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+  </div>
+</BaseLayout>

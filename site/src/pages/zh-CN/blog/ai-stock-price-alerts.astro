@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="zh-CN" title="我的 AI 每天两次为我报告股价。我只负责交易。 — Luxon HK" description="如何设定 AI 在每天预设时间报告股价两次 — 让你不需要不断看盘就能做出交易决策。">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/blog/styles.css" />
+  </Fragment>
+
+  <!-- Blog Post -->
+  <section class="blog-post">
+    <div class="blog-post__header">
+      <a href="/zh-CN/blog" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
+        <span>返回 AI 生活</span>
+      </a>
+      <span class="blog-post__tag blog-post__tag--blue">理财</span>
+      <h1 class="blog-post__title">我的 AI 每天两次为我报告股价。我只负责交易。</h1>
+      <p class="blog-post__subtitle">我让 AI 追踪鸿海，每天 10:30 和 11:50 自动报告股价。不用开任何 app，不用处理通知 — 只在我需要的时候，给我需要的数据。</p>
+      <div class="blog-post__meta">
+        <span>2026 年 4 月</span>
+        <span>·</span>
+        <span>2 分钟阅读</span>
+      </div>
+    </div>
+
+    <div class="blog-post__hero-image">
+      <img src="/images/blog-stock-price-alerts.png" alt="AI 透过聊天发送定时股价报告">
+    </div>
+
+    <div class="blog-post__content">
+      <p>我在香港做跨太平洋贸易，同时交易台湾股票。台股早上 9 点开盘，我需要在早盘做决策 — 但我还有全职工作。没办法一直盯着看盘。</p>
+
+      <p>所以我告诉 AI：</p>
+
+      <blockquote>
+        <p>「帮我每天在固定时间回报鸿海的股价，让我需要的时候可以做交易。」</p>
+      </blockquote>
+
+      <p>AI 问了追问 — 哪只股票？几点？我说：</p>
+
+      <blockquote>
+        <p>「鸿海 (2317.TW)。收盘后报告比较好 — 所以 10:30 和 11:50。」</p>
+      </blockquote>
+
+      <p>就这样。AI 设定了自动排程。现在每天两次，我会收到这样的讯息：</p>
+
+      <div class="highlight-box">
+        <p><strong>鸿海 (2317) — 2026/04/02 (三)</strong></p>
+        <p><strong>收盘价:</strong> 193.0</p>
+        <p><strong>跌 4.0 元</strong> (-2.03%)</p>
+        <p><strong>开盘:</strong> 198.0 → <strong>最高:</strong> 199.0 → <strong>最低:</strong> 191.5</p>
+        <p><strong>成交金额:</strong> 70.46 亿</p>
+        <p><strong>昨收:</strong> 197.0</p>
+      </div>
+
+      <p>开盘价、最高、最低、收盘、成交量 — 决定买卖或持有所需的一切资讯。不用打开任何 app。</p>
+
+      <h2>为什么这很重要</h2>
+
+      <p>边做全职工作边交易，意味着你永远在分心。以前的方式：</p>
+
+      <ul>
+        <li>打开股票 app（Yahoo Finance、富途等）</li>
+        <li>搜寻股票代码</li>
+        <li>查看数字</li>
+        <li>决定是否需要操作</li>
+        <li>每天重复好几次</li>
+      </ul>
+
+      <p>现在的方式：AI 主动发送数据给我。我读讯息、做决策、继续工作。10 秒代替 10 分钟的 app 切换。</p>
+
+      <h2>进阶应用</h2>
+
+      <p>第一个股价提醒跑起来后，要加更多很简单：</p>
+
+      <ul>
+        <li><strong>多支股票</strong> — 追踪 5-10 只股票的观察清单，不限一只</li>
+        <li><strong>条件提醒</strong> — 「如果鸿海跌破 190 或突破 200 就通知我」</li>
+        <li><strong>盘前简报</strong> — 「开盘前给我 ADR 价格和隔夜新闻」</li>
+        <li><strong>每周总结</strong> — 「每周五收盘后发给我周与周的比较」</li>
+      </ul>
+
+      <p>AI 不只报数字 — 还能加上背景分析。例如注意到鸿海本周持续下跌并标记趋势。</p>
+
+      <h2>适合谁？</h2>
+
+      <ul>
+        <li><strong>兼职交易者</strong> — 交易股票但没办法整天盯盘的人</li>
+        <li><strong>跨境投资者</strong> — 在香港交易台湾、韩国、美国市场</li>
+        <li><strong>投资组合追踪者</strong> — 想追踪特定股票但不想活在金融 app 里的人</li>
+      </ul>
+
+      <p>设定只需 5 分钟。之后自动运行 — 每天、按排程、不需要手动操作。</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="blog-cta">
+      <h3>想让 AI 为你设定股价提醒？</h3>
+      <p>我们为你配置带定时股价报告和市场监控的 AI 助手。一次设定，当天部署。</p>
+      <a href="https://wa.me/85297381028" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <span>立即预约安装</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

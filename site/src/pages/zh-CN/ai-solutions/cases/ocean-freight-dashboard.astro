@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ScreenshotPlaceholder from '../../../../components/ai-solutions/ScreenshotPlaceholder.astro';
+import { getTranslations } from '../../../../i18n/utils';
+
+const t = getTranslations('zh-CN');
+const cs = t.caseOceanFreight;
+const lp = (path: string) => `/zh-CN${path}`;
+
+const metrics = [
+  { value: '13', label: '家承运商自动化，覆盖 5 条贸易航线' },
+  { value: '44', label: '个专用提取器（Excel、PDF、Word、电邮、PNG）' },
+  { value: '秒', label: '每日快照生成（原需 4+ 小时手动）' },
+  { value: '5 分钟', label: '运价比较时间（原需 4+ 小时）' },
+  { value: '6+', label: '种输入格式处理' },
+  { value: '24/7', label: '自我修复流程，自动重试' },
+];
+
+const features = [
+  { title: '运价比较表', description: '所有承运商的并排运价比较，配备周度变化列。红色涨幅、绿色跌幅的颜色编码让变化一目了然。', placeholder: '仪表板截图 — 含 WoW 变化的运价比较视图' },
+  { title: '贸易航线分页', description: 'TPEB 美国、TPEB 加拿大、WCSA、ECSA、EUR — 每条航线设有目的地分栏。即时切换航线，聚焦重点。', placeholder: '仪表板截图 — 贸易航线分页导航' },
+  { title: '承运商覆盖率追踪', description: '13 家承运商的热力图，显示哪些有新鲜数据、哪些是手动配置、哪些存在缺口。过期数据警报防止基于旧运价做决策。', placeholder: '仪表板截图 — 承运商覆盖率热力图' },
+  { title: '自然语言查询', description: '输入「上海到 Manzanillo 20DC」即可获得含附加费和有效期的即时运价。不再需要复杂的多步骤电子表格查找。', placeholder: '仪表板截图 — 自然语言查询界面' },
+];
+
+const techStack = [
+  { label: 'Python 提取引擎', detail: '44 个按承运商区分的解析器，含格式检测' },
+  { label: 'SQLite 数据库', detail: '5 个标准化关联架构' },
+  { label: 'Streamlit 仪表板', detail: 'Plotly 可视化，多面板布局' },
+  { label: 'n8n 工作流程自动化', detail: '定时触发器、电邮轮询、快照生成' },
+  { label: '视觉 AI (OCR)', detail: 'glm-4.6v 用于 PNG 截图运价表提取' },
+];
+---
+
+<BaseLayout locale="zh-CN" title={cs.title} description={cs.description}>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-28 md:py-36 lg:py-44 px-6">
+    <div class="absolute inset-0 -z-10 opacity-[0.07]" style="background: radial-gradient(ellipse 70% 50% at 60% 40%, #4A7C59 0%, #6B5CE7 100%);" aria-hidden="true"></div>
+    <div class="max-w-[720px] mx-auto text-center">
+      <nav class="text-sm text-luxon-muted mb-6" aria-label="Breadcrumb">
+        <a href={lp('/ai-solutions')} class="hover:text-luxon-dark transition-colors">{t.nav.aiSolutions}</a>
+        <span class="mx-2">/</span>
+        <a href={lp('/ai-solutions/cases')} class="hover:text-luxon-dark transition-colors">{t.nav.caseStudies}</a>
+        <span class="mx-2">/</span>
+        <span>{cs.breadcrumb}</span>
+      </nav>
+      <p class="text-xs uppercase tracking-widest text-luxon-green-accent font-semibold mb-4">{cs.badge}</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-luxon-dark tracking-tight leading-tight mb-6">{cs.heroTitle}</h1>
+      <p class="text-lg md:text-xl text-luxon-muted max-w-[580px] mx-auto leading-relaxed">{cs.heroSubtitle}</p>
+    </div>
+  </section>
+
+  <!-- Results Metrics -->
+  <div class="fade-in-up">
+    <section class="px-6 pb-20 md:pb-28">
+      <div class="max-w-[900px] mx-auto">
+        <div class="relative overflow-hidden rounded-xl bg-luxon-dark p-8 md:p-12">
+          <div class="absolute -top-20 -right-20 w-60 h-60 rounded-full opacity-10" style="background: radial-gradient(circle, #6B5CE7 0%, transparent 70%);" aria-hidden="true"></div>
+          <div class="relative z-10">
+            <p class="text-xs uppercase tracking-widest text-luxon-green-accent font-semibold mb-8">{cs.resultsBadge}</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8">
+              {metrics.map((m) => (
+                <div>
+                  <p class="font-heading text-3xl md:text-4xl font-bold text-luxon-green-accent mb-1">{m.value}</p>
+                  <p class="text-sm text-gray-400 leading-relaxed">{m.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Challenge -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28">
+      <div class="max-w-[800px] mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-luxon-dark mb-8">{cs.challengeTitle}</h2>
+        <div class="space-y-5 text-luxon-text leading-relaxed">
+          <p>海运运价每周在 <strong>13 家承运商</strong>的 <strong>5 条主要贸易航线</strong>（亚洲至美国/加拿大、亚洲至拉丁美洲、亚洲至欧洲）上变动。掌握这些走势至关重要 — 遗漏运价上调或过期合约每航次可能损失数千美元。</p>
+          <p>但运价表以截然不同的格式送达：Excel（.xls 和 .xlsx）、PDF、Word 文档、Outlook .msg 电邮、行内电邮文本，甚至 <strong>PNG 截图</strong>格式的运价表。每家承运商使用独特的电子表格布局，有些在档案间还会更改格式。</p>
+          <p>结果：手动比较每天耗费 <strong>4+ 小时</strong> — 复制贴上到电子表格中，容易出错，决策延误数天。运价有效期不断过期，GRI 上调总是发现得太晚。</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Solution -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28 bg-white">
+      <div class="max-w-[800px] mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-luxon-dark mb-8">{cs.solutionTitle}</h2>
+        <div class="space-y-6">
+          {[
+            { icon: '<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>', title: cs.solutionItems.extractionEngine.title, desc: cs.solutionItems.extractionEngine.description },
+            { icon: '<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>', title: cs.solutionItems.comparisonDashboard.title, desc: cs.solutionItems.comparisonDashboard.description },
+            { icon: '<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>', title: cs.solutionItems.nlq.title, desc: cs.solutionItems.nlq.description },
+            { icon: '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>', title: cs.solutionItems.dailySnapshot.title, desc: cs.solutionItems.dailySnapshot.description },
+            { icon: '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>', title: cs.solutionItems.rateChange.title, desc: cs.solutionItems.rateChange.description },
+          ].map((item) => (
+            <div class="flex gap-4">
+              <div class="w-8 h-8 rounded-lg bg-luxon-green/10 flex items-center justify-center shrink-0 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={item.icon} /></svg>
+              </div>
+              <div>
+                <h3 class="font-heading text-lg font-bold text-luxon-dark mb-1">{item.title}</h3>
+                <p class="text-luxon-muted leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Key Features with Screenshots -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28">
+      <div class="max-w-[900px] mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-luxon-dark text-center mb-12">{cs.featuresTitle}</h2>
+        <div class="space-y-12">
+          {features.map((feature, i) => (
+            <div class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? 'md:direction-rtl' : ''}`}>
+              <div class={i % 2 === 1 ? 'md:order-2' : ''}>
+                <ScreenshotPlaceholder label={feature.placeholder} />
+              </div>
+              <div class={i % 2 === 1 ? 'md:order-1' : ''}>
+                <h3 class="font-heading text-xl font-bold text-luxon-dark mb-3">{feature.title}</h3>
+                <p class="text-luxon-muted leading-relaxed">{feature.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Technology Stack -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28 bg-luxon-dark">
+      <div class="max-w-[800px] mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white text-center mb-12">{cs.techStackTitle}</h2>
+        <div class="space-y-4">
+          {techStack.map((item) => (
+            <div class="flex items-start gap-4 py-3 border-b border-gray-700/50">
+              <code class="font-mono text-sm text-luxon-green-accent shrink-0 min-w-[180px]">{item.label}</code>
+              <p class="text-sm text-gray-400 leading-relaxed">{item.detail}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-xs text-gray-500 mt-8 text-center">{cs.techStackNote}</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- CTA -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28">
+      <div class="max-w-[700px] mx-auto text-center">
+        <div class="relative overflow-hidden rounded-2xl px-8 py-14 md:px-14 md:py-20" style="background: linear-gradient(135deg, #4A7C59 0%, #3a6347 40%, #6B5CE7 100%);">
+          <div class="absolute inset-0 opacity-[0.06]" style="background: radial-gradient(circle at 20% 80%, white 0%, transparent 50%), radial-gradient(circle at 80% 20%, white 0%, transparent 50%);" aria-hidden="true"></div>
+          <div class="relative z-10">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">{cs.ctaTitle}</h2>
+            <p class="text-white/80 mb-10 text-lg leading-relaxed">{cs.ctaSubtitle}</p>
+            <a href={lp('/contact')} class="inline-flex items-center px-8 py-3.5 bg-white text-luxon-dark font-semibold rounded-full text-lg hover:bg-gray-100 transition-colors">{t.aiSolutions.bookDiscovery}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <style>.fade-in-up{opacity:0;transform:translateY(1rem);transition:opacity .6s ease-out,transform .6s ease-out}.fade-in-up.is-visible{opacity:1;transform:translateY(0)}@media(prefers-reduced-motion:reduce){.fade-in-up{opacity:1;transform:none;transition:none}}</style>
+  <script is:inline>
+    (function () { var p = window.matchMedia('(prefers-reduced-motion: reduce)').matches; if (p) { document.querySelectorAll('.fade-in-up').forEach(function(e){e.classList.add('is-visible');}); return; } var o = new IntersectionObserver(function(e){e.forEach(function(n){if(n.isIntersecting){n.target.classList.add('is-visible');o.unobserve(n.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'}); document.querySelectorAll('.fade-in-up').forEach(function(e){o.observe(e);}); })();
+  </script>
+</BaseLayout>

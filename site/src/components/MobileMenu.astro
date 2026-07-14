@@ -1,0 +1,88 @@
+---
+/**
+ * MobileMenu.astro
+ * Slide-in mobile menu with hamburger toggle.
+ */
+import { type Locale, type TranslationKeys, defaultLocale } from '../i18n/translations';
+
+interface Props {
+  locale?: Locale;
+  t?: TranslationKeys;
+}
+
+const { locale = defaultLocale, t } = Astro.props;
+const nav = t.nav;
+const lp = (path: string) => locale === 'en' ? path : `/${locale}${path}`;
+---
+
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-black/30 z-[1050] opacity-0 invisible transition-opacity"></div>
+
+<div id="mobile-menu" class="fixed top-0 right-0 w-[300px] max-w-[85vw] h-full bg-luxon-card z-[1060] pt-20 px-8 pb-8 translate-x-full transition-transform duration-300 shadow-xl overflow-y-auto">
+  <button
+    id="mobile-menu-close"
+    class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center text-luxon-muted hover:text-luxon-dark transition-colors"
+    aria-label="Close menu"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+  </button>
+
+  <nav class="flex flex-col gap-1">
+    <a href={lp('/ai-workers')} class="block py-3 text-lg font-medium text-luxon-dark border-b border-gray-100 hover:text-luxon-muted transition-colors">
+      {nav.aiWorkers}
+    </a>
+    <a href={lp('/ai-workers/pricing')} class="block py-3 pl-4 text-base text-luxon-muted border-b border-gray-100 hover:text-luxon-dark transition-colors">
+      {nav.pricing}
+    </a>
+    <a href={lp('/ai-solutions')} class="block py-3 text-lg font-medium text-luxon-dark border-b border-gray-100 hover:text-luxon-muted transition-colors">
+      {nav.aiSolutions}
+    </a>
+    <a href={lp('/ai-solutions/cases')} class="block py-3 pl-4 text-base text-luxon-muted border-b border-gray-100 hover:text-luxon-dark transition-colors">
+      {nav.caseStudies}
+    </a>
+    <a href={lp('/ai-solutions/process')} class="block py-3 pl-4 text-base text-luxon-muted border-b border-gray-100 hover:text-luxon-dark transition-colors">
+      {nav.ourProcess}
+    </a>
+    <a href={lp('/blog')} class="block py-3 text-lg font-medium text-luxon-dark border-b border-gray-100 hover:text-luxon-muted transition-colors">
+      {nav.aiLiving}
+    </a>
+    <a href={lp('/learn')} class="block py-3 text-lg font-medium text-luxon-dark border-b border-gray-100 hover:text-luxon-muted transition-colors">
+      {nav.learn}
+    </a>
+  </nav>
+
+  <a
+    href={lp('/contact')}
+    class="mt-8 flex items-center justify-center w-full py-3 bg-luxon-dark text-white font-semibold rounded-full hover:bg-gray-800 transition-colors"
+  >
+    {nav.getStarted}
+  </a>
+</div>
+
+<script>
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('mobile-menu-overlay');
+  const close = document.getElementById('mobile-menu-close');
+
+  function openMenu() {
+    menu?.classList.remove('translate-x-full');
+    menu?.classList.add('translate-x-0');
+    overlay?.classList.remove('opacity-0', 'invisible');
+    overlay?.classList.add('opacity-100', 'visible');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    menu?.classList.remove('translate-x-0');
+    menu?.classList.add('translate-x-full');
+    overlay?.classList.remove('opacity-100', 'visible');
+    overlay?.classList.add('opacity-0', 'invisible');
+    document.body.style.overflow = '';
+  }
+
+  toggle?.addEventListener('click', openMenu);
+  close?.addEventListener('click', closeMenu);
+  overlay?.addEventListener('click', closeMenu);
+</script>

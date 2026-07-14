@@ -1,0 +1,53 @@
+---
+/**
+ * Hero section — homepage headline, sub-headline, two CTAs, abstract gradient visual.
+ */
+import { type TranslationKeys, translations, type Locale, defaultLocale } from '../../i18n/translations';
+
+interface Props {
+  t?: TranslationKeys;
+  locale?: Locale;
+}
+
+const { t = translations.en, locale = defaultLocale } = Astro.props;
+const h = t.home;
+const lp = (path: string) => locale === 'en' ? path : `/${locale}${path}`;
+---
+
+<section class="relative overflow-hidden py-28 md:py-36 lg:py-44 px-6">
+  <!-- Abstract gradient accent -->
+  <div
+    class="absolute inset-0 -z-10 opacity-[0.07]"
+    style="background: radial-gradient(ellipse 70% 50% at 60% 40%, #4A7C59 0%, #6B5CE7 100%);"
+    aria-hidden="true"
+  ></div>
+  <!-- Geometric accent — top right -->
+  <div
+    class="absolute top-0 right-0 -z-10 w-[420px] h-[420px] rounded-full opacity-[0.04]"
+    style="background: radial-gradient(circle, #6B5CE7 0%, transparent 70%);"
+    aria-hidden="true"
+  ></div>
+
+  <div class="max-w-[720px] mx-auto text-center">
+    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-luxon-dark tracking-tight leading-tight mb-6">
+      {h.heroTitle}
+    </h1>
+    <p class="text-lg md:text-xl text-luxon-muted max-w-[580px] mx-auto leading-relaxed mb-10">
+      {h.heroSubtitle}
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href={lp('/ai-workers')}
+        class="inline-flex items-center px-8 py-3.5 bg-luxon-green text-white font-semibold rounded-full text-lg hover:bg-luxon-green-accent transition-colors"
+      >
+        {h.ctaExplore}
+      </a>
+      <a
+        href={lp('/ai-solutions')}
+        class="inline-flex items-center px-8 py-3.5 border border-luxon-border text-luxon-dark font-semibold rounded-full text-lg hover:bg-white transition-colors"
+      >
+        {h.ctaSolutions}
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,160 @@
+---
+/**
+ * AI Solutions Case Studies Index — /ai-solutions/cases
+ * Lists all case studies as cards with teasers.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CaseStudyCard from '../../../components/ai-solutions/CaseStudyCard.astro';
+
+const caseStudies = [
+  {
+    title: 'Ocean Freight Rate Intelligence',
+    description: 'How we built an AI-powered dashboard that automated rate tracking across 13 carriers, 5 trade lanes, and 6+ document formats — replacing 4+ hours of daily manual work.',
+    href: '/ai-solutions/cases/ocean-freight-dashboard',
+    tag: 'Logistics',
+    showImage: true,
+  },
+  {
+    title: 'Daily Market Snapshot',
+    description: 'From 2 hours of manual spreadsheet compilation to a 30-second automated pipeline that generates and emails daily market reports to stakeholders.',
+    href: '/ai-solutions/cases/market-snapshot',
+    tag: 'Reporting',
+    showImage: true,
+  },
+  {
+    title: 'Intelligent Document Extraction',
+    description: '44 carrier-specific extractors processing 100+ rate sheets per week across Excel, PDF, Word, email, and PNG — with zero manual data entry.',
+    href: '/ai-solutions/cases/document-extraction',
+    tag: 'Processing',
+    showImage: true,
+  },
+];
+---
+
+<BaseLayout title="Case Studies — AI Solutions | Luxon" description="Real AI solutions delivering real results. Read our case studies on logistics automation, reporting pipelines, and document processing.">
+
+  <!-- Section 1: Hero -->
+  <section class="relative overflow-hidden py-28 md:py-36 lg:py-44 px-6">
+    <div
+      class="absolute inset-0 -z-10 opacity-[0.07]"
+      style="background: radial-gradient(ellipse 70% 50% at 60% 40%, #6B5CE7 0%, #4A7C59 100%);"
+      aria-hidden="true"
+    ></div>
+
+    <div class="max-w-[720px] mx-auto text-center">
+      <nav class="text-sm text-luxon-muted mb-6" aria-label="Breadcrumb">
+        <a href="/ai-solutions" class="hover:text-luxon-dark transition-colors">AI Solutions</a>
+        <span class="mx-2">/</span>
+        <span>Case Studies</span>
+      </nav>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-luxon-dark tracking-tight leading-tight mb-6">
+        Case Studies
+      </h1>
+      <p class="text-lg md:text-xl text-luxon-muted max-w-[580px] mx-auto leading-relaxed">
+        Real solutions delivering real results. See how we have helped teams automate their most painful workflows.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 2: Case Study Cards -->
+  <div class="fade-in-up">
+    <section class="px-6 pb-20 md:pb-28">
+      <div class="max-w-[1100px] mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {caseStudies.map((cs) => (
+            <CaseStudyCard
+              title={cs.title}
+              description={cs.description}
+              href={cs.href}
+              tag={cs.tag}
+              showImage={cs.showImage}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CTA -->
+  <div class="fade-in-up">
+    <section class="px-6 py-20 md:py-28">
+      <div class="max-w-[700px] mx-auto text-center">
+        <div
+          class="relative overflow-hidden rounded-2xl px-8 py-14 md:px-14 md:py-20"
+          style="background: linear-gradient(135deg, #6B5CE7 0%, #4A7C59 100%);"
+        >
+          <div
+            class="absolute inset-0 opacity-[0.06]"
+            style="background: radial-gradient(circle at 20% 80%, white 0%, transparent 50%), radial-gradient(circle at 80% 20%, white 0%, transparent 50%);"
+            aria-hidden="true"
+          ></div>
+
+          <div class="relative z-10">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+              Want something like this?
+            </h2>
+            <p class="text-white/80 mb-10 text-lg leading-relaxed">
+              Every project starts with a conversation. Tell us about your data challenges.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center px-8 py-3.5 bg-white text-luxon-dark font-semibold rounded-full text-lg hover:bg-gray-100 transition-colors"
+            >
+              Book a Discovery Call
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Scroll animation -->
+  <style>
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        document.querySelectorAll('.fade-in-up').forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      document.querySelectorAll('.fade-in-up').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+</BaseLayout>

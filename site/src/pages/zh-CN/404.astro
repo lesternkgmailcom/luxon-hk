@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n/utils';
+
+const t = getTranslations('zh-CN');
+const nf = t.notFound;
+const lp = (path: string) => `/zh-CN${path}`;
+---
+
+<BaseLayout locale="zh-CN" title={nf.title} description={nf.description}>
+
+  <section class="relative flex items-center justify-center min-h-[70vh] px-6">
+    <div class="absolute inset-0 -z-10 opacity-[0.04]" style="background: radial-gradient(ellipse 60% 50% at 50% 50%, #4A7C59 0%, #6B5CE7 100%);" aria-hidden="true"></div>
+    <div class="max-w-[600px] mx-auto text-center">
+      <h1 class="font-heading text-8xl md:text-9xl font-bold text-luxon-dark tracking-tight leading-none mb-6">404</h1>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-luxon-dark mb-4">{nf.heading}</h2>
+      <p class="text-luxon-muted text-lg leading-relaxed mb-10 max-w-[480px] mx-auto">{nf.subtitle}</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href={lp('/')} class="inline-flex items-center justify-center px-8 py-3.5 bg-luxon-green text-white font-semibold rounded-full text-lg hover:bg-luxon-green/90 transition-colors">{nf.backToHome}</a>
+        <a href={lp('/ai-solutions')} class="inline-flex items-center justify-center px-8 py-3.5 bg-luxon-card border border-luxon-border text-luxon-dark font-semibold rounded-full text-lg hover:bg-luxon-border/50 transition-colors">{nf.exploreSolutions}</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

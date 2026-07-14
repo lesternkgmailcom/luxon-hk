@@ -1,0 +1,89 @@
+---
+/**
+ * Homepage — Luxon.hk
+ * 7 sections: Hero, Trust Strip, Product Teasers, How It Works,
+ * Featured Case Study, FAQ, Final CTA.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/home/Hero.astro';
+import TrustStrip from '../components/home/TrustStrip.astro';
+import ProductTeasers from '../components/home/ProductTeasers.astro';
+import HowItWorks from '../components/home/HowItWorks.astro';
+import FeaturedCaseStudy from '../components/home/FeaturedCaseStudy.astro';
+import FAQ from '../components/home/FAQ.astro';
+import FinalCTA from '../components/home/FinalCTA.astro';
+import { getTranslations } from '../i18n/utils';
+
+const t = getTranslations('en');
+---
+
+<BaseLayout>
+  <Hero t={t} />
+  <TrustStrip t={t} />
+  <div class="fade-in-up">
+    <ProductTeasers t={t} />
+  </div>
+  <div class="fade-in-up">
+    <HowItWorks t={t} />
+  </div>
+  <div class="fade-in-up">
+    <FeaturedCaseStudy t={t} />
+  </div>
+  <div class="fade-in-up">
+    <FAQ t={t} />
+  </div>
+  <div class="fade-in-up">
+    <FinalCTA t={t} />
+  </div>
+
+  <!-- Scroll animation: fade-in-up on viewport entry -->
+  <style>
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        // Show everything immediately if user prefers reduced motion
+        document.querySelectorAll('.fade-in-up').forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      document.querySelectorAll('.fade-in-up').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+</BaseLayout>

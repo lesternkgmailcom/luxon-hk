@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="AI vs Google Search — Luxon Learn" description="Lesson 1: Why giving AI more context gets you dramatically better results.">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/legacy-shared.css" />
+    <link rel="stylesheet" href="/learn/learn-styles.css" />
+    <link rel="stylesheet" href="/chat-story.css" />
+  </Fragment>
+
+  <!-- Lesson Hero — Chapter Headline -->
+  <section class="lesson-hero">
+    <div class="lesson-breadcrumb">
+      <a href="/learn">Learn</a>
+      <span>/</span>
+      <span>Lesson 1</span>
+    </div>
+    <div class="lesson-chapter-box">
+      <div class="lesson-chapter-box__badge">Beginner</div>
+      <h1>AI vs Google Search</h1>
+      <p class="lesson-chapter-box__sub">Why giving AI more context gets you dramatically better results.</p>
+    </div>
+  </section>
+
+  <!-- Chat Story -->
+  <div class="chat-story" role="region" aria-label="Interactive lesson">
+
+    <!-- Act 1: The Google Habit -->
+    <div class="chat-story__group">
+      <div class="chat-story__bubble chat-story__bubble--user">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">10:02 AM</span>
+          </div>
+          <div class="chat-story__bubble-inner">EV comparison</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">10:02 AM</span>
+          </div>
+          <div class="chat-story__bubble-inner">Sure! Here are some popular electric vehicles on the market:<br><br>🚗 Tesla Model 3 — from ~HK$280k<br>🚗 BYD Atto 3 — from ~HK$190k<br>🚗 BMW iX3 — from ~HK$380k<br>🚗 Hyundai Ioniq 5 — from ~HK$300k<br><br>Would you like me to compare specific models?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Narration -->
+    <div class="chat-story__narration is-visible">
+      <p><strong>That's how most people talk to AI.</strong> Short keywords. Like a Google search. And the AI gives you… a Google search result. Generic. Not wrong — just not useful.</p>
+    </div>
+
+    <!-- Act 2: The Right Way -->
+    <div class="chat-story__group">
+      <div class="chat-story__divider">
+        <span class="chat-story__divider-text">Try again</span>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--user">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">10:05 AM</span>
+          </div>
+          <div class="chat-story__bubble-inner">I'm comparing EVs for a family of 4 in Hong Kong. Budget HK$300k. Need boot space for 2 strollers. Prefer white. We do mostly city driving, occasional trips to Shenzhen. What are my best options?</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">10:05 AM</span>
+          </div>
+          <div class="chat-story__bubble-inner">Based on your situation, here's what I'd narrow it to:<br><br>🥇 <strong>BYD Seal</strong> — HK$259k, 540L boot (fits 2 strollers), available in white, great for city + cross-border charging network<br><br>🥈 <strong>Tesla Model 3 Highland</strong> — HK$265k, 682L boot, Supercharger network across HK + Shenzhen, white available<br><br>🥉 <strong>Hyundai Ioniq 5</strong> — HK$299k, 531L boot, V2L can power appliances during Shenzhen trips<br><br>Want me to compare insurance costs or depreciation for these three?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Narration: The Formula -->
+    <div class="chat-story__narration is-visible">
+      <p>Same question. One is <strong>3 words</strong>. The other is <strong>3 sentences</strong>. The second answer is 10x more useful. The secret? <strong>Task + Context.</strong></p>
+    </div>
+
+    <!-- Act 3: Work Email Example -->
+    <div class="chat-story__group">
+      <div class="chat-story__divider">
+        <span class="chat-story__divider-text">Same mistake at work</span>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--user">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">2:30 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">Write an email about the delayed shipment</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">2:30 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">I'd be happy to help! Could you tell me:<br><br>• Who is this going to?<br>• What was delayed and why?<br>• What's the new timeline?<br>• What tone do you want — formal, friendly, urgent?</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-story__narration is-visible">
+      <p>The AI is asking you the questions it needs. But you already know the answers. <strong>Why not give them all at once?</strong></p>
+    </div>
+
+    <!-- Act 4: The Complete Version -->
+    <div class="chat-story__group">
+      <div class="chat-story__divider">
+        <span class="chat-story__divider-text">Here's how it should look</span>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--user">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">2:35 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">Write an email to my supplier in Shenzhen about the delayed shipment. Container was supposed to arrive last Friday, now they say next Wednesday. Our warehouse is in Tuen Mun. Tone: firm but professional. Ask for an explanation and updated ETA. CC our logistics manager David.</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">2:35 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">Done. Here's the draft:<br><br>---<br><br>Dear [Supplier Name],<br><br>We note that container [number], originally scheduled for arrival on April 11th, has been rescheduled to April 16th without prior notification.<br><br>As this delay impacts our delivery commitments, we would appreciate an explanation for the revised timeline and confirmation that the new ETA of April 16th is firm.<br><br>Our warehouse is located in Tuen Mun — please ensure the delivery booking reflects this.<br><br>We look forward to your prompt response.<br><br>Best regards<br>[Your Name]<br><br>---<br><br>Want me to adjust the tone or add anything?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Narration: Constraints -->
+    <div class="chat-story__narration is-visible">
+      <p>Every good prompt has two parts: <strong>what you want done</strong> and <strong>what the AI needs to know</strong>. Budget, timeline, audience, tone, format — these filters turn a generic answer into a useful one.</p>
+    </div>
+
+    <!-- Act 5: Constraint Example -->
+    <div class="chat-story__group">
+      <div class="chat-story__divider">
+        <span class="chat-story__divider-text">Constraints change everything</span>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--user">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">4:10 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">Summarize this meeting</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">4:10 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">Here's a summary of the meeting...<br><br>[A 500-word summary covering everything equally, because you didn't tell the AI what mattered]</div>
+        </div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--user" style="margin-top: 24px;">
+        <div class="chat-story__avatar chat-story__avatar--user">L</div>
+        <div>
+          <div class="chat-story__meta chat-story__meta--user">
+            <span class="chat-story__label">You</span>
+            <span class="chat-story__time">4:12 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner">Summarize this meeting in 3 bullet points. Focus on action items and deadlines. This is for my boss who wasn't there — keep it under 150 words.</div>
+        </div>
+      </div>
+      <div class="chat-story__typing">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div class="chat-story__typing-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="chat-story__bubble chat-story__bubble--ai">
+        <div class="chat-story__avatar chat-story__avatar--ai">Lx</div>
+        <div>
+          <div class="chat-story__meta">
+            <span class="chat-story__label">AI</span>
+            <span class="chat-story__time">4:12 PM</span>
+          </div>
+          <div class="chat-story__bubble-inner"><strong>Meeting Summary — April 13</strong><br><br>• <strong>Q2 shipment target confirmed:</strong> 200 containers by June 30. David to finalize routing by Friday.<br><br>• <strong>New supplier onboarded:</strong> Shenzhen FastLogistics approved for HK routes. Trial run next week.<br><br>• <strong>Pricing review:</strong> Rate increase request from main carrier — decision needed by April 20.<br><br>95 words. Ready to forward.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tip -->
+    <div class="lesson-tip">
+      <div class="lesson-tip__icon">💡</div>
+      <div class="lesson-tip__text"><strong>Try this now:</strong> Open your AI and ask it the same question you normally would. Then re-ask with 3x more context. Compare the results. The difference is usually shocking.</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="lesson-cta">
+      <h3>Want this set up for you?</h3>
+      <p>We configure everything — personalization, projects, and workflows — in one session.</p>
+      <a href="https://wa.me/85297381028" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book installation</a>
+    </div>
+  </div>
+
+  <!-- Lesson Nav -->
+  <div class="lesson-nav">
+    <span></span>
+    <a href="/learn/lesson-2" class="next">Set Up a Project First <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+  </div>
+
+  <script is:inline src="/chat-story.js"></script>
+</BaseLayout>

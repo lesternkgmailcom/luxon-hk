@@ -1,0 +1,52 @@
+---
+/**
+ * Footer.astro
+ * Site footer with links, contact info, and copyright.
+ */
+import { type Locale, type TranslationKeys, defaultLocale } from '../i18n/translations';
+
+interface Props {
+  locale?: Locale;
+  t?: TranslationKeys;
+}
+
+const { locale = defaultLocale, t } = Astro.props;
+const nav = t.nav;
+const footer = t.footer;
+const lp = (path: string) => locale === 'en' ? path : `/${locale}${path}`;
+---
+
+<footer class="border-t border-luxon-border bg-luxon-card">
+  <div class="max-w-[1100px] mx-auto px-6 py-12">
+    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+      <!-- Brand -->
+      <div class="flex-shrink-0">
+        <a href={lp('/')} class="inline-flex items-center gap-2 text-luxon-dark font-bold text-xl tracking-tight">
+          <img src="/images/logo-icon.svg" alt="Luxon" class="h-8 w-auto" />
+          Luxon
+        </a>
+        <p class="mt-2 text-sm text-luxon-muted max-w-xs">
+          {footer.tagline}
+        </p>
+      </div>
+
+      <!-- Links -->
+      <nav class="flex flex-wrap gap-x-8 gap-y-2 text-sm">
+        <a href={lp('/ai-workers')} class="text-luxon-muted hover:text-luxon-dark transition-colors">{nav.aiWorkers}</a>
+        <a href={lp('/ai-solutions')} class="text-luxon-muted hover:text-luxon-dark transition-colors">{nav.aiSolutions}</a>
+        <a href={lp('/ai-workers/pricing')} class="text-luxon-muted hover:text-luxon-dark transition-colors">{nav.pricing}</a>
+        <a href={lp('/blog')} class="text-luxon-muted hover:text-luxon-dark transition-colors">{nav.aiLiving}</a>
+        <a href={lp('/learn')} class="text-luxon-muted hover:text-luxon-dark transition-colors">{nav.learn}</a>
+        <a href={lp('/contact')} class="text-luxon-muted hover:text-luxon-dark transition-colors">{nav.contact}</a>
+      </nav>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-10 pt-6 border-t border-luxon-border flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-luxon-muted">
+      <p>&copy; {new Date().getFullYear()} Luxon. {footer.rights}</p>
+      <div class="flex items-center gap-4">
+        <a href="mailto:info@luxon.hk" class="hover:text-luxon-dark transition-colors">info@luxon.hk</a>
+      </div>
+    </div>
+  </div>
+</footer>
