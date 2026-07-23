@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>freight_db — Ocean Freight Rates</title>
+<!-- Demo: no backend, no tracking. Screenshot click-through for sales use. -->
+<style>
+  :root {
+    /* Ported from mfdb_prod globals.css — Bloomberg-terminal aesthetic */
+    --background: #0A0A0A;
+    --foreground: #E5E5E5;
+    --card: #141414;
+    --sidebar: #111111;
+    --sidebar-foreground: #E5E5E5;
+    --sidebar-accent: #262626;
+    --sidebar-border: #282828;
+    --primary: #FF8A00;
+    --muted-foreground: #737373;
+    --border: #262626;
+    --radius: 2px;
+    --mono: "JetBrains Mono", "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--mono);
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Login gate ───────────────────────────────────────────────── */
+  #gate {
+    position: fixed; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--background);
+    z-index: 100;
+  }
+  #gate-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    width: 100%; max-width: 360px;
+  }
+  #gate-card h1 {
+    font-size: 16px; font-weight: 600; margin-bottom: 4px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  #gate-card .sub {
+    color: var(--muted-foreground); font-size: 12px; margin-bottom: 24px;
+  }
+  #gate input {
+    width: 100%;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--foreground);
+    font-family: var(--mono);
+    font-size: 14px;
+    padding: 10px 12px;
+    outline: none;
+  }
+  #gate input:focus { border-color: var(--primary); }
+  #gate button {
+    width: 100%; margin-top: 12px;
+    background: var(--primary); color: var(--background);
+    border: none; border-radius: var(--radius);
+    font-family: var(--mono); font-size: 14px; font-weight: 600;
+    padding: 10px; cursor: pointer;
+    transition: opacity .15s;
+  }
+  #gate button:hover { opacity: .9; }
+  #gate-error {
+    color: #F87171; font-size: 12px; margin-top: 12px;
+    min-height: 16px;
+  }
+  #gate .brand {
+    color: var(--primary);
+  }
+
+  /* ── App shell (login success) ────────────────────────────────── */
+  #app { display: none; height: 100vh; flex-direction: row; }
+  #app.show { display: flex; }
+
+  aside {
+    width: 240px; flex-shrink: 0;
+    background: var(--sidebar);
+    border-right: 1px solid var(--sidebar-border);
+    display: flex; flex-direction: column;
+  }
+  .brand-row {
+    height: 64px; display: flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid var(--sidebar-border);
+    padding: 0 24px;
+  }
+  .brand-row svg { color: var(--primary); width: 20px; height: 20px; }
+  .brand-row .name { font-weight: 600; letter-spacing: -0.01em; }
+  .brand-row .ver {
+    margin-left: auto; font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--muted-foreground);
+  }
+  nav { display: flex; flex-direction: column; gap: 4px; padding: 12px; flex: 1; }
+  nav button {
+    display: flex; align-items: center; gap: 12px;
+    border-radius: var(--radius);
+    padding: 8px 12px;
+    font-family: var(--mono); font-size: 13px;
+    background: transparent; border: none;
+    color: var(--muted-foreground); cursor: pointer;
+    text-align: left; width: 100%;
+    transition: background .12s, color .12s;
+  }
+  nav button:hover {
+    background: rgba(38, 38, 38, 0.5);
+    color: var(--sidebar-foreground);
+  }
+  nav button.active {
+    background: var(--sidebar-accent);
+    color: var(--sidebar-foreground);
+    font-weight: 500;
+  }
+  nav button svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .side-foot {
+    border-top: 1px solid var(--sidebar-border);
+    padding: 12px; font-size: 11px; color: var(--muted-foreground);
+  }
+
+  main {
+    flex: 1; overflow-y: auto;
+    position: relative;
+  }
+  .shot {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: left top;
+    display: none;
+    /* Hide the real sidebar region (0-240px) — our overlay covers it */
+    clip-path: inset(0 0 0 240px);
+  }
+  .shot.show { display: block; }
+
+  /* "not to scale" hint for narrow screens — screenshots are 1440px wide */
+  @media (max-width: 768px) {
+    aside { display: none; }
+    .shot { clip-path: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── Login gate ──────────────────────────────────────────────── -->
+<div id="gate">
+  <div id="gate-card">
+    <h1><span class="brand">⬚</span> freight_db</h1>
+    <div class="sub">Enter access code to continue</div>
+    <form id="login-form">
+      <input id="pass" type="password" placeholder="Access code" autofocus autocomplete="off" />
+      <button type="submit">Enter</button>
+      <div id="gate-error"></div>
+    </form>
+  </div>
+</div>
+
+<!-- ─── App shell ──────────────────────────────────────────────── -->
+<div id="app">
+  <aside>
+    <div class="brand-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10.189V14"/><path d="M12 2v3"/><path d="M19 13V7"/><path d="M5 13V7"/><path d="M2 18h20"/><path d="M7 21h10"/><path d="M12 2 2 18h20z"/></svg>
+      <span class="name">freight_db</span>
+      <span class="ver">v0.1</span>
+    </div>
+    <nav id="nav"></nav>
+    <div class="side-foot">Ocean freight rate platform</div>
+  </aside>
+  <main>
+    <img id="shot-overview" class="shot show" src="overview.png" alt="Overview" />
+    <img id="shot-rates"    class="shot"       src="rates.png"    alt="Rate Matrix" />
+    <img id="shot-rank"     class="shot"       src="rank.png"     alt="Rank" />
+    <img id="shot-trends"   class="shot"       src="trends.png"   alt="Trends" />
+    <img id="shot-search"   class="shot"       src="search.png"   alt="Search" />
+  </main>
+</div>
+
+<script>
+  // ── Tabs (mirrors mfdb_prod nav-items.ts, minus Upload) ──────────
+  const TABS = [
+    { id: "overview", label: "Overview",     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>' },
+    { id: "rates",    label: "Rate Matrix",  icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>' },
+    { id: "rank",     label: "Rank",         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>' },
+    { id: "trends",   label: "Trends",       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/></svg>' },
+    { id: "search",   label: "Search",       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>' },
+  ];
+
+  // Render nav
+  const navEl = document.getElementById("nav");
+  TABS.forEach((tab, i) => {
+    const btn = document.createElement("button");
+    btn.dataset.tab = tab.id;
+    btn.innerHTML = tab.icon + "<span>" + tab.label + "</span>";
+    if (i === 0) btn.classList.add("active");
+    btn.onclick = () => switchTab(tab.id);
+    navEl.appendChild(btn);
+  });
+
+  function switchTab(id) {
+    document.querySelectorAll("nav button").forEach(b => {
+      b.classList.toggle("active", b.dataset.tab === id);
+    });
+    document.querySelectorAll(".shot").forEach(img => {
+      img.classList.toggle("show", img.id === "shot-" + id);
+    });
+  }
+
+  // ── Login gate (client-side: NOT real security, just friction) ───
+  // sha256("mfi-demo") — password hidden behind a hash so it's not
+  // plaintext-greppable in page source. Anyone with devtools bypasses this.
+  const PASS_HASH = "c89ef5d6045c1c6c38e33f2624293db3d07d31f26357a1cc975534f473e291f9";
+
+  async function sha256(s) {
+    const buf = new TextEncoder().encode(s);
+    const h = await crypto.subtle.digest("SHA-256", buf);
+    return [...new Uint8Array(h)].map(b => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  document.getElementById("login-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const input = document.getElementById("pass");
+    const err = document.getElementById("gate-error");
+    const hash = await sha256(input.value);
+    if (hash === PASS_HASH) {
+      sessionStorage.setItem("fdb-demo-authed", "1");
+      document.getElementById("gate").style.display = "none";
+      document.getElementById("app").classList.add("show");
+    } else {
+      err.textContent = "Incorrect access code.";
+      input.value = "";
+      input.focus();
+    }
+  });
+
+  // Auto-login within the same tab session
+  if (sessionStorage.getItem("fdb-demo-authed") === "1") {
+    document.getElementById("gate").style.display = "none";
+    document.getElementById("app").classList.add("show");
+  }
+</script>
+</body>
+</html>
