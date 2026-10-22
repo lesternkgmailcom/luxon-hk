@@ -38,6 +38,7 @@ const lp = (path: string) => locale === 'en' ? path : `/${locale}${path}`;
         <a href={lp('/blog')} class="text-luxon-muted hover:text-luxon-dark transition-colors">{nav.aiLiving}</a>
         <a href={lp('/learn')} class="text-luxon-muted hover:text-luxon-dark transition-colors">{nav.learn}</a>
         <a href={lp('/contact')} class="text-luxon-muted hover:text-luxon-dark transition-colors">{nav.contact}</a>
+        <a href={lp('/about')} class="text-luxon-muted hover:text-luxon-dark transition-colors">{footer.about}</a>
       </nav>
     </div>
 
@@ -45,6 +46,8 @@ const lp = (path: string) => locale === 'en' ? path : `/${locale}${path}`;
     <div class="mt-10 pt-6 border-t border-luxon-border flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-luxon-muted">
       <p>&copy; {new Date().getFullYear()} Luxon. {footer.rights}</p>
       <div class="flex items-center gap-4">
+        <a href={lp('/privacy')} class="hover:text-luxon-dark transition-colors">{footer.privacy}</a>
+        <a href={lp('/terms')} class="hover:text-luxon-dark transition-colors">{footer.terms}</a>
         <a href="mailto:info@luxon.hk" class="hover:text-luxon-dark transition-colors">info@luxon.hk</a>
       </div>
     </div>

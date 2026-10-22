@@ -26,6 +26,27 @@ const {
 } = Astro.props;
 
 const t = getTranslations(locale);
+
+const siteUrl = Astro.site ?? new URL('https://www.luxon.hk');
+const ogImage = new URL('/images/og-image.png', siteUrl).href;
+const ogLocale = locale === 'zh-HK' ? 'zh_HK' : locale === 'zh-CN' ? 'zh_CN' : 'en';
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Luxon',
+  url: siteUrl.href,
+  logo: new URL('/images/logo-icon.svg', siteUrl).href,
+  description: 'Luxon builds AI Workers and custom AI solutions for SMEs in Hong Kong and Asia Pacific.',
+  email: 'info@luxon.hk',
+  sameAs: ['https://hk.linkedin.com/company/luxon-hk'],
+  areaServed: ['Hong Kong', 'Singapore', 'Asia Pacific'],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'info@luxon.hk',
+    contactType: 'sales',
+    availableLanguage: ['en', 'zh-HK', 'zh-CN'],
+  },
+};
 ---
 
 <!doctype html>
@@ -36,6 +57,22 @@ const t = getTranslations(locale);
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <link rel="canonical" href={Astro.url.href} />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Luxon" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Organization structured data -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(orgSchema)} />
 
     <!-- Google Fonts: Google Sans Text, Inter, JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

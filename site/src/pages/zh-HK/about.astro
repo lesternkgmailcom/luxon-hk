@@ -1,0 +1,53 @@
+---
+/**
+ * About Page — /zh-HK/about
+ * Business identity and legitimacy signals for visitors and web-filter categorizers.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n/utils';
+
+const t = getTranslations('zh-HK');
+const pg = t.legal.about;
+---
+
+<BaseLayout locale="zh-HK" title={pg.title} description={pg.description}>
+  <section class="relative overflow-hidden py-20 md:py-28 px-6">
+    <div class="absolute inset-0 -z-10 opacity-[0.05]" style="background: radial-gradient(ellipse 70% 50% at 60% 40%, #4A7C59 0%, #6B5CE7 100%);" aria-hidden="true"></div>
+    <div class="max-w-[720px] mx-auto text-center">
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-luxon-dark tracking-tight leading-tight mb-4">{pg.heroTitle}</h1>
+      <p class="text-lg text-luxon-muted max-w-[580px] mx-auto leading-relaxed">{pg.heroSubtitle}</p>
+    </div>
+  </section>
+
+  <section class="px-6 pb-20 md:pb-28">
+    <div class="max-w-[720px] mx-auto">
+      {pg.sections.map((s) => (
+        <div class="mb-10">
+          <h2 class="font-heading text-xl md:text-2xl font-bold text-luxon-dark mb-3">{s.heading}</h2>
+          {s.paragraphs.map((p) => (
+            <p class="text-luxon-muted leading-relaxed mb-3">{p}</p>
+          ))}
+        </div>
+      ))}
+
+      <div class="flex flex-wrap gap-4 mt-2">
+        <a
+          href="mailto:info@luxon.hk"
+          class="inline-flex items-center px-6 py-3 bg-luxon-green text-white font-semibold rounded-full hover:bg-luxon-green/90 transition-colors"
+        >info@luxon.hk</a>
+        <a
+          href="https://wa.me/85297381028"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-6 py-3 bg-[#25D366] text-white font-semibold rounded-full hover:bg-[#20BD5A] transition-colors"
+        >WhatsApp</a>
+        <a
+          href="https://hk.linkedin.com/company/luxon-hk"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-6 py-3 bg-luxon-card border border-luxon-border text-luxon-dark font-semibold rounded-full hover:border-luxon-dark/30 transition-colors"
+        >LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

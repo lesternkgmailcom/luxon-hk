@@ -32,6 +32,146 @@ export const translations = {
     footer: {
       tagline: 'AI solutions that fit your business. From Hong Kong to the world.',
       rights: 'All rights reserved.',
+      about: 'About Us',
+      privacy: 'Privacy Policy',
+      terms: 'Terms of Use',
+    },
+
+    // Legal / trust pages
+    legal: {
+      about: {
+        title: 'About Luxon \u2014 AI solutions for SMEs | Luxon',
+        description: 'Luxon is a Hong Kong-based business building AI Workers and custom AI solutions for SMEs in Hong Kong, Singapore and across Asia Pacific.',
+        heroTitle: 'About Luxon',
+        heroSubtitle: 'Practical AI for small and medium businesses \u2014 built in Hong Kong, serving Asia Pacific.',
+        sections: [
+          {
+            heading: 'Who we are',
+            paragraphs: [
+              'Luxon is a Hong Kong-based technology business that builds practical AI solutions for small and medium enterprises. We help companies automate routine work \u2014 email, scheduling, customer replies, document processing and reporting \u2014 so their teams can focus on customers and growth.',
+              'Our clients span Hong Kong, Singapore and the wider Asia Pacific region, across industries including logistics, professional services, finance and lifestyle businesses.',
+            ],
+          },
+          {
+            heading: 'What we do',
+            paragraphs: [
+              'AI Workers: autonomous AI assistants that run 24/7, handling email, calendar, WhatsApp inquiries and document processing. Most AI Workers are deployed same-day.',
+              'Custom AI Solutions: interactive dashboards and automation built around your data \u2014 for example market snapshots, document extraction and operations reporting.',
+            ],
+          },
+          {
+            heading: 'How we work',
+            paragraphs: [
+              'No hype. Every engagement starts with a discovery call to understand your workflow and pain points, and ends with measurable results. Security comes standard: solutions run in sandboxed environments with read-only permissions by default and an instant kill switch for any integration.',
+            ],
+          },
+          {
+            heading: 'Get in touch',
+            paragraphs: [
+              'We\'re happy to discuss your project \u2014 no obligation. Reach us by email, WhatsApp or LinkedIn.',
+            ],
+          },
+        ],
+      },
+      privacy: {
+        title: 'Privacy Policy | Luxon',
+        description: 'How luxon.hk collects, uses and protects your information \u2014 contact form, AI chat widget, and Google Analytics.',
+        heroTitle: 'Privacy Policy',
+        heroSubtitle: 'What we collect, what we never do, and how to reach us about your data.',
+        updated: 'Last updated: October 2026',
+        sections: [
+          {
+            heading: 'Information we collect',
+            paragraphs: [
+              'Contact form. When you use the form on our contact page, your name, email, company name and project description are passed to your own email app and sent to info@luxon.hk. We use it only to reply to your inquiry.',
+              'Direct messages. If you email or WhatsApp us, we keep the conversation so we can handle and follow up on your request.',
+              'AI chat assistant. Messages you send to the chat assistant on this website are used to generate a reply. Message content is forwarded to a third-party AI provider (Z.ai) for processing.',
+              'Website analytics. We use Google Analytics 4 to understand aggregate usage \u2014 pages visited, approximate region, device and browser type. The site runs no advertising trackers.',
+            ],
+          },
+          {
+            heading: 'What we never do',
+            paragraphs: [
+              'We never sell your data. We do not use your business data or chat messages to train AI models. We do not run advertising or cross-site tracking.',
+            ],
+          },
+          {
+            heading: 'Cookies',
+            paragraphs: [
+              'The site sets Google Analytics cookies for anonymous, aggregate statistics. You can block or delete cookies in your browser settings, or use Google\'s official opt-out add-on.',
+            ],
+          },
+          {
+            heading: 'Third-party services',
+            paragraphs: [
+              'This website relies on: Google (analytics), Z.ai (AI chat backend), and Cloudflare and GitHub (hosting and content delivery, which keep standard server logs).',
+            ],
+          },
+          {
+            heading: 'Retention and your rights',
+            paragraphs: [
+              'We keep correspondence only as long as needed to handle your inquiry. To access, correct or delete your personal data, email info@luxon.hk. We are committed to complying with the Hong Kong Personal Data (Privacy) Ordinance.',
+            ],
+          },
+          {
+            heading: 'Changes to this policy',
+            paragraphs: [
+              'We may update this policy from time to time; the latest version is always published on this page. Questions: info@luxon.hk.',
+            ],
+          },
+        ],
+      },
+      terms: {
+        title: 'Terms of Use | Luxon',
+        description: 'Terms governing the use of the luxon.hk website.',
+        heroTitle: 'Terms of Use',
+        heroSubtitle: 'The ground rules for using this website.',
+        updated: 'Last updated: October 2026',
+        sections: [
+          {
+            heading: 'Use of this site',
+            paragraphs: [
+              'Content on this website is for general information about Luxon and our services. It may change without notice.',
+            ],
+          },
+          {
+            heading: 'Services',
+            paragraphs: [
+              'AI Workers and custom AI solutions are provided under separate written agreements or quotations. Nothing on this website constitutes an offer; prices and specifications are as agreed between the parties.',
+            ],
+          },
+          {
+            heading: 'Intellectual property',
+            paragraphs: [
+              'The content, design and logos on this website belong to Luxon and may not be copied or republished without written permission.',
+            ],
+          },
+          {
+            heading: 'Acceptable use',
+            paragraphs: [
+              'Please don\'t abuse the AI chat assistant (for example with automated spam or unlawful content) or access the site in a way that disrupts its operation.',
+            ],
+          },
+          {
+            heading: 'Third-party links',
+            paragraphs: [
+              'This site links to third-party services such as WhatsApp, LinkedIn and Google. We are not responsible for third-party content.',
+            ],
+          },
+          {
+            heading: 'Disclaimers and liability',
+            paragraphs: [
+              'The website is provided "as is" without warranties of any kind. To the maximum extent permitted by law, Luxon is not liable for any loss arising from use of this website.',
+            ],
+          },
+          {
+            heading: 'Governing law',
+            paragraphs: [
+              'These terms are governed by the laws of the Hong Kong Special Administrative Region. Questions: info@luxon.hk.',
+            ],
+          },
+        ],
+      },
     },
     languageSelector: {
       currentLang: 'Language',
@@ -483,6 +623,146 @@ export const translations = {
     footer: {
       tagline: '切合您業務的 AI 解決方案。立足香港，服務亞太。',
       rights: '版權所有。',
+      about: '關於我們',
+      privacy: '私隱政策',
+      terms: '條款及細則',
+    },
+
+    // Legal / trust pages
+    legal: {
+      about: {
+        title: '關於 Luxon \u2014 為中小企而設的 AI 方案 | Luxon',
+        description: 'Luxon 是一家立足香港的科技公司，為中小企打造 AI 工作員和客製化 AI 解決方案，服務香港、新加坡及亞太區。',
+        heroTitle: '關於 Luxon',
+        heroSubtitle: '立足香港，為中小企打造實用、可量度成效的 AI 方案。',
+        sections: [
+          {
+            heading: '我們是誰',
+            paragraphs: [
+              'Luxon 是一家立足香港的科技公司，專門為中小企打造實用的 AI 方案。我們幫企業自動化日常工序 \u2014 電郵、排程、客戶回覆、文件處理和報告 \u2014 讓團隊專注服務客戶和發展業務。',
+              '我們的客戶遍佈香港、新加坡和亞太區，行業涵蓋物流、專業服務、金融和生活品味業務。',
+            ],
+          },
+          {
+            heading: '我們做什麼',
+            paragraphs: [
+              'AI 工作員：全天候運作的自主 AI 助理，處理電郵、行事曆、WhatsApp 查詢和文件處理，大多數可即日上線。',
+              '客製化 AI 方案：圍繞您的數據建立的互動儀表板和自動化流程，例如市務快照、文件提取和營運報告。',
+            ],
+          },
+          {
+            heading: '我們的做事方式',
+            paragraphs: [
+              '我們不賣概念。每次合作都由一次了解業務流程和痛點的會議開始，以可量度的成果驗收。安全是標準配置：所有方案預設在沙盒環境運作、採用唯讀權限，並設有一鍵終止開關，隨時可以撤銷任何整合。',
+            ],
+          },
+          {
+            heading: '聯絡我們',
+            paragraphs: [
+              '歡迎隨時跟我們聊聊您的項目 \u2014 沒有任何義務。可透過電郵、WhatsApp 或 LinkedIn 聯絡我們。',
+            ],
+          },
+        ],
+      },
+      privacy: {
+        title: '私隱政策 | Luxon',
+        description: 'luxon.hk 如何收集、使用和保護您的資料 \u2014 聯絡表格、AI 聊天助理及 Google Analytics。',
+        heroTitle: '私隱政策',
+        heroSubtitle: '我們收集什麼、絕不會做什麼，以及如何就您的資料聯絡我們。',
+        updated: '最後更新：2026 年 10 月',
+        sections: [
+          {
+            heading: '我們收集的資料',
+            paragraphs: [
+              '聯絡表格：當您使用網站表格聯絡我們，您的姓名、電郵、公司名稱和項目描述會透過您自己的電郵軟件發送到 info@luxon.hk，我們只會用來回覆您的查詢。',
+              '直接通訊：如果您以電郵或 WhatsApp 聯絡我們，我們會保留通訊紀錄，以便處理和跟進您的要求。',
+              'AI 聊天助理：您在網站聊天視窗發送的訊息會用來生成回覆，訊息內容會傳送至第三方 AI 服務供應商（Z.ai）處理。',
+              '網站分析：我們使用 Google Analytics 4 了解整體使用情況 \u2014 瀏覽的頁面、大概地區、裝置和瀏覽器類型。網站不設廣告追蹤。',
+            ],
+          },
+          {
+            heading: '我們絕不會做的事',
+            paragraphs: [
+              '我們絕不出售您的資料。我們不會使用您的業務數據或聊天訊息來訓練 AI 模型，亦不會進行廣告或跨網站追蹤。',
+            ],
+          },
+          {
+            heading: 'Cookies',
+            paragraphs: [
+              '網站使用 Google Analytics 的 Cookie 收集匿名統計數據。您可以在瀏覽器設定中封鎖或刪除 Cookie，或使用 Google 提供的官方退出工具。',
+            ],
+          },
+          {
+            heading: '第三方服務',
+            paragraphs: [
+              '本網站使用以下第三方服務：Google（網站分析）、Z.ai（AI 聊天後端），以及 Cloudflare 和 GitHub（網站託管及內容傳遞網絡，會記錄標準伺服器日誌）。',
+            ],
+          },
+          {
+            heading: '資料保留及您的權利',
+            paragraphs: [
+              '我們只會在處理查詢所需的期間內保留通訊資料。如欲查閱、更正或刪除您的個人資料，請電郵 info@luxon.hk。我們致力遵守香港《個人資料（私隱）條例》。',
+            ],
+          },
+          {
+            heading: '政策更新',
+            paragraphs: [
+              '我們可能不時更新本政策，最新版本會在此頁面公佈。如有任何疑問，請電郵 info@luxon.hk。',
+            ],
+          },
+        ],
+      },
+      terms: {
+        title: '條款及細則 | Luxon',
+        description: '使用 luxon.hk 網站的條款。',
+        heroTitle: '條款及細則',
+        heroSubtitle: '使用本網站前請細閱以下條款。',
+        updated: '最後更新：2026 年 10 月',
+        sections: [
+          {
+            heading: '網站使用',
+            paragraphs: [
+              '本網站的內容僅供參考，介紹 Luxon 及我們的服務，內容可能隨時更新而不另行通知。',
+            ],
+          },
+          {
+            heading: '服務條款',
+            paragraphs: [
+              'AI 工作員和客製化 AI 方案以獨立的書面協議或報價單提供。網站上的資訊不構成要約，價格和規格以雙方確認的協議為準。',
+            ],
+          },
+          {
+            heading: '知識產權',
+            paragraphs: [
+              '本網站的內容、設計和標誌均屬 Luxon 所有，未經書面許可不得複製或轉載。',
+            ],
+          },
+          {
+            heading: '可接受使用',
+            paragraphs: [
+              '請勿濫用 AI 聊天助理（例如發送自動化垃圾訊息或違法內容），亦不得以干擾網站正常運作的方式存取本網站。',
+            ],
+          },
+          {
+            heading: '第三方連結',
+            paragraphs: [
+              '本網站連結至第三方服務（如 WhatsApp、LinkedIn 和 Google），我們不對第三方網站的內容負責。',
+            ],
+          },
+          {
+            heading: '免責聲明',
+            paragraphs: [
+              '本網站按「現狀」提供，不作任何明示或暗示的保證。在法律允許的最大範圍內，Luxon 對因使用本網站而產生的任何損失概不負責。',
+            ],
+          },
+          {
+            heading: '管轄法律',
+            paragraphs: [
+              '本條款受香港特別行政區法律管轄。如有疑問，請電郵 info@luxon.hk。',
+            ],
+          },
+        ],
+      },
     },
     languageSelector: {
       currentLang: '語言',
@@ -919,6 +1199,146 @@ export const translations = {
     footer: {
       tagline: '切合您业务的 AI 解决方案。立足香港，服务亚太。',
       rights: '版权所有。',
+      about: '关于我们',
+      privacy: '隐私政策',
+      terms: '条款及细则',
+    },
+
+    // Legal / trust pages
+    legal: {
+      about: {
+        title: '关于 Luxon \u2014 为中小企业而设的 AI 方案 | Luxon',
+        description: 'Luxon 是一家立足香港的科技公司，为中小企业打造 AI 工作员和客制化 AI 解决方案，服务香港、新加坡及亚太区。',
+        heroTitle: '关于 Luxon',
+        heroSubtitle: '立足香港，为中小企业打造实用、可衡量成效的 AI 方案。',
+        sections: [
+          {
+            heading: '我们是谁',
+            paragraphs: [
+              'Luxon 是一家立足香港的科技公司，专门为中小企业打造实用的 AI 方案。我们帮助企业自动化日常流程 \u2014 邮件、日程安排、客户回复、文档处理和报告 \u2014 让团队专注于服务客户和发展业务。',
+              '我们的客户遍布香港、新加坡和亚太区，行业涵盖物流、专业服务、金融和生活方式业务。',
+            ],
+          },
+          {
+            heading: '我们做什么',
+            paragraphs: [
+              'AI 工作员：全天候运行的自主 AI 助理，处理邮件、日历、WhatsApp 咨询和文档处理，大多数可当天上线。',
+              '客制化 AI 方案：围绕您的数据构建的互动仪表板和自动化流程，例如市场快照、文档提取和运营报告。',
+            ],
+          },
+          {
+            heading: '我们的做事方式',
+            paragraphs: [
+              '我们不卖概念。每次合作都从一次了解业务流程和痛点的会议开始，以可衡量的成果验收。安全是标准配置：所有方案默认在沙盒环境中运行、采用只读权限，并设有一键终止开关，随时可以撤销任何集成。',
+            ],
+          },
+          {
+            heading: '联系我们',
+            paragraphs: [
+              '欢迎随时和我们聊聊您的项目 \u2014 没有任何义务。可通过邮件、WhatsApp 或 LinkedIn 联系我们。',
+            ],
+          },
+        ],
+      },
+      privacy: {
+        title: '隐私政策 | Luxon',
+        description: 'luxon.hk 如何收集、使用和保护您的信息 \u2014 联系表单、AI 聊天助理及 Google Analytics。',
+        heroTitle: '隐私政策',
+        heroSubtitle: '我们收集什么、绝不会做什么，以及如何就您的数据联系我们。',
+        updated: '最后更新：2026 年 10 月',
+        sections: [
+          {
+            heading: '我们收集的信息',
+            paragraphs: [
+              '联系表单：当您使用网站表单联系我们时，您的姓名、邮箱、公司名称和项目描述会通过您自己的邮件软件发送到 info@luxon.hk，我们只用来回复您的咨询。',
+              '直接通讯：如果您通过邮件或 WhatsApp 联系我们，我们会保留通讯记录，以便处理和跟进您的要求。',
+              'AI 聊天助理：您在网站聊天窗口发送的消息会用来生成回复，消息内容会传送至第三方 AI 服务供应商（Z.ai）处理。',
+              '网站分析：我们使用 Google Analytics 4 了解整体使用情况 \u2014 浏览的页面、大概地区、设备和浏览器类型。网站不设广告跟踪。',
+            ],
+          },
+          {
+            heading: '我们绝不会做的事',
+            paragraphs: [
+              '我们绝不出售您的数据。我们不会使用您的业务数据或聊天消息来训练 AI 模型，亦不会进行广告或跨网站跟踪。',
+            ],
+          },
+          {
+            heading: 'Cookies',
+            paragraphs: [
+              '网站使用 Google Analytics 的 Cookie 收集匿名统计数据。您可以在浏览器设置中封锁或删除 Cookie，或使用 Google 提供的官方退出工具。',
+            ],
+          },
+          {
+            heading: '第三方服务',
+            paragraphs: [
+              '本网站使用以下第三方服务：Google（网站分析）、Z.ai（AI 聊天后端），以及 Cloudflare 和 GitHub（网站托管及内容分发网络，会记录标准服务器日志）。',
+            ],
+          },
+          {
+            heading: '数据保留及您的权利',
+            paragraphs: [
+              '我们只会在处理咨询所需的期间内保留通讯数据。如欲查阅、更正或删除您的个人数据，请发邮件至 info@luxon.hk。我们致力遵守香港《个人资料（隐私）条例》。',
+            ],
+          },
+          {
+            heading: '政策更新',
+            paragraphs: [
+              '我们可能不时更新本政策，最新版本会在此页面公布。如有任何疑问，请发邮件至 info@luxon.hk。',
+            ],
+          },
+        ],
+      },
+      terms: {
+        title: '条款及细则 | Luxon',
+        description: '使用 luxon.hk 网站的条款。',
+        heroTitle: '条款及细则',
+        heroSubtitle: '使用本网站前请细阅以下条款。',
+        updated: '最后更新：2026 年 10 月',
+        sections: [
+          {
+            heading: '网站使用',
+            paragraphs: [
+              '本网站的内容仅供参考，介绍 Luxon 及我们的服务，内容可能随时更新而不另行通知。',
+            ],
+          },
+          {
+            heading: '服务条款',
+            paragraphs: [
+              'AI 工作员和客制化 AI 方案以独立的书面协议或报价单提供。网站上的信息不构成要约，价格和规格以双方确认的协议为准。',
+            ],
+          },
+          {
+            heading: '知识产权',
+            paragraphs: [
+              '本网站的内容、设计和标志均属 Luxon 所有，未经书面许可不得复制或转载。',
+            ],
+          },
+          {
+            heading: '可接受使用',
+            paragraphs: [
+              '请勿滥用 AI 聊天助理（例如发送自动化垃圾信息或违法内容），亦不得以干扰网站正常运行的方式访问本网站。',
+            ],
+          },
+          {
+            heading: '第三方链接',
+            paragraphs: [
+              '本网站链接至第三方服务（如 WhatsApp、LinkedIn 和 Google），我们不对第三方网站的内容负责。',
+            ],
+          },
+          {
+            heading: '免责声明',
+            paragraphs: [
+              '本网站按「现状」提供，不作任何明示或暗示的保证。在法律允许的最大范围内，Luxon 对因使用本网站而产生的任何损失概不负责。',
+            ],
+          },
+          {
+            heading: '管辖法律',
+            paragraphs: [
+              '本条款受香港特别行政区法律管辖。如有疑问，请发邮件至 info@luxon.hk。',
+            ],
+          },
+        ],
+      },
     },
     languageSelector: {
       currentLang: '语言',
